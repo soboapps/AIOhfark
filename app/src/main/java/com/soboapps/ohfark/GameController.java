@@ -238,8 +238,6 @@ public class GameController extends PreferenceActivity {
                                     @Override
                                     public void run() {
 
-                                        dM.diceOnTable(1);
-
                                         int d = 0;
                                         for (int i = 0; i < dM.diceOnTable(1).length; i++){
                                             int[] currentvals = dM.diceOnTable(1);

@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 
 
 public class GameController extends PreferenceActivity {
@@ -126,86 +128,6 @@ public class GameController extends PreferenceActivity {
         return false;
     }
 
-    // Called to find out if it's the AI's Turn or not
-    public void aiRoll() {
-        // Don't try to roll if the game is over
-        if (currPlayer.hasHighestScore()) {
-            gameOverMan = true;
-        }
-        if ((aiPlayer = true && gameOverMan == false) || (isRoundEnded == false && currPlayer.getName() == "Android")) {
-            if (currPlayer.getName() == "Android") {
-
-                // Handlers create a Pause
-                UI.handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        // Roll the Dice
-                        onRoll();
-
-                        // Select the Dice if the Value is > 0
-                        // Thank you Nathan for helping with this!
-                        UI.handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                        int d = 0;
-                                        for (int i = 0; i < dM.diceOnTable(1).length; i++){
-                                            int[] currentvals = dM.diceOnTable(1);
-                                            d = currentvals[i];
-                                            if (shouldHighlight(i) || currentvals[i] > 0){
-                                                onClickDice(i, false);
-                                            }
-                                        }
-                                        // Go decide what to do with the selected dice
-                                        aiDecide();
-                                    }
-                                }, 1000);
-                    }
-                }, 1500);
-            }
-        }
-    }
-
-
-    public void aiDecide(){
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(UI);
-        String ListDifPreference;
-        ListDifPreference = prefs.getString("player2DiffPref", "Easy");
-
-        final int highlightedScore = Scorer.calculate(dM.getHighlighted(DieManager.ABS_VALUE_FLAG), false, UI);
-        final int possibleScore = currPlayer.getInRoundScore() + highlightedScore;
-        final int turnScore = currPlayer.getInRoundScore() + highlightedScore + currPlayer.getScore();
-
-        if ((ListDifPreference.equals("Easy") && (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 350) && (dM.numDiceRemain() <= 3)
-                || (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
-
-                || (ListDifPreference.equals("Medium") && (turnScore >= GOB_SCORE) && (dM.numDiceRemain()) != 0 && (possibleScore >= 250) && (dM.numDiceRemain() <= 3)
-                || (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
-
-                || (ListDifPreference.equals("Hard") && (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300))) {
-
-            UI.handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    // Score the Dice
-                if (isRoundEnded == false && dM.numDiceRemain() == 0 || isLastRound == true && turnScore < WINNING_SCORE){
-                    aiRoll();
-                } else {
-                    onScore();
-                    UI.enableButtons();
-                    UI.enableDice();
-                }
-                }
-            }, 1000);
-        } else {
-            // Roll the dice becasue you didn't
-            // meet the criteria to score
-            if (isRoundEnded == false && gameOverMan == false) {
-                aiRoll();
-            }
-        }
-    }
-
     // Always called from onRoll method
     private void startRound() {
         isRoundEnded = false;
@@ -290,6 +212,96 @@ public class GameController extends PreferenceActivity {
             String rollText = UI.getString(R.string.stRoll);
             UI.updateRollButtonText(rollText);
             UI.defaultBgrd();
+        }
+    }
+
+    // Called to find out if it's the AI's Turn or not
+    public void aiRoll() {
+
+        if (currPlayer.hasHighestScore()) {
+            gameOverMan = true;
+        }
+        if ((aiPlayer = true && gameOverMan == false) || (isRoundEnded == false && currPlayer.getName() == "Android")) {
+            if (currPlayer.getName() == "Android") {
+
+                UI.handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Roll the Dice
+                        onRoll();
+
+                        // Select the Dice one by one
+                        UI.handler.postDelayed(new Runnable() {
+                            //@Override
+                            public void run() {
+                                UI.handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+
+                                        dM.diceOnTable(1);
+
+                                        int d = 0;
+                                        for (int i = 0; i < dM.diceOnTable(1).length; i++){
+                                            int[] currentvals = dM.diceOnTable(1);
+
+                                            d = currentvals[i];
+
+                                            if (shouldHighlight(i) && d >= 0){
+                                                onClickDice(i, false);
+                                            }
+                                        }
+                                        // Go decide what to do with the selected dice
+                                        aiDecide();
+                                    }
+                                }, 750);
+                            }
+                        }, 1000);
+                    }
+                }, 1500);
+            }
+        }
+    }
+
+    public void aiDecide(){
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(UI);
+        String ListDifPreference;
+        ListDifPreference = prefs.getString("player2DiffPref", "Easy");
+
+        final int highlightedScore = Scorer.calculate(dM.getHighlighted(DieManager.ABS_VALUE_FLAG), false, UI);
+        final int possibleScore = currPlayer.getInRoundScore() + highlightedScore;
+        final int turnScore = currPlayer.getInRoundScore() + highlightedScore + currPlayer.getScore();
+
+        if (((highlightedScore > 0) && (ListDifPreference.equals("Easy")) && (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 3)
+                || (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
+
+                || ((highlightedScore > 0) && (ListDifPreference.equals("Medium")) && (turnScore >= GOB_SCORE) && (dM.numDiceRemain()) != 0 && (possibleScore >= 350) || (dM.numDiceRemain() <= 2)
+                || (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
+
+                || ((highlightedScore > 0) && (ListDifPreference.equals("Hard")) && (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300  || (dM.numDiceRemain() <= 3)))) {
+
+            UI.handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Score the Dice
+                    if (isRoundEnded == false && dM.numDiceRemain() == 0 || isLastRound == true && turnScore < WINNING_SCORE){
+                        aiRoll();
+                    } else {
+                        if (highlightedScore > 0) {
+                            onScore();
+                            UI.enableButtons();
+                            UI.enableDice();
+                        }
+
+                    }
+                }
+            }, 1000);
+        } else {
+            // Roll the dice becasue you didn't
+            // meet the criteria to score
+            if (isRoundEnded == false && gameOverMan == false) {
+                aiRoll();
+            }
         }
     }
 

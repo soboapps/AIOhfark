@@ -1,7 +1,9 @@
 package com.soboapps.ohfark;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.EditTextPreference;
@@ -15,14 +17,20 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.util.Log;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class PlayerSetup extends PreferenceActivity {
 
         private int numOfPlayers = 0;
         private boolean playersPrefChanged = true;
+
+        SharedPreferences setNoti;
+        boolean showHelp1;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +101,36 @@ public class PlayerSetup extends PreferenceActivity {
                             return false;
                         }
                 });
+
+                setNoti = PreferenceManager.getDefaultSharedPreferences(this );
+                //SharedPref tutorial
+                showHelp1 = setNoti.getBoolean("help", true);
+
+                if (showHelp1 == true) {
+                        showActivityOverlay();
+                }
+
+        }
+
+        private void showActivityOverlay() {
+                final Dialog dialog = new Dialog(this,
+                        android.R.style.Theme_Translucent_NoTitleBar);
+
+                dialog.setContentView(R.layout.info_overview);
+
+                RelativeLayout layout = (RelativeLayout) dialog.findViewById(R.id.llOverlay_activity);
+                layout.setBackgroundColor(Color.TRANSPARENT);
+                layout.setOnClickListener(new View.OnClickListener() {
+
+                        @Override
+                        public void onClick(View arg0) {
+                                dialog.dismiss();
+                                SharedPreferences.Editor editor = setNoti.edit();
+                                editor.putBoolean("help", false);
+                                editor.commit();
+                        }
+                });
+                dialog.show();
         }
 
         protected void enablePrefs() {
@@ -118,6 +156,10 @@ public class PlayerSetup extends PreferenceActivity {
         protected void setUpListeners(boolean setListeners) {
                 CheckBoxPreference c = null;
 
+                if (showHelp1 == true) {
+                        showActivityOverlay();
+                }
+
                 for (int i = 2; i <= numOfPlayers; i++) {
                         c = (CheckBoxPreference) findPreference("player" + i
                                 + "IsHumanPref");
@@ -139,8 +181,6 @@ public class PlayerSetup extends PreferenceActivity {
                         if (setListeners) {
 
                                 c.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-
-
 
                                         @Override
                                         public boolean onPreferenceChange(Preference preference, Object newValue) {

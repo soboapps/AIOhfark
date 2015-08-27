@@ -21,7 +21,7 @@ Once a player has achieved a winning point total, the other player has one last 
 
 * Two Player & Human vs Android Modes - Local Game Play Only, No Online Play.
 * Screen Flips for Easy 2 Player Games
-* Human vs Android with Difficulty Levels
+* Choose from Easy, Medium or Hard Difficulty Levels for Human vs Android play
 * Wide Range of Scoring Customizations.
 * Easy "Reset All Options" in case you get carried away.
 

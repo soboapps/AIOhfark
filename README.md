@@ -1,7 +1,7 @@
 # OhFark (Farkle)
 Farkle game for Android
 
-<img src="http://www.soboapps.com/wp-content/uploads/2015/05/device-2015-05-23-070540.png">
+<img src="http://www.soboapps.com/wp-content/uploads/2015/05/device-2015-08-26-201828.png"><img src="http://www.soboapps.com/wp-content/uploads/2015/05/device-2015-08-26-201925.png">
 
 OhFark (Farkle) is a fun dice game that can be played by the entire family! Watch it, it's addicting!
 

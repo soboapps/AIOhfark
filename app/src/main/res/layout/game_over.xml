@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.soboapps.ohfark.Flip180 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llParent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="#cd525252"
+    android:orientation="vertical" >
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:android1="http://schemas.android.com/apk/res/android"
+		android:id="@+id/ivOverlay"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_marginTop="100dp"
+		android1:layout_marginBottom="100dp"
+		android:orientation="horizontal" >
+
+		<Button
+			android:id="@+id/goQuitButton"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="50"
+			android:background="@drawable/go_quit_button"
+			android:onClick="onRoll"
+			android:textSize="35sp"
+			android:textStyle="bold"
+			android:text="@string/stQuit"
+			android:layout_gravity="center_vertical"
+			android:textColor="#ffffff" />
+
+
+		<Button
+			android:id="@+id/goPlayButton"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="50"
+			android:background="@drawable/go_play_button"
+			android:onClick="onScore"
+			android:textSize="35sp"
+			android:textStyle="bold"
+			android:text="@string/stPlay"
+			android:layout_gravity="center_vertical"
+			android:textColor="#ffffff" />
+
+	</LinearLayout>
+
+</com.soboapps.ohfark.Flip180>

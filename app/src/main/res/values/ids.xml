@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="state" type="id"/>
+    <item name="die_img_1" type="id"/>
+    <item name="die_img_2" type="id"/>
+    <item name="die_img_3" type="id"/>
+    <item name="die_img_4" type="id"/>
+    <item name="die_img_5" type="id"/>
+    <item name="die_img_6" type="id"/>
+
+</resources>

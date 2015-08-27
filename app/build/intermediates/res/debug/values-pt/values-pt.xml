@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/values-pt/strings.xml -->
+    <eat-comment/>
+    <string-array name="difficulty_Array">
+                <item>Easy</item>
+                <item>Medium</item>
+                <item>Hard</item>
+        </string-array>
+    <string-array name="farkle_Array">
+                <item>-100</item>
+                <item>-500</item>
+                <item>-1000</item>
+        </string-array>
+    <string-array name="five_of_a_kind_Array">
+                <item>3x the 3 Of A Kind Value</item>
+                <item>6x the 3 Of A Kind Value</item>
+                <item>2000</item>
+                <item>4000</item>
+        </string-array>
+    <string-array name="four_of_a_kind_Array">
+                <item>2x the 3 Of A Kind Value</item>
+                <item>4x the 3 Of A Kind Value</item>
+                <item>1000</item>
+                <item>2000</item>
+        </string-array>
+    <string-array name="gob_score_Array">
+                <item>0</item>
+                <item>300</item>
+                <item>500</item>
+                <item>750</item>
+                <item>1000</item>
+        </string-array>
+    <string-array name="num_players_Array">
+                <item>1</item>
+                <item>2</item>
+        </string-array>
+    <string-array name="onepair_Array">
+                <item>100</item>
+                <item>200</item>
+                <item>300</item>
+                <item>500</item>
+        </string-array>
+    <string-array name="six_of_a_kind_Array">
+                <item>4x the 3 Of A Kind Value</item>
+                <item>8x the 3 Of A Kind Value</item>
+                <item>3000</item>
+                <item>6000</item>
+                <item>10000</item>
+        </string-array>
+    <string-array name="six_ones_Array">
+                <item>5000</item>
+                <item>10000</item>
+        </string-array>
+    <string-array name="straight_Array">
+                <item>1000</item>
+                <item>1200</item>
+                <item>1500</item>
+                <item>2500</item>
+        </string-array>
+    <string-array name="three_pair_Array">
+                <item>500</item>
+                <item>600</item>
+                <item>750</item>
+                <item>1000</item>
+                <item>1500</item>
+        </string-array>
+    <string-array name="two_pair_Array">
+                <item>1500</item>
+                <item>2000</item>
+                <item>2500</item>
+                <item>3000</item>
+        </string-array>
+    <string-array name="win_score_Array">
+                <item>1000</item>
+                <item>2500</item>
+                <item>5000</item>
+                <item>7500</item>
+                <item>10000</item>
+        </string-array>
+    <string name="Cancel">"Cancelar"</string>
+    <string name="ChooseGame">"Escolha um Novo Tipo de Jogo"</string>
+    <string name="HowToPlay">"OhFark é jogado por um ou dois jogadores, com cada jogador em sucessão com uma volta em jogar os dados. Cada jogador\0027s sua vez resulta em uma pontuação, e as pontuações de cada jogador acumular um total de vencimento de 1000 - 10,000."</string>
+    <string name="LandPlayerScore">"Jogador 1 Pontuação\003A 0 Jogador 2 Pontuação\oo3A: 0"</string>
+    <string name="MY_AD_UNIT_ID">"a14f4924b2df6ab"</string>
+    <string name="OnePlayer">"Uma Jogador"</string>
+    <string name="PlayerScore">"Jogador 1 Pontuação\003A 0 \nJogador 2 Pontuação\003A: 0"</string>
+    <string name="Rules">"No início de cada vez, o jogador joga dados. Após cada rodada, um ou mais dados de pontuação deve ser selecionado. O jogador pode, então, quer acabar com a sua volta e banco a pontuação acumulada até agora, ou continuar rolando os dados. Se o jogador marcou todos os seis dados, eles \022Hot Dice\022 e pode continuar a sua vez com um novo rolo de todos os seis dados, somando-se a pontuação que já acumulou. Não há limite para o número de \022Hot Dice\022 um jogador pode rolar em um turno. Se nenhum dos dados marcar em qualquer lance, o jogador tem \022FARKLED\022 e todos os pontos para que por sua vez são perdidas. No final do jogador\0027s virar, o próximo jogador tem sua vez. Uma vez que um jogador tenha atingido um total de pontos ganhar, o outro jogador tem uma última vez para marcar pontos suficientes para superar o high-score."</string>
+    <string name="TwoPlayer">"Dois Jogador"</string>
+    <string name="app_label">"OhFarkle"</string>
+    <string name="app_name">"OhFark"</string>
+    <string name="btnRollClick">"HandleRoll"</string>
+    <string name="buttonHandler">"buttonClickEvent"</string>
+    <string name="cancel">Cancel</string>
+    <string name="check_avail">Check If Available</string>
+    <string name="dialog_message">Você gosta OhFark? Por favor, reserve um tempo para avaliá-lo.\n</string>
+    <string name="dialog_message_never">Nem</string>
+    <string name="dialog_message_no_gp">Se não tem o Google Play instalado</string>
+    <string name="dialog_message_not_now">Não Agora</string>
+    <string name="dialog_message_rate">Taxa </string>
+    <string name="dialog_message_yes">Sim</string>
+    <string name="disclaimer">"Todos os outros logotipos e marcas comerciais são propriedade dos seus respectivos donos. \U00ae e \u2122 denote marcas registradas nos Estados Unidos e em outros países"</string>
+    <string name="donate1">"Doe um dólar"</string>
+    <string name="hello">"Olá Mundo, OhFarkActivity!"</string>
+    <string name="password">Password:</string>
+    <string name="register">Register</string>
+    <string name="save">Save</string>
+    <string name="scoring_handler">"scoringClick"</string>
+    <string name="sign_in">Sign In</string>
+    <string name="stAStraight">"A linha reta"</string>
+    <string name="stAStraightPoints">"Quantos pontos é uma linha reta vale a pena?"</string>
+    <string name="stAbout">"Sobre"</string>
+    <string name="stAbout_lr">"OhFark 2.0 \u00A9 2015"</string>
+    <string name="stCompany">"South Bound Apps"</string>
+    <string name="stConfigOptions">"Configurar opções de Pontuação"</string>
+    <string name="stCredits">"Créditos: Baseado em um projeto open source por mikgonz!"</string>
+    <string name="stCurrentScore">"Score Dice:"</string>
+    <string name="stDiceScore">"Dice Pontuação \: "</string>
+    <string name="stDie1">"Die1"</string>
+    <string name="stDie2">"Die2"</string>
+    <string name="stDie3">"Die3"</string>
+    <string name="stDie4">"Die4"</string>
+    <string name="stDie5">"Die5"</string>
+    <string name="stDie6">"Die6"</string>
+    <string name="stDieScore">" 1"</string>
+    <string name="stDoNotFlip">"Não virar a tela"</string>
+    <string name="stDonate">"Doar"</string>
+    <string name="stExit">"Saída"</string>
+    <string name="stFarkles">" Farkles em uma fileira"</string>
+    <string name="stFinalRound">"Fase Final"</string>
+    <string name="stFiveOfKind">"Cinco de um tipo"</string>
+    <string name="stFiveOfKind3XValue">3x the 3 Of A Kind Value</string>
+    <string name="stFiveOfKind6XValue">6x the 3 Of A Kind Value</string>
+    <string name="stFiveOfKindPoints">"Quantos pontos Cinco of a Kind vale a pena?"</string>
+    <string name="stFlipScreen">"Virar a tela"</string>
+    <string name="stFlipTheScreen">"Virar a tela"</string>
+    <string name="stFourOfKind">"Four of a Kind"</string>
+    <string name="stFourOfKind2XValue">2x the 3 Of A Kind Value</string>
+    <string name="stFourOfKind4XValue">4x the 3 Of A Kind Value</string>
+    <string name="stFourOfKindPoints">"Quantos pontos Four of a Kind vale a pena?"</string>
+    <string name="stGOB">"Obter-On-Board Score"</string>
+    <string name="stGameOver">"Game Over!"</string>
+    <string name="stHelp">"Socorro"</string>
+    <string name="stHowManyPoints">"Quantos pontos vai demorar para ganhar?"</string>
+    <string name="stHowManyToGOB">"Quantos pontos necessários para obter-On-Board?"</string>
+    <string name="stLword0">"Congrats  "</string>
+    <string name="stLword1">"Você está brincando comigo  "</string>
+    <string name="stLword2">"E o vencedor é \.  "</string>
+    <string name="stLword3">"UAU,  "</string>
+    <string name="stLword4">"Eu não posso acreditar nisso  "</string>
+    <string name="stMachine">Machine</string>
+    <string name="stNewGame">"New Game"</string>
+    <string name="stNoScoreSinglePair">"Sem pontuação para o restante único par"</string>
+    <string name="stNumFarkles">"Você tem 0 farkles em uma fileira"</string>
+    <string name="stOptions">"Opções"</string>
+    <string name="stPass">"PONTO"</string>
+    <string name="stPlay">Jogar</string>
+    <string name="stPlayAgain">"Jogar novamente!"</string>
+    <string name="stPlayAgainTitle">"Jogar novamente?"</string>
+    <string name="stPlayNow">"Jogue Agora"</string>
+    <string name="stPlayer1">"Jogador 1"</string>
+    <string name="stPlayer1Score">"1"</string>
+    <string name="stPlayer2">"Jogador 2"</string>
+    <string name="stPlayer2Score">"1"</string>
+    <string name="stPoints">"PONTO"</string>
+    <string name="stQuit">"Saia!"</string>
+    <string name="stResetOptions">"Redefinir todas as opções"</string>
+    <string name="stRoll">"ROLO"</string>
+    <string name="stRword0">"  você ganhou!"</string>
+    <string name="stRword1">"  lembre-se, cada cão tem seu dia!"</string>
+    <string name="stRword2">"  você deve ir pro!"</string>
+    <string name="stRword3">"  é melhor verificar-se!"</string>
+    <string name="stRword4">"  você tem tanta sorte! \""</string>
+    <string name="stScore">"PONTO"</string>
+    <string name="stScoreAStraight">"Marque uma linha reta"</string>
+    <string name="stScoreOnePair">"Pontuação on One Pair"</string>
+    <string name="stScoreSinglePair">"Restante único par vai marcar"</string>
+    <string name="stScoreStraightOff">"A linha reta não vai ganhar nenhum ponto"</string>
+    <string name="stScoreStraightOn">"A linha reta ganhará pontos especificados"</string>
+    <string name="stScoring">"Como Pontuação"</string>
+    <string name="stScoringOptions">"Opções de pontuação"</string>
+    <string name="stSinglePair">"Um único par"</string>
+    <string name="stSinglePairPoints">"Quantos pontos de um único par pena"</string>
+    <string name="stSixOfKind">"Seis de um tipo"</string>
+    <string name="stSixOfKind4XValue">4x the 3 Of A Kind Value</string>
+    <string name="stSixOfKind8XValue">8x the 3 Of A Kind Value</string>
+    <string name="stSixOfKindPoints">"Quantos pontos é Six of a Kind vale a pena?"</string>
+    <string name="stSixOnes">"Seis das One"</string>
+    <string name="stSixOnesInstantWin">Instant Win</string>
+    <string name="stSixOnesPoints">"Quantos pontos são Six One do vale?"</string>
+    <string name="stSlogan">"OhFark, Diversão para toda a família!"</string>
+    <string name="stSoundFX">"FX Som"</string>
+    <string name="stSoundOff">"O som é Off"</string>
+    <string name="stSoundOn">"O som é On"</string>
+    <string name="stThreeFarkInRow">"3 farkles in-a-row pena"</string>
+    <string name="stThreeFarkInRowCheckBox">"3 farkles in-a-row pena"</string>
+    <string name="stThreeFarkNegativeOff">"Pontuação Negativa de estimação"</string>
+    <string name="stThreeFarkNegativeOn">"Pontuação não vai abaixo de 0"</string>
+    <string name="stThreeFarkNegativeScoreCheckBox">"Resultado negativo?"</string>
+    <string name="stThreeFarkPenaltyHowManyPoints">"Quantos pontos para a Penalty Farkle?"</string>
+    <string name="stThreeFarkPenaltyOff">"Não há multa para 3 farkles in-a-row"</string>
+    <string name="stThreeFarkPenaltyOn">"Multa para 3 farkles in-a-row"</string>
+    <string name="stThreeFarkPenaltyOptions">"3 opções de penalidade Farkle"</string>
+    <string name="stThreeFarkPenaltyPoints">"Farkle perda de pontos"</string>
+    <string name="stThreePair">"Três Pair"</string>
+    <string name="stThreePairPoints">"Quantos pontos Três Pair vale a pena?"</string>
+    <string name="stTwoThreeOfKindScore">"2, 3 of a Kind Scoring"</string>
+    <string name="stTwoThreeOfKindSetPointsOff">"Rolando 2, 3 de um tipo vai ganhar a soma dos 2, 3 of a Kind"</string>
+    <string name="stTwoThreeOfKindSetPointsOn">"Rolando 2, 3 de um tipo vai ganhar uma quantidade de pontos"</string>
+    <string name="stTwoThreeOfKindValue">"2, 3, com um valor Tipo Pontos"</string>
+    <string name="stWWW">"http://www.soboapps.com"</string>
+    <string name="stWinner">"Vencedor \: 0"</string>
+    <string name="stWinnerButton">Vitórias</string>
+    <string name="stWinningScore">"Score Vencer"</string>
+    <string name="stYes">"Sim"</string>
+    <string name="stYouHave">"Você tem "</string>
+    <string name="startButtonHandler">"buttonStartClick"</string>
+    <string name="ststTwoThreeOfKindWorth">"Quantos pontos são 2, 3 de um tipo vale a pena?"</string>
+    <string name="username">Username:</string>
+</resources>

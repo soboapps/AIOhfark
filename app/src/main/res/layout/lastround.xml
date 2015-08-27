@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.soboapps.ohfark.Flip180 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llParent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#263238"
+    android:orientation="vertical" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:android1="http://schemas.android.com/apk/res/android"
+        android:id="@+id/Overlay_activity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="100dp"
+        android1:layout_marginBottom="100dp"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/ivOverlayEntertask"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lastround"
+            android:onClick="onScore"
+            android:text="@string/stFinalRound"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</com.soboapps.ohfark.Flip180>
+
+
+
+
+

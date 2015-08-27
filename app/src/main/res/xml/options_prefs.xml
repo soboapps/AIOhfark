@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="Options">
+        <Preference
+                android:key="resetPrefs"       
+                android:title="@string/stResetOptions"
+                android:enabled="true" />    
+    
+        <Preference
+                android:key="scorePrefs"
+                android:title="@string/stConfigOptions"/>
+        
+        <CheckBoxPreference
+                android:title="@string/stFlipScreen"
+                android:defaultValue="true"
+                android:summaryOff="@string/stDoNotFlip"
+                android:summaryOn="@string/stFlipTheScreen"
+                android:key="screenPrefCheck" />
+        
+        <CheckBoxPreference
+                android:title="@string/stSoundFX"
+                android:defaultValue="true"
+                android:summaryOff="@string/stSoundOff"
+                android:summaryOn="@string/stSoundOn"
+                android:key="soundPrefCheck" />  
+        <!-- 
+        <CheckBoxPreference
+                android:title="Allow Shake to Roll"
+                android:defaultValue="false"
+                android:summaryOff="Shake to Roll is Off"
+                android:summaryOn="Shake to Roll is On"
+                android:key="shakerPrefCheck" />  
+        -->
+        
+       <Preference
+                android:title="@string/stPlayNow"
+                android:key="twoPlayPref"
+                android:enabled="true" />
+    
+</PreferenceScreen>

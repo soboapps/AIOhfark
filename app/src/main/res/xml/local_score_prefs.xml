@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/stScoringOptions">
+
+        <ListPreference
+                android:title="@string/stWinningScore"
+                android:summary="@string/stHowManyPoints"
+                android:key="winScorePref"
+                android:defaultValue="10000"
+                android:entries="@array/win_score_Array"
+                android:entryValues="@array/win_score_Array" />
+        
+        <ListPreference
+                android:title="@string/stGOB"
+                android:summary="@string/stHowManyToGOB"
+                android:key="gobScorePref"
+                android:defaultValue="0"
+                android:entries="@array/gob_score_Array"
+                android:entryValues="@array/gob_score_Array" />
+
+        
+		<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:title="@string/stThreeFarkInRow"
+			    android:key="farkle_penalty_options"
+			    android:summary="@string/stThreeFarkPenaltyOptions" >
+			     
+		<CheckBoxPreference
+                android:title="@string/stThreeFarkInRow"
+                android:defaultValue="false"
+                android:summaryOff="@string/stThreeFarkPenaltyOff"
+                android:summaryOn="@string/stThreeFarkPenaltyOn"
+                android:key="farklePenalty" />
+     
+        <CheckBoxPreference
+                android:title="@string/stThreeFarkNegativeScoreCheckBox"
+                android:defaultValue="false"
+                android:summaryOff="@string/stThreeFarkNegativeOff"
+                android:summaryOn="@string/stThreeFarkNegativeOn"
+                android:key="allowNegScore"
+                android:dependency="farklePenalty" 
+                android:shouldDisableView="true"/>
+             
+        <ListPreference
+                android:title="@string/stThreeFarkPenaltyPoints"
+                android:summary="@string/stThreeFarkPenaltyHowManyPoints"
+                android:key="farklePenaltyPref"
+                android:defaultValue="-1000"
+                android:entries="@array/farkle_Array"
+                android:entryValues="@array/farkle_Array"
+                android:dependency="farklePenalty" 
+                android:shouldDisableView="true"/> 
+
+        </PreferenceScreen>
+
+<!--        
+        <CheckBoxPreference
+                android:title="@string/stScoreOnePair"
+                android:defaultValue="false"
+                android:summaryOff="@string/stNoScoreSinglePair"
+                android:summaryOn="@string/stScoreSinglePair"
+                android:key="scoreOnePairPref" />
+                
+        <ListPreference
+                android:title="@string/stSinglePair"
+                android:summary="@string/stSinglePairPoints"
+                android:key="onePairPref"
+                android:defaultValue="100"
+                android:entries="@array/onepair_Array"
+                android:entryValues="@array/onepair_Array"
+                android:dependency="scoreOnePairPref"
+                android:shouldDisableView="true" />
+-->                
+        <ListPreference
+                android:title="@string/stThreePair"
+                android:summary="@string/stThreePairPoints"
+                android:key="threePairPref"
+                android:defaultValue="1500"
+                android:entries="@array/three_pair_Array"
+                android:entryValues="@array/three_pair_Array" />
+
+        <ListPreference
+                android:title="@string/stFourOfKind"
+                android:summary="@string/stFourOfKindPoints"
+                android:key="fourOfAKindPref"
+                android:defaultValue="@string/stFourOfKind2XValue"
+                android:entries="@array/four_of_a_kind_Array"
+                android:entryValues="@array/four_of_a_kind_Array" />
+                
+        <ListPreference
+                android:title="@string/stFiveOfKind"
+                android:summary="@string/stFiveOfKindPoints"
+                android:key="fiveOfAKindPref"
+                android:defaultValue="@string/stFiveOfKind3XValue"
+                android:entries="@array/five_of_a_kind_Array"
+                android:entryValues="@array/five_of_a_kind_Array" />
+                
+        <ListPreference
+                android:title="@string/stSixOfKind"
+                android:summary="@string/stSixOfKindPoints"
+                android:key="sixOfAKindPref"
+                android:defaultValue="@string/stSixOfKind4XValue"
+                android:entries="@array/six_of_a_kind_Array"
+                android:entryValues="@array/six_of_a_kind_Array" />
+                
+        <ListPreference
+                android:title="@string/stSixOnes"
+                android:summary="@string/stSixOnesPoints"
+                android:key="sixonesPref"
+                android:defaultValue="10000"
+                android:entries="@array/six_ones_Array"
+                android:entryValues="@array/six_ones_Array" />
+                
+        <CheckBoxPreference
+                android:title="@string/stScoreAStraight"
+                android:defaultValue="true"
+                android:summaryOff="@string/stScoreStraightOff"
+                android:summaryOn="@string/stScoreStraightOn"
+                android:key="toScoreStraightPref" />
+                
+        <ListPreference
+                android:title="@string/stAStraight"
+                android:summary="@string/stAStraightPoints"
+                android:key="straightPref"
+                android:defaultValue="1500"
+                android:entries="@array/straight_Array"
+                android:entryValues="@array/straight_Array"
+                android:dependency="toScoreStraightPref"
+                android:shouldDisableView="true" />
+                
+        <CheckBoxPreference
+                android:title="@string/stTwoThreeOfKindScore"
+                android:defaultValue="true"
+                android:summaryOff="@string/stTwoThreeOfKindSetPointsOff"
+                android:summaryOn="@string/stTwoThreeOfKindSetPointsOn"
+                android:key="toScoreTwoTripsPref" />
+                
+        <ListPreference
+                android:title="@string/stTwoThreeOfKindValue"
+                android:summary="@string/ststTwoThreeOfKindWorth"
+                android:key="twoTripletScorePref"
+                android:defaultValue="2500"
+                android:entries="@array/two_pair_Array"
+                android:entryValues="@array/two_pair_Array"
+                android:dependency="toScoreTwoTripsPref"
+                android:shouldDisableView="true" />
+
+</PreferenceScreen>

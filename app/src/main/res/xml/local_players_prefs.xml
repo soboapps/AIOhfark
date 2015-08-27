@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="playerPrefs"
+    android:title="@string/stPlayerSetup">
+
+    <PreferenceCategory
+        android:key="NumOfPlayerPref">
+
+    <ListPreference
+        android:title="@string/stNumberPlayers"
+        android:summary="@string/stHowManyPlayers"
+        android:key="playerNumPref"
+        android:defaultValue="2"
+        android:entries="@array/num_players_Array"
+        android:entryValues="@array/num_players_Array" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/stPlayerSetup"
+        android:key="NamePref">
+
+             <EditTextPreference
+                android:title="@string/stEnterFirstPlayerName"
+                android:defaultValue="@string/stPlayer1"
+                android:key="player1NamePref" />
+
+             <EditTextPreference
+                android:title="@string/stEnterSecondPlayerName"
+                android:defaultValue="@string/stPlayer2"
+                android:enabled="true"
+                android:key="player2NamePref" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/stNotHumanBeta">
+
+        <CheckBoxPreference
+            android:id="@+id/human_player"
+            android:enabled="true"
+            android:title="@string/stIsSecondPlayerHumanBeta"
+            android:defaultValue="true"
+            android:summaryOff="@string/stSeconPlayerNotHuman"
+            android:summaryOn="@string/stSeconPlayerHuman"
+            android:key="player2IsHumanPref"
+            android:disableDependentsState="true" />
+
+        <ListPreference
+            android:title="@string/stDifficultyOfAndroidBeta"
+            android:key="player2DiffPref"
+            android:defaultValue="@string/stDefaultEasy"
+            android:entries="@array/difficulty_Array"
+            android:entryValues="@array/difficulty_Array"
+            android:dependency="player2IsHumanPref" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/stNewGame">
+        <Preference
+            android:title="@string/stPlayNow"
+            android:key="playPref"
+            android:enabled="true" />
+        <Preference
+            android:key="resetPrefs"
+            android:title="@string/stResetOptions"
+            android:enabled="true" />
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

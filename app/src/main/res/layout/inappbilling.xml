@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="vertical"
+   android:background="@drawable/donate" 
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent" >
+
+        <Button
+                android:id="@+id/main_purchase_yes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/donate1" />
+
+        <ImageView
+                android:id="@+id/main_purchase_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/donate"
+                android:visibility="gone" />
+        
+</LinearLayout>

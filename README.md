@@ -1,4 +1,4 @@
-# OhFark (Farkle)
+# OhFark (Farkle) - https://github.com/soboapps/OhFark
 Farkle game for Android
 
 This is the working version of OhFark with an AI (Human vs Android)

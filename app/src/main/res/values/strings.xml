@@ -82,6 +82,8 @@
     <string name="stYouHave">You have </string>
     <string name="stFarkles"> Farkles in a row</string>
 
+    <string name="stOverLayMvsA">\n\nWe have added a "Single Player Mode". :-) \n\nHuman vs Android is a new feature and may contain bugs.\n\nPlease submit all issues to soboapps@gmail.com\n\n\nTap to continue</string>
+
     <!-- New Game Menu -->
     <string name="stNumberPlayers">Number of Players</string>
     <string name="stHowManyPlayers">How many people are playing?</string>

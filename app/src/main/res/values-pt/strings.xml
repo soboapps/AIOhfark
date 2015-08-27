@@ -3,7 +3,6 @@
 
     <string name="hello">"Olá Mundo, OhFarkActivity!"</string>
     <string name="app_name">"OhFark"</string>
-    <string name="MY_AD_UNIT_ID">"a14f4924b2df6ab"</string>
     <string name="dialog_message_rate">Taxa </string>
     <string name="dialog_message">Você gosta OhFark? Por favor, reserve um tempo para avaliá-lo.\n</string>
     <string name="dialog_message_yes">Sim</string>
@@ -61,6 +60,7 @@
     <string name="stDiceScore">"Dice Pontuação \: "</string>
     <string name="stWinner">"Vencedor \: 0"</string>
     <string name="stWinnerButton">Vitórias</string>
+    <string name="stWaitButton">Aguarde</string>
     <string name="stQuit">"Saia!"</string>
     <string name="stPlayAgain">"Jogar novamente!"</string>
     <string name="stPlay">Jogar</string>
@@ -80,7 +80,30 @@
     <string name="stGameOver">"Game Over!"</string>
    
     <string name="stYouHave">"Você tem "</string>
-    <string name="stFarkles">" Farkles em uma fileira"</string> 
+    <string name="stFarkles">" Farkles em uma fileira"</string>
+
+    <string name = "stOverLayMvsA">\n\nAdicionamos um "Modo Single Player". :-) \n\nHumano vs Android é um novo recurso e podem conter erros. \n\nPor favor envie todos os problemas para soboapps@gmail.com \n\n\nTAP para continuar</string>
+
+    <!-- New Game Menu -->
+    <string name = "stNumberPlayers">Número de Jogadores</string>
+    <string name = "stHowManyPlayers">Quantas pessoas estão jogando?</string>
+    <string name = "stPlayerSetup">Configuração do Leitor</string>
+    <string name = "stPlayer1Setup">Jogador 1 Configuração</string>
+    <string name = "stSetupFirstPlayer">Configuração O primeiro jogador</string>
+    <string name = "stEnterFirstPlayerName">Entre os primeiros jogadores Nome </string>
+    <string name = "stSecondPlayerSetup">Jogador 2 Configuração </string>
+    <string name = "stSetupSecondPlayer">Configuração o segundo jogador </string>
+    <string name = "stEnterSecondPlayerName">Digite o segundo Jogadores Nome </string>
+    <string name = "stIsSecondPlayerHumanBeta">é o segundo jogador humano (Beta) </string>
+    <string name = "stIsSecondPlayerHuman">é o segundo jogador humano </string>
+    <string name = "stSeconPlayerNotHuman">Segundo jogador não está Human </string>
+    <string name = "stSeconPlayerHuman">Segundo Player é humano</string>
+    <string name = "stNotHumanCS">Humano vs Android (em breve)</string>
+    <string name = "stNotHumanBeta">Humano vs Android (Beta)</string>
+    <string name = "stNotHuman">Humano vs Android</string>
+    <string name = "stDifficultyOfAndroidBeta">Dificuldade de Jogador Android (Beta)</string>
+    <string name = "stDifficultyOfAndroid">Dificuldade de Jogador Android</string>
+    <string name = "stDefaultEasy">Easy</string>
     
     <!-- Options Menu -->
     <string name="stResetOptions">"Redefinir todas as opções"</string>

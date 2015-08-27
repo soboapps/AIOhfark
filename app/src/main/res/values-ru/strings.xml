@@ -3,7 +3,6 @@
 
     <string name="hello">"Привет мир, OhFarkActivity!"</string>
     <string name="app_name">"OhFark"</string>
-    <string name="MY_AD_UNIT_ID">"a14f4924b2df6ab"</string>
     <string name="dialog_message_rate">Ставка </string>
     <string name="dialog_message">Вам нравится OhFark? Пожалуйста, найдите время, чтобы оценить его.\n</string>
     <string name="dialog_message_yes">Да</string>
@@ -61,6 +60,7 @@
     <string name="stDiceScore">"Dice-line \: "</string>
     <string name="stWinner">"Победитель \: 0"</string>
     <string name="stWinnerButton">Побед</string>
+    <string name="stWaitButton">Подожди</string>
     <string name="stQuit">"Выход!"</string>
     <string name="stPlayAgain">"Играть снова!"</string>
     <string name="stPlay">Играть</string>
@@ -80,7 +80,29 @@
     <string name="stGameOver">"Игра Закончена!"</string>
    
     <string name="stYouHave">"У вас есть "</string>
-    <string name="stFarkles">" Farkles подряд"</string> 
+    <string name="stFarkles">" Farkles подряд"</string>
+
+    <string name= "stOverLayMvsA"> \n\n We добавили "режим одиночной игры". :-) \n\nчеловека против Android это новая функция, и может содержать ошибки. \n\nПожалуйста, представить все вопросы, soboapps@gmail.com \n\n\nTAP продолжать </string>
+
+    <string name= "stNumberPlayers"> Количество игроков </string>
+    <string name= "stHowManyPlayers"> Сколько людей играет?</string>
+    <string name= "stPlayerSetup"> Установка Player </string>
+    <string name= "stPlayer1Setup"> Игрок 1 Настройка </string>
+    <string name= "stSetupFirstPlayer"> Настройка первого игрока </string>
+    <string name= "stEnterFirstPlayerName"> Введите первые игроки Имя </string>
+    <string name= "stSecondPlayerSetup"> Игрок 2 установка </string>
+    <string name= "stSetupSecondPlayer"> Настройка второго игрока </string>
+    <string name= "stEnterSecondPlayerName"> Введите второе Игроки Имя </string>
+    <string name= "stIsSecondPlayerHumanBeta"> Это второй игрок человека (бета-версия) </string>
+    <string name= "stIsSecondPlayerHuman"> Это второй игрок человека </string>
+    <string name= "stSeconPlayerNotHuman"> Второй игрок не человека </string>
+    <string name= "stSeconPlayerHuman"> Второй Игрок человека </string>
+    <string name= "stNotHumanCS"> Человек против Android (Скоро) </string>
+    <string name= "stNotHumanBeta"> Человек против Android (Beta) </string>
+    <string name= "stNotHuman"> Человек против Android </string>
+    <string name= "stDifficultyOfAndroidBeta"> Сложность Android Player (Beta) </string>
+    <string name= "stDifficultyOfAndroid"> Сложность Android плеер </string>
+    <string name= "stDefaultEasy"> Легко </string>
     
     <!-- Options Menu -->
     <string name="stResetOptions">"Сбросить все параметры"</string>

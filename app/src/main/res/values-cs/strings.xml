@@ -3,7 +3,6 @@
 
     <string name="hello">"Hello World, OhFarkActivity!"</string>
     <string name="app_name">"OhFark"</string>
-    <string name="MY_AD_UNIT_ID">"a14f4924b2df6ab"</string>
     <string name="dialog_message_rate">Rychlost </string>
     <string name="dialog_message">Líbí se vám OhFark? Věnujte prosím čas, aby ho ohodnotit.\n</string>
     <string name="dialog_message_yes">Ano</string>
@@ -61,6 +60,7 @@
     <string name="stDiceScore">"Kostky Skóre \: "</string>
     <string name="stWinner">"Vítěz \: 0"</string>
     <string name="stWinnerButton">vyhrává</string>
+    <string name="stWaitButton">Počkejte</string>
     <string name="stQuit">"Konec!"</string>
     <string name="stPlayAgain">"Hrát znovu!"</string>
     <string name="stPlay">Hrát</string>
@@ -80,7 +80,30 @@
     <string name="stGameOver">"Hra Přes!"</string>
    
     <string name="stYouHave">"Máte "</string>
-    <string name="stFarkles">" Farkles v řadě"</string> 
+    <string name="stFarkles">" Farkles v řadě"</string>
+
+    <string name="stOverLayMvsA"> \n\nImplicitne přidali "režimu pro jednoho hráče." :-) \n\nčlověk vs Android je nová funkce, a může obsahovat chyby. \n\nProsím předložit všechny problémy, které soboapps@gmail.com \n\n\nTAP, aby i nadále </string>
+
+    <!-- New Game Menu -->
+    <string name="stNumberPlayers"> Počet hráčů </string>
+    <string name="stHowManyPlayers"> Kolik lidí se hraje?</string>
+    <string name="stPlayerSetup"> Nastavení Player </string>
+    <string name="stPlayer1Setup"> Hráč 1 Nastavení </string>
+    <string name="stSetupFirstPlayer"> Nastavení první hráč </string>
+    <string name="stEnterFirstPlayerName"> Zadejte první hráči Jméno </string>
+    <string name="stSecondPlayerSetup"> Hráč 2 Nastavení </string>
+    <string name="stSetupSecondPlayer"> Nastavení druhý hráč </string>
+    <string name="stEnterSecondPlayerName"> Zadejte druhé Hráči Jméno </string>
+    <string name="stIsSecondPlayerHumanBeta"> Je druhý hráč člověk (Beta) </string>
+    <string name="stIsSecondPlayerHuman"> Je druhý hráč člověk </string>
+    <string name="stSeconPlayerNotHuman"> Druhý Hráč není člověk </string>
+    <string name="stSeconPlayerHuman"> Druhý Hráč je člověk </string>
+    <string name="stNotHumanCS"> člověk vs Android (Coming Soon) </string>
+    <string name="stNotHumanBeta"> člověk vs Android (Beta) </string>
+    <string name="stNotHuman"> člověk vs Android </string>
+    <string name="stDifficultyOfAndroidBeta"> Obtížnost Android Player (Beta) </string>
+    <string name="stDifficultyOfAndroid"> Obtížnost Android přehrávače </string>
+    <string name="stDefaultEasy"> Easy </string>
     
     <!-- Options Menu -->
     <string name="stResetOptions">"Obnovit všechny možnosti"</string>

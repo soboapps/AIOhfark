@@ -23,7 +23,6 @@ public class Flip180 extends LinearLayout {
     {
         super(context, attrs);
     }
-
     
     @Override
     public void onDraw(Canvas canvas) {

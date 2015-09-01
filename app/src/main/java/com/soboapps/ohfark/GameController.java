@@ -21,44 +21,41 @@ import java.util.Iterator;
 
 public class GameController extends PreferenceActivity {
 
-    private ArrayList<Player> players = new ArrayList<Player>();
+    public ArrayList<Player> players = new ArrayList<Player>();
 
     private int round = 0;
+    private int animationCount = 0;
+    public int WINNING_SCORE;
+    public int GOB_SCORE;
+
+    private boolean negateFarklePenalty = false;
+    private boolean toFarkle = false;
+    private boolean aiPlayer = false;
     public boolean isPlayerPastWinScore = false;
     public boolean didPlayerGetGOB = false;
     public boolean IsHumanPref = true;
     public boolean gameOverMan = false;
     public boolean isLastRound = false;
-    private boolean negateFarklePenalty = false;
-    private boolean toFarkle = false;
-    private boolean aiPlayer = false;
+    public boolean isRoundEnded = true;
+    public boolean showOverlay;
+
+    private String difLevel;
+    private String Easy;
+    private String Medium;
+    private String Hard;
+    private String easy;
+    private String medium;
+    private String hard;
 
     private DieManager dM;
     private OhFarkActivity UI;
 
-    private int animationCount = 0;
-
-    private Player currPlayer;
-    private Player lastPlayer;
-
-    private int WINNING_SCORE;
-    private int GOB_SCORE;
-    private boolean isRoundEnded = true;
-    boolean showOverlay;
 
     public Handler handler;
-
-    public String difLevel;
-    public String Easy;
-    public String Medium;
-    public String Hard;
-    public String easy;
-    public String medium;
-    public String hard;
+    public Player currPlayer;
+    public Player lastPlayer;
 
     public GameController(OhFarkActivity ui) {
-
-
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ui);
 
@@ -238,13 +235,14 @@ public class GameController extends PreferenceActivity {
                                     @Override
                                     public void run() {
 
+                                        //dM.diceOnTable(1);
                                         int d = 0;
-                                        for (int i = 0; i < dM.diceOnTable(1).length; i++){
+                                        for (int i = 0; i < dM.diceOnTable(1).length; i++) {
                                             int[] currentvals = dM.diceOnTable(1);
 
                                             d = currentvals[i];
 
-                                            if (shouldHighlight(i) && d >= 0){
+                                            if (shouldHighlight(i) && d >= 0) {
                                                 onClickDice(i, false);
                                             }
                                         }
@@ -265,18 +263,21 @@ public class GameController extends PreferenceActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(UI);
         String ListDifPreference;
         ListDifPreference = prefs.getString("player2DiffPref", "Easy");
+        GOB_SCORE = Integer.valueOf(prefs.getString("gobScorePref", "0"));
+
 
         final int highlightedScore = Scorer.calculate(dM.getHighlighted(DieManager.ABS_VALUE_FLAG), false, UI);
         final int possibleScore = currPlayer.getInRoundScore() + highlightedScore;
         final int turnScore = currPlayer.getInRoundScore() + highlightedScore + currPlayer.getScore();
 
-        if (((highlightedScore > 0) && (ListDifPreference.equals("Easy")) && (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 3)
-                || (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
+        if (((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 3))
+         || ((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
 
-                || ((highlightedScore > 0) && (ListDifPreference.equals("Medium")) && (turnScore >= GOB_SCORE) && (dM.numDiceRemain()) != 0 && (possibleScore >= 350) || (dM.numDiceRemain() <= 2)
-                || (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
+                || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 350) && (dM.numDiceRemain() <= 2))
+                || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (dM.numDiceRemain() <= 3) && (possibleScore >= 400))
 
-                || ((highlightedScore > 0) && (ListDifPreference.equals("Hard")) && (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300  || (dM.numDiceRemain() <= 3)))) {
+                || ((ListDifPreference.equals("Hard")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300))
+                || ((ListDifPreference.equals("Hard")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (dM.numDiceRemain() <= 3) && (possibleScore >= 400))) {
 
             UI.handler.postDelayed(new Runnable() {
                 @Override
@@ -564,7 +565,7 @@ public class GameController extends PreferenceActivity {
     }
 
     // Determines whether to highlight the dice clicked
-    private boolean shouldHighlight(int index) {
+    public boolean shouldHighlight(int index) {
 
         // Gets the pairs (if any)
         int[] pairs = dM.findPairs(index, DieManager.INDEX_FLAG);

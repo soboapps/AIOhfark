@@ -50,6 +50,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     LinearLayout winnerLayout;
 
     private GameController controller;
+    private Ai_Decision AiD;
     private ArrayList<MyImageView> imageViews = new ArrayList<MyImageView>();
     private int[] letters = new int[6];
     private boolean toFarkle = false;
@@ -147,6 +148,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             updateImages(false, false);
         } else {
             controller = new GameController(this);
+            AiD = new Ai_Decision();
         }
 
         // Restore UI elements
@@ -296,6 +298,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Make sure the Game is not over.
         if (controller.isMachinePlayer()== true || controller.gameOverMan == false){
             controller.aiRoll();
+            //AiD.aiRoll(this);
         }
         //   Using toast's to for work the logic
         //String strI = Integer.toString(possibleScore);
@@ -474,6 +477,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Make sure the Game is not over.
         if (controller.isMachinePlayer()== true || controller.gameOverMan == false){
             controller.aiRoll();
+            //AiD.aiRoll(this);
         }
 
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="difficulty_Array">
                 <item>Easy</item>
@@ -78,7 +78,7 @@
                 <item>7500</item>
                 <item>10000</item>
         </string-array>
-    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/values/ids.xml -->
+    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/values/ids.xml -->
     <eat-comment/>
     <item name="die_img_1" type="id"/>
     <item name="die_img_2" type="id"/>
@@ -87,7 +87,7 @@
     <item name="die_img_5" type="id"/>
     <item name="die_img_6" type="id"/>
     <item name="state" type="id"/>
-    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="Cancel">Cancel</string>
     <string name="ChooseGame">Choose a New Game Type</string>
@@ -120,7 +120,7 @@
     <string name="stAStraight">A Straight</string>
     <string name="stAStraightPoints">How many points is a Straight is worth?</string>
     <string name="stAbout">About</string>
-    <string name="stAbout_lr">OhFark 2.0 \u00A9 2015</string>
+    <string name="stAbout_lr">OhFark 2.0.2 \u00A9 2015</string>
     <string name="stCompany">South Bound Apps</string>
     <string name="stConfigOptions">Configure Scoring Options</string>
     <string name="stCredits">Credits: Based on an open source project by mikgonz!</string>
@@ -175,6 +175,7 @@
     <string name="stNumFarkles">You have 0 Farkles in a row</string>
     <string name="stNumberPlayers">Number of Players</string>
     <string name="stOptions">Options</string>
+    <string name="stOverLayMvsA">\n\nWe have added a "Single Player Mode". :-) \n\nHuman vs Android is a new feature and may contain bugs.\n\nPlease submit all issues to soboapps@gmail.com\n\n\nTap to continue</string>
     <string name="stPass">PASS</string>
     <string name="stPlay">Play</string>
     <string name="stPlayAgain">Play Again!</string>

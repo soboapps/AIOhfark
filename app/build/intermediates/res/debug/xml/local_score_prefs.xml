@@ -145,4 +145,4 @@
                 android:dependency="toScoreTwoTripsPref"
                 android:shouldDisableView="true" />
 
-</PreferenceScreen><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/xml/local_score_prefs.xml -->
+</PreferenceScreen><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/xml/local_score_prefs.xml -->

@@ -8,4 +8,4 @@
     <item android:duration="200" android:drawable="@drawable/die1_roll" />
     <item android:duration="200" android:drawable="@drawable/die5_roll" />
 </animation-list>
-<!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/drawable/anim6.xml -->
+<!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/drawable/anim6.xml -->

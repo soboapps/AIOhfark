@@ -7,4 +7,4 @@
     android:toDegrees="0"
     android:pivotX="50%" 
     android:pivotY="50%" 
-    android:fillAfter="true" /><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/anim/rotate_dialog.xml -->
+    android:fillAfter="true" /><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/anim/rotate_dialog.xml -->

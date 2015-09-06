@@ -6,4 +6,4 @@
 	    <item android:maxLevel="3" android:drawable="@drawable/diek" />
 	    <item android:maxLevel="4" android:drawable="@drawable/diel" />
 	    <item android:maxLevel="5" android:drawable="@drawable/diee" />
-</level-list><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/drawable/dice_farkle.xml -->
+</level-list><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/drawable/dice_farkle.xml -->

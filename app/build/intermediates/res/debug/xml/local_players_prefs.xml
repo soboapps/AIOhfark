@@ -41,7 +41,7 @@
         <CheckBoxPreference
             android:id="@+id/human_player"
             android:enabled="true"
-            android:title="@string/stIsSecondPlayerHumanBeta"
+            android:title="@string/stIsSecondPlayerHuman"
             android:defaultValue="true"
             android:summaryOff="@string/stSeconPlayerNotHuman"
             android:summaryOn="@string/stSeconPlayerHuman"
@@ -49,7 +49,7 @@
             android:disableDependentsState="true" />
 
         <ListPreference
-            android:title="@string/stDifficultyOfAndroidBeta"
+            android:title="@string/stDifficultyOfAndroid"
             android:key="player2DiffPref"
             android:defaultValue="@string/stDefaultEasy"
             android:entries="@array/difficulty_Array"
@@ -61,16 +61,16 @@
     <PreferenceCategory
         android:title="@string/stNewGame">
         <Preference
+            android:key="scorePrefs"
+            android:title="@string/stConfigOptions"/>
+
+        <Preference
             android:title="@string/stPlayNow"
             android:key="playPref"
-            android:enabled="true" />
-        <Preference
-            android:key="resetPrefs"
-            android:title="@string/stResetOptions"
             android:enabled="true" />
     </PreferenceCategory>
 
 
 
 </PreferenceScreen>
-<!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/xml/local_players_prefs.xml -->
+<!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/xml/local_players_prefs.xml -->

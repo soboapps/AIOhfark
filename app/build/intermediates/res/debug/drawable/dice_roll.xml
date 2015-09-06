@@ -6,4 +6,4 @@
 	    <item android:maxLevel="3" android:drawable="@drawable/die4_roll" />
 	    <item android:maxLevel="4" android:drawable="@drawable/die5_roll" />
 	    <item android:maxLevel="5" android:drawable="@drawable/die6_roll" />
-</level-list><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/drawable/dice_roll.xml -->
+</level-list><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/drawable/dice_roll.xml -->

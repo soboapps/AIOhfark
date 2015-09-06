@@ -15,4 +15,4 @@
         android:drawable="@drawable/die4_select" />
     <item
         android:drawable="@drawable/die4_roll" />
-</selector><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/drawable/die4_state.xml -->
+</selector><!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/drawable/die4_state.xml -->

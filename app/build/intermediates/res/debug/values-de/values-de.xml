@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/app/src/main/res/values-de/strings.xml -->
+    <!-- From: file:/D:/Users/Steve/Documents/GitHub/AiOhfark/AIOhfark/app/src/main/res/values-de/strings.xml -->
     <eat-comment/>
     <string-array name="difficulty_Array">
                 <item>Easy</item>
@@ -82,7 +82,6 @@
     <string name="ChooseGame">"Wählen Sie einen neuen Spieltyp"</string>
     <string name="HowToPlay">"OhFark wird durch einen oder zwei Spieler hintereinander gespielt, wobei jeder Spieler eine Umdrehung in Würfeln. Jeder Spieler\0027s drehen führt zu einem Ergebnis, und die Werte für jeden Spieler sammeln, um eine gewinnende insgesamt 1000 - 10,000."</string>
     <string name="LandPlayerScore">"Spieler 1 Ergebnis \003A 0 2 Score \oo3A: 0"</string>
-    <string name="MY_AD_UNIT_ID">"a14f4924b2df6ab"</string>
     <string name="OnePlayer">"Ein Spieler"</string>
     <string name="PlayerScore">"Spieler 1 Score \003A 0 \nSpieler 2 Score \003A: 0"</string>
     <string name="Rules">"Zu Beginn jeder Runde der Spieler würfelt. Nach jeder Rolle, müssen ein oder mehrere Punktewürfel ausgewählt werden. Der Spieler kann dann entweder an der Reihe zu beenden und Bank dem Spielangesammelt hat, oder weiterhin die Würfel rollen. Wenn der Spieler alle sechs Würfel hat, sie 022Hot Dice\022 \ haben und können ihrerseits durch eine neue Rolle aller sechs Würfel weiter, indem auf die Punktzahl die sie bereits gesammelt haben. Es gibt keine Begrenzung für die Anzahl der \ 022Hot Dice \ 022 kann ein Spieler in einem Zug zu rollen. Wenn keiner der Würfel in einem bestimmten Wurf erzielen, muss der Spieler \022FARKLED\022 und alle Punkte in dieser Runde verloren. Am Ende der Spieler \0027s drehen, ist der nächste Spieler ist an der Reihe. Sobald ein Spieler eine Gewinnpunktzahl erreicht, die jeweils andere Spieler hat eine letzte Reihe, genügend Punkte, um diese High-Score zu übertreffen."</string>
@@ -110,11 +109,12 @@
     <string name="stAStraight">"Ein Hetero"</string>
     <string name="stAStraightPoints">"Wie viele Punkte eine gerade wert ist?"</string>
     <string name="stAbout">"Über"</string>
-    <string name="stAbout_lr">"OhFark 2.0 \u00A9 2015"</string>
+    <string name="stAbout_lr">"OhFark 2.0.2 \u00A9 2015"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stConfigOptions">"Konfigurieren Scoring-Optionen"</string>
     <string name="stCredits">"Credits: Gestützt auf einen Open-Source-Projekt von mikgonz!"</string>
     <string name="stCurrentScore">"Dice Score:"</string>
+    <string name="stDefaultEasy"> Einfach </string>
     <string name="stDiceScore">"Dice Score \: "</string>
     <string name="stDie1">"Die1"</string>
     <string name="stDie2">"Die6"</string>
@@ -123,8 +123,12 @@
     <string name="stDie5">"Die6"</string>
     <string name="stDie6">"Die6"</string>
     <string name="stDieScore">" 0"</string>
+    <string name="stDifficultyOfAndroid"> Schwierigkeitsgrad der Android-Player </string>
+    <string name="stDifficultyOfAndroidBeta"> Schwierigkeitsgrad der Android-Player (Beta) </string>
     <string name="stDoNotFlip">"Nicht Klappen Sie den Bildschirm"</string>
     <string name="stDonate">"Spenden"</string>
+    <string name="stEnterFirstPlayerName"> Geben Sie den ersten Spieler Name </string>
+    <string name="stEnterSecondPlayerName"> Geben Sie den zweiten Spieler Name </string>
     <string name="stExit">"Ausgang"</string>
     <string name="stFarkles">" Farkles in Folge"</string>
     <string name="stFinalRound">"Schlussrunde"</string>
@@ -141,8 +145,11 @@
     <string name="stGOB">"Get-On-Board-Score"</string>
     <string name="stGameOver">"Spiel Ist Aus!"</string>
     <string name="stHelp">"Hilfe"</string>
+    <string name="stHowManyPlayers"> Wie viele Menschen zu spielen?</string>
     <string name="stHowManyPoints">"Wie viele Punkte wird es dauern, um zu gewinnen?"</string>
     <string name="stHowManyToGOB">"Wie viele Punkte benötigt, um Get-On-Board?"</string>
+    <string name="stIsSecondPlayerHuman"> Ist der zweite Spieler Menschen </string>
+    <string name="stIsSecondPlayerHumanBeta"> Ist der zweite Spieler Menschen (Beta) </string>
     <string name="stLword0">"Herzlichen Glückwunsch  "</string>
     <string name="stLword1">"Willst du mich verarschen  "</string>
     <string name="stLword2">"And the Winner is \.  "</string>
@@ -151,8 +158,13 @@
     <string name="stMachine">Machine</string>
     <string name="stNewGame">"Neues Spiel"</string>
     <string name="stNoScoreSinglePair">"Nein Punktzahl verbleibenden Einzel Pair"</string>
+    <string name="stNotHuman"> Menschen vs Android </string>
+    <string name="stNotHumanBeta"> Menschen vs Android (Beta) </string>
+    <string name="stNotHumanCS"> Menschen vs Android (in Kürze) </string>
     <string name="stNumFarkles">"Sie haben 0 Farkles in Folge"</string>
+    <string name="stNumberPlayers"> Anzahl der Spieler </string>
     <string name="stOptions">"Optionen"</string>
+    <string name="stOverLayMvsA"> \n\nWir haben sich zu einem "Single-Player-Modus" versetzt. :-) \n\n Menschen vs Android ist eine neue Funktion und kann Fehler enthalten. \n\nBitte senden Sie alle Fragen im Zusammenhang mit soboapps@gmail.com \n\n\nTAP um fortzufahren </string>
     <string name="stPass">"PASS"</string>
     <string name="stPlay">Spielen</string>
     <string name="stPlayAgain">"Spielen Wieder!"</string>
@@ -160,8 +172,10 @@
     <string name="stPlayNow">"Jetzt Spielen"</string>
     <string name="stPlayer1">"Spieler 1"</string>
     <string name="stPlayer1Score">"0"</string>
+    <string name="stPlayer1Setup"> Spieler 1-Setup </string>
     <string name="stPlayer2">"Spieler 2"</string>
     <string name="stPlayer2Score">"0"</string>
+    <string name="stPlayerSetup"> Player Setup </string>
     <string name="stPoints">"ERGEBNIS"</string>
     <string name="stQuit">"Gehen!"</string>
     <string name="stResetOptions">"Zurücksetzen Alle Optionen"</string>
@@ -179,6 +193,11 @@
     <string name="stScoreStraightOn">"Eine Gerade wird Punkte festgelegt verdienen"</string>
     <string name="stScoring">"Wie Ergebnis"</string>
     <string name="stScoringOptions">"Scoring-Optionen"</string>
+    <string name="stSeconPlayerHuman"> Second Player ist Menschen </string>
+    <string name="stSeconPlayerNotHuman"> Second-Player ist nicht menschlich </string>
+    <string name="stSecondPlayerSetup"> Spieler 2 Setup </string>
+    <string name="stSetupFirstPlayer"> Setup der erste Spieler </string>
+    <string name="stSetupSecondPlayer"> Setup der zweite Spieler </string>
     <string name="stSinglePair">"Einzel Pair"</string>
     <string name="stSinglePairPoints">"Wie viele Punkte ein einziges Paar wert"</string>
     <string name="stSixOfKind">"Sechs der A Kind"</string>
@@ -209,6 +228,7 @@
     <string name="stTwoThreeOfKindSetPointsOn">"Rollende 2, 3 von einer Art wird eine bestimmte Menge an Punkte zu sammeln"</string>
     <string name="stTwoThreeOfKindValue">"2, 3 einer Art Punktwert"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
+    <string name="stWaitButton">Warten</string>
     <string name="stWinner">"Winner \: 0"</string>
     <string name="stWinnerButton">Siegen</string>
     <string name="stWinningScore">"Winning Score"</string>

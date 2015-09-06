@@ -4,110 +4,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b70d7f-bf98-40a9-9a57-633fe81a21bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/Ai_Decision.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/Ai_Decision.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/DieManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/DieManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/Flip180.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/Flip180.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameController$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameController$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameController$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameController$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameController.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameOver.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/GameOver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/Help.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/Help.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/OhFarkActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/OhFarkActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/OhFarkActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/OhFarkActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/OhFarkActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/OhFarkActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/OhFarkActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/OhFarkActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/PlayerSetup$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/PlayerSetup$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/PlayerSetup$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/PlayerSetup$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/PlayerSetup$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/PlayerSetup$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/PlayerSetup.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/PlayerSetup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/RateMyApp$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/RateMyApp$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/RateMyApp.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/RateMyApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/UTILS.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/soboapps/ohfark/UTILS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/aidl/debug/dependency.store" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/aidl/debug/dependency.store" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/aidl/debug/com/android/vending/billing/IMarketBillingService.java" afterPath="$PROJECT_DIR$/app/build/generated/source/aidl/debug/com/android/vending/billing/IMarketBillingService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/soboapps/ohfark/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/soboapps/ohfark/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/about.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/about.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim1.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim2.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim3.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim4.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim5.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim6.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/anim6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/dialog.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/dialog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/anim/dice_animation.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/anim/dice_animation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_dead.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_dead.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_farkle.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_farkle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_roll.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_roll.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_select.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_select.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_sides.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/dice_sides.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die1_state.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die1_state.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die2_state.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die2_state.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die3_state.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die3_state.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die4_state.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die4_state.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die5_state.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die5_state.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die6_state.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/die6_state.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/final_round.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/final_round.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/game_over.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/game_over.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/go_play_button.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/go_play_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/go_quit_button.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/go_quit_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/help.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/help.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/inappbilling.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/inappbilling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/lastround.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/lastround.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/lastround.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/lastround.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/local_players_prefs.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/local_players_prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/xml/local_players_prefs.xml" afterPath="$PROJECT_DIR$/app/src/main/res/xml/local_players_prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/local_score_prefs.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/local_score_prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/androidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/androidTest/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/options_prefs.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/options_prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/overlay_prefs.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/overlay_prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/prefs_menu.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/menu/prefs_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/roll_button.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/roll_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/anim/rotate_dialog.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/anim/rotate_dialog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/score_button.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/drawable/score_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/toast_layout.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/toast_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-cs/values-cs.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-cs/values-cs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-de/values-de.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-de/values-de.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-es/values-es.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-es/values-es.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-fr/values-fr.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-fr/values-fr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-it/values-it.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-it/values-it.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-pt/values-pt.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-pt/values-pt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-ru/values-ru.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-ru/values-ru.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Users\Steve\Documents\GitHub\AiOhfark\AIOhfark\AiOhfark.iml" afterPath="$PROJECT_DIR$/AIOhfark.iml" />
-    </list>
+    <list default="true" id="53b70d7f-bf98-40a9-9a57-633fe81a21bb" name="Default" comment="" />
     <ignored path="AIOhfark.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -137,8 +34,8 @@
       <file leaf-file-name="PlayerSetup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/soboapps/ohfark/PlayerSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.093065694">
-              <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.59130436">
+              <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -1862,8 +1759,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/soboapps/ohfark/PlayerSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.093065694">
-          <caret line="37" column="70" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.59130436">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
           <folding />
         </state>
       </provider>

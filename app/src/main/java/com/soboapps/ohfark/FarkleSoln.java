@@ -11,7 +11,7 @@ package com.soboapps.ohfark;
  * efficiently with a computer algorithm.  As a result, I worked out the probabilities by hand and hard coded them
  * into this function.
  *
- * 
+ *
  * May Use in a future implementation of the AI Player
  *
  */

@@ -2,14 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.soboapps.ohfark"
     android:installLocation="auto"
-    android:versionCode="20"
-    android:versionName="2.0" >
-    
-      	<uses-permission android:name="com.android.vending.BILLING" />
-    
-        <uses-sdk 
-            	android:minSdkVersion="7"
-              	android:targetSdkVersion="22" />
+    android:versionCode="203"
+    android:versionName="2.0.3" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="23" />
 
     <application
         android:icon="@drawable/icon"
@@ -40,48 +38,42 @@
                     android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-                <activity
-                        android:name=".Options"
-                        android:finishOnTaskLaunch="true"
-                        android:label="@string/app_name" />
-                <activity
-                        android:name=".FlipOptions"
-                        android:finishOnTaskLaunch="true"
-                        android:label="@string/app_name" />
-                <activity
-                        android:name=".ScoringOptions"
-                        android:finishOnTaskLaunch="true"
-                        android:label="@string/app_name" />
-                <activity
-                        android:name=".PlayerSetup"
-                        android:finishOnTaskLaunch="true"
-                        android:label="@string/app_name" />
-                <activity
-                        android:name=".Help"
-                        android:finishOnTaskLaunch="true"
-                        android:label="@string/stHelp" />
+        <activity
+            android:name=".Options"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ScoringOptions"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".PlayerSetup"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Help"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/stHelp" />
+        <activity
+            android:name=".About"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/stAbout_lr"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.soboapps.ohfark.ABOUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity
-			            android:name=".About"
-                        android:finishOnTaskLaunch="true"
-			            android:label="@string/stAbout_lr"
-			            android:exported="false"
-			            android:theme="@android:style/Theme.Dialog" >
-			            <intent-filter>
-			                <action android:name="com.soboapps.ohfark.ABOUT" />
-			                <category android:name="android.intent.category.DEFAULT" />
-			            </intent-filter>
-		        </activity>
-
-        <activity
-                    android:name=".GameOver"
-                    android:finishOnTaskLaunch="true"
-                    android:label="Game Over"
-                    android:exported="false"
-                    android:background="#c0000000"
-                    android:theme="@android:style/Theme.Translucent" >
-                </activity>
-
+            android:name=".GameOver"
+            android:finishOnTaskLaunch="true"
+            android:label="Game Over"
+            android:exported="false"
+            android:background="#c0000000"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
 
     </application>
 </manifest>

@@ -270,14 +270,13 @@ public class GameController extends PreferenceActivity {
         final int possibleScore = currPlayer.getInRoundScore() + highlightedScore;
         final int turnScore = currPlayer.getInRoundScore() + highlightedScore + currPlayer.getScore();
 
-        if (((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 3))
+        if (((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 2))
          || ((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
 
-                || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 350) && (dM.numDiceRemain() <= 2))
-                || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (dM.numDiceRemain() <= 3) && (possibleScore >= 400))
+                || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 3))
+                || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
 
-                || ((ListDifPreference.equals("Hard")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300))
-                || ((ListDifPreference.equals("Hard")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (dM.numDiceRemain() <= 3) && (possibleScore >= 400))) {
+                || ((ListDifPreference.equals("Hard")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300))) {
 
             UI.handler.postDelayed(new Runnable() {
                 @Override

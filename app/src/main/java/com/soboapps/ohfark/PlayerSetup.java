@@ -36,7 +36,9 @@ public class PlayerSetup extends PreferenceActivity {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 addPreferencesFromResource(R.xml.local_players_prefs);
-                Preference reset = findPreference("resetPrefs");
+                //Preference reset = findPreference("resetPrefs");
+                Preference o = findPreference("scorePrefs");
+
 
                 PreferenceScreen screen = getPreferenceScreen();
                 PreferenceCategory l = (PreferenceCategory)findPreference("NumOfPlayerPref");
@@ -70,6 +72,15 @@ public class PlayerSetup extends PreferenceActivity {
                         }
                 });
                 */
+                // Open Scoring Prefs
+                o.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+                        @Override
+                        public boolean onPreferenceClick(Preference preference) {
+                                startActivity(new Intent(PlayerSetup.this, ScoringOptions.class));
+                                return true;
+                        }
+                });
 
                 Preference p = findPreference("playPref");
 
@@ -84,6 +95,9 @@ public class PlayerSetup extends PreferenceActivity {
 
                 });
 
+
+
+            /*
                 // Reset All the Options back to Default
                 reset.setOnPreferenceClickListener(new OnPreferenceClickListener() {
                         @Override
@@ -102,36 +116,39 @@ public class PlayerSetup extends PreferenceActivity {
                         }
                 });
 
-                setNoti = PreferenceManager.getDefaultSharedPreferences(this );
+            */
+
+                //setNoti = PreferenceManager.getDefaultSharedPreferences(this );
                 //SharedPref tutorial
-                showHelp1 = setNoti.getBoolean("help", true);
+                //showHelp1 = setNoti.getBoolean("help", true);
 
-                if (showHelp1 == true) {
-                        showActivityOverlay();
-                }
+                //if (showHelp1 == true) {
+                //        showActivityOverlay();
+                //}
 
         }
 
-        private void showActivityOverlay() {
-                final Dialog dialog = new Dialog(this,
-                        android.R.style.Theme_Translucent_NoTitleBar);
+        //Show Beta Screen
+        //private void showActivityOverlay() {
+        //        final Dialog dialog = new Dialog(this,
+        //                android.R.style.Theme_Translucent_NoTitleBar);
 
-                dialog.setContentView(R.layout.info_overview);
+        //        dialog.setContentView(R.layout.info_overview);
 
-                RelativeLayout layout = (RelativeLayout) dialog.findViewById(R.id.llOverlay_activity);
-                layout.setBackgroundColor(Color.TRANSPARENT);
-                layout.setOnClickListener(new View.OnClickListener() {
+        //        RelativeLayout layout = (RelativeLayout) dialog.findViewById(R.id.llOverlay_activity);
+        //        layout.setBackgroundColor(Color.TRANSPARENT);
+        //        layout.setOnClickListener(new View.OnClickListener() {
 
-                        @Override
-                        public void onClick(View arg0) {
-                                dialog.dismiss();
-                                SharedPreferences.Editor editor = setNoti.edit();
-                                editor.putBoolean("help", false);
-                                editor.commit();
-                        }
-                });
-                dialog.show();
-        }
+        //                @Override
+        //                public void onClick(View arg0) {
+        //                        dialog.dismiss();
+        //                        SharedPreferences.Editor editor = setNoti.edit();
+        //                        editor.putBoolean("help", false);
+        //                        editor.commit();
+        //                }
+        //        });
+        //        dialog.show();
+        //}
 
         protected void enablePrefs() {
 
@@ -156,9 +173,9 @@ public class PlayerSetup extends PreferenceActivity {
         protected void setUpListeners(boolean setListeners) {
                 CheckBoxPreference c = null;
 
-                if (showHelp1 == true) {
-                        showActivityOverlay();
-                }
+                //if (showHelp1 == true) {
+                //        showActivityOverlay();
+                //}
 
                 for (int i = 2; i <= numOfPlayers; i++) {
                         c = (CheckBoxPreference) findPreference("player" + i
@@ -210,6 +227,7 @@ public class PlayerSetup extends PreferenceActivity {
                 }
 
         }
+
 
         @Override
         protected void onSaveInstanceState(Bundle outState) {

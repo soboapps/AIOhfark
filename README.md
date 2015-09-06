@@ -19,7 +19,7 @@ If none of the dice score in any given throw, the player has "farkled" and all p
 At the end of the player's turn, the dice are passed to the next player and they have their turn.
 Once a player has achieved a winning point total, the other player has one last turn to score enough points to surpass that high-score.
 
-* Two Player & Human vs Android Modes - Local Game Play Only, No Online Play.
+* Two Player & Human vs Android Mode (Single Player) - Local Game Play Only, No Online Play.
 * Screen Flips for Easy 2 Player Games
 * Choose from Easy, Medium or Hard Difficulty Levels for Human vs Android play
 * Wide Range of Scoring Customizations.
@@ -30,5 +30,3 @@ If you find any bugs or have any suggestions, please let me know.
 If you would like to contribute, we could always use help with the better language translation for German, Spanish, French, Italian, Portuguese, Czech and Russian.
 
 You can find it on Google Play:  https://play.google.com/store/apps/details?id=com.soboapps.ohfark
-
-I am still looking for someone to Help with adding an AI.  Any takers, please contact me "soboapps at gmail.com"

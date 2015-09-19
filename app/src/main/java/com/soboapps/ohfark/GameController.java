@@ -90,27 +90,43 @@ public class GameController extends PreferenceActivity {
         int numOfPlayers = Integer.valueOf(prefs.getString("playerNumPref", "2"));
         Boolean isNotAI = Boolean.valueOf(prefs.getBoolean("player2IsHumanPref", true));
 
+        //if (numOfPlayers >= 3)
         //for (int i = 1; i <= numOfPlayers; i++) {
+        //    String temp = prefs.getString("Player " + i + "NamePref", "Player " + i);
+        //    players.add(new Player(temp));
+        //} else {
 
         String mName = "Android";
         String temp1 = (prefs.getString("player1NamePref", "Player 1"));
         String temp2 = (prefs.getString("player2NamePref", "Player 2"));
+        String temp3 = (prefs.getString("player3NamePref", "Player 3"));
+        String temp4 = (prefs.getString("player4NamePref", "Player 4"));
         players.add(new Player(temp1));
         players.add(new Player(temp2));
+        players.add(new Player(temp3));
+        players.add(new Player(temp4));
 
         // Player 2 is a Human
         if (isNotAI == true){
             players.clear();
             players.add(new Player(temp1));
             players.add(new Player(temp2));
+            if (numOfPlayers >= 3){
+                players.add(new Player(temp3));
+            }
+            if (numOfPlayers == 4){
+                players.add(new Player(temp4));
+            }
+            //players.add(new Player(temp3));
+            //players.add(new Player(temp4));
         } else { // Player 2 is the AI, setting name to Android
             players.clear();
             players.add(new Player(temp1));
             players.add(new Player(mName));
         }
 
-        //}
-    }
+        }
+   // }
 
     // Check to to see if the current player is the Machine
     public boolean isMachinePlayer() {
@@ -253,7 +269,7 @@ public class GameController extends PreferenceActivity {
                             }
                         }, 1000);
                     }
-                }, 1500);
+                }, 2000);
             }
         }
     }
@@ -273,7 +289,7 @@ public class GameController extends PreferenceActivity {
         if (((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 2))
          || ((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
 
-                || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 3))
+                || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 350) && (dM.numDiceRemain() <= 3))
                 || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
 
                 || ((ListDifPreference.equals("Hard")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300))) {
@@ -282,7 +298,7 @@ public class GameController extends PreferenceActivity {
                 @Override
                 public void run() {
                     // Score the Dice
-                    if (isRoundEnded == false && dM.numDiceRemain() == 0 || isLastRound == true && turnScore < WINNING_SCORE){
+                    if ((isRoundEnded == false && dM.numDiceRemain() == 0) || (isLastRound == true && turnScore < WINNING_SCORE)){
                         aiRoll();
                     } else {
                         if (highlightedScore > 0) {
@@ -297,7 +313,7 @@ public class GameController extends PreferenceActivity {
         } else {
             // Roll the dice becasue you didn't
             // meet the criteria to score
-            if (isRoundEnded == false && gameOverMan == false) {
+            if ((isRoundEnded == false) && (gameOverMan == false)) {
                 aiRoll();
             }
         }

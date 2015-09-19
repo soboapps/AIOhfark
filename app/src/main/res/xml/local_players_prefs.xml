@@ -7,11 +7,11 @@
     android:title="@string/stPlayerSetup">
 
     <PreferenceCategory
-        android:key="NumOfPlayerPref">
+        android:title="@string/stNumberPlayers"
+        android:key="NumPref">
 
     <ListPreference
-        android:title="@string/stNumberPlayers"
-        android:summary="@string/stHowManyPlayers"
+        android:title="@string/stHowManyPlayers"
         android:key="playerNumPref"
         android:defaultValue="2"
         android:entries="@array/num_players_Array"
@@ -20,22 +20,41 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/stPlayerSetup"
+        android:title="@string/stPlayerNames"
         android:key="NamePref">
 
              <EditTextPreference
                 android:title="@string/stEnterFirstPlayerName"
                 android:defaultValue="@string/stPlayer1"
+                android:maxLength="10"
                 android:key="player1NamePref" />
 
              <EditTextPreference
+                android:id="@+id/second_player"
                 android:title="@string/stEnterSecondPlayerName"
                 android:defaultValue="@string/stPlayer2"
+                android:maxLength="10"
                 android:enabled="true"
                 android:key="player2NamePref" />
+
+            <EditTextPreference
+                android:title="@string/stEnterThirdPlayerName"
+                android:defaultValue="@string/stPlayer3"
+                android:maxLength="10"
+                android:enabled="true"
+                android:key="player3NamePref" />
+
+            <EditTextPreference
+                android:title="@string/stEnterFourPlayerName"
+                android:defaultValue="@string/stPlayer4"
+                android:maxLength="10"
+                android:enabled="true"
+                android:key="player4NamePref" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="IsHumanPref"
         android:title="@string/stNotHumanBeta">
 
         <CheckBoxPreference
@@ -46,7 +65,8 @@
             android:summaryOff="@string/stSeconPlayerNotHuman"
             android:summaryOn="@string/stSeconPlayerHuman"
             android:key="player2IsHumanPref"
-            android:disableDependentsState="true" />
+            android:disableDependentsState="true"
+            android:onClick="itemClicked" />
 
         <ListPreference
             android:title="@string/stDifficultyOfAndroid"

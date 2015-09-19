@@ -1,52 +1,177 @@
 package com.soboapps.ohfark;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
-import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
+import android.widget.RadioGroup;
 
 public class PlayerSetup extends PreferenceActivity {
 
         private int numOfPlayers = 0;
         private boolean playersPrefChanged = true;
+        private boolean player2IsHumanPref = true;
+
+        Boolean isNotAI = true;
+
+        SharedPreferences prefs;
+        PreferenceScreen screen;
+        PreferenceScreen screenH;
+        PreferenceScreen screenN;
+        ListPreference l;
+        PreferenceCategory h;
+        PreferenceCategory n;
+        Preference p2;
+        Preference p3;
+        Preference p4;
+        CheckBoxPreference aI;
+
+
+
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
+
+                prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+                //CheckBoxPreference aI = new CheckBoxPreference(this);
                 addPreferencesFromResource(R.xml.local_players_prefs);
                 Preference o = findPreference("scorePrefs");
 
+                aI = (CheckBoxPreference)findPreference("player2IsHumanPref");
 
-                PreferenceScreen screen = getPreferenceScreen();
-                PreferenceCategory l = (PreferenceCategory)findPreference("NumOfPlayerPref");
-                screen.removePreference(l);
+            //CheckBox Ai = (CheckBox)PlayerSetup.this.findViewById(R.id.human_player);;
 
-                ((PreferenceGroup) findPreference("playerPrefs")).removePreference(l);
+                p2 = findPreference("player2NamePref");
+                p3 = findPreference("player3NamePref");
+                p4 = findPreference("player4NamePref");
+
+
+
+                isNotAI = Boolean.valueOf(prefs.getBoolean("player2IsHumanPref", true));
+
+                if (aI.isChecked()){
+                    //n.addPreference(p2);
+                    getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
+                } else {
+
+                    //n.removePreference(p2);
+                    getPreferenceScreen().findPreference("player2NamePref").setEnabled(false);//Disabling
+                }
+
+
+                //prefs.setOnPreferenceClickListener(pref1_click);
+
+
+
+
+
+                prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+                screen = getPreferenceScreen();
+                l = (ListPreference)findPreference("playerNumPref");
+
+
+                screenH = getPreferenceScreen();
+                h = (PreferenceCategory)findPreference("IsHumanPref");
+
+
+                screenN = getPreferenceScreen();
+                n = (PreferenceCategory)findPreference("NamePref");
+
+                // Remove Player setup if not 3 or 4 players
+                n.removePreference(p3);
+                n.removePreference(p4);
+
+                //Ai = (CheckBox)PlayerSetup.this.findViewById(R.id.human_player);
+                //if (aI.isChecked()){
+                //    n.addPreference(p2);
+                //} else {
+                //    n.removePreference(p2);
+                //}
+
+
+                numOfPlayers = Integer.valueOf(prefs.getString("playerNumPref", "2"));
+
+                for (int i = 1; i <= numOfPlayers; i++) {
+
+
+                    if (i == 1) {
+                        //aI.setChecked(false);
+                    } else {
+                        //aI.setChecked(true);
+                    }
+
+                    if ((i == 2) && (aI.isChecked())) {
+                        //screenH.removePreference(h);
+                        getPreferenceScreen().findPreference("player2NamePref").setEnabled(true);
+                    } else {
+                        //screenH.addPreference(h);
+                        getPreferenceScreen().findPreference("player2NamePref").setEnabled(false);//Disabling
+                    }
+
+                    if (i >= 3) {
+                        screenH.removePreference(h);
+                        aI.setChecked(true);
+                        screen.addPreference(p3);
+                        getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
+                    } else {
+                        screenH.addPreference(h);
+                        screen.removePreference(p3);
+                    }
+
+                    //if (i >= 3) {
+                    //    screen.addPreference(p3);
+                    //    getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
+                    //} else {
+                    //    screen.removePreference(p3);
+                    //}
+
+                    if (i == 4) {
+                        screen.addPreference(p4);
+                    } else {
+                        screen.removePreference(p4);
+                    }
+
+                }
+
+
+                l.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+
+                    @Override
+                    public boolean onPreferenceChange(Preference preference,
+                                                      Object newValue) {
+
+                        playersPrefChanged = true;
+
+                        numOfPlayers = Integer.valueOf((String) newValue);
+
+                        //enablePrefs();
+                        setUpListeners(true);
+
+                        return true;
+                    }
+                });
+
 
                 if (savedInstanceState != null
                         && savedInstanceState.getBoolean("playersPrefChanged")) {
                         numOfPlayers = Integer.valueOf(2);
-                        enablePrefs();
-                        setUpListeners(false);
+                        //enablePrefs();
+                        setUpListeners(true);
 
                 }
 
@@ -72,7 +197,28 @@ public class PlayerSetup extends PreferenceActivity {
                     }
 
                 });
+
+            final CheckBoxPreference finalAI = aI;
+            aI.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+                    @Override
+                    public boolean onPreferenceClick(Preference preference) {
+                        if (finalAI.isChecked()){
+                            //n.addPreference(p2);
+                            getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
+                        } else {
+                            //n.removePreference(p2);
+                            getPreferenceScreen().findPreference("player2NamePref").setEnabled(false);//Disabling
+                        }
+                        return true;
+                    }
+
+                });
+
+
+
         }
+
 
         protected void enablePrefs() {
 
@@ -95,55 +241,64 @@ public class PlayerSetup extends PreferenceActivity {
         }
 
         protected void setUpListeners(boolean setListeners) {
-                CheckBoxPreference c = null;
 
-                for (int i = 2; i <= numOfPlayers; i++) {
-                        c = (CheckBoxPreference) findPreference("player" + i
-                                + "IsHumanPref");
+            CheckBoxPreference c = null;
 
-                        EditTextPreference e = (EditTextPreference) findPreference("player"
-                                + i + "NamePref");
-                        ListPreference l = (ListPreference) findPreference("player" + i
-                                + "DiffPref");
+            //aI.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+            //    @Override
+            //    public boolean onPreferenceClick(Preference preference) {
+            //        return false;
+            //    }
+            //});
 
-                        if (c.isChecked() == true) {
-                                e.setEnabled(true);
-                                l.setEnabled(false);
 
+            for (int i = 2; i <= numOfPlayers; i++) {
+                c = (CheckBoxPreference) findPreference("player" + i + "onePlayPref");
+
+                //for (int i = 2; i <= numOfPlayers; i++) {
+
+                        //if (aI.isChecked()){
+                        //    n.addPreference(p2);
+                        //} else {
+                        //    n.removePreference(p2);
+                        //}
+                        if (i == 1) {
+                           // aI.setChecked(false);
                         } else {
-                                e.setEnabled(false);
-                                l.setEnabled(true);
+                           // aI.setChecked(true);
                         }
 
-                        if (setListeners) {
-
-                                c.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-
-                                        @Override
-                                        public boolean onPreferenceChange(Preference preference, Object newValue) {
-
-                                                int i = Integer.valueOf(""
-                                                        + preference.getKey().charAt(6));
-
-                                                EditTextPreference e = (EditTextPreference) findPreference("player"
-                                                        + i + "NamePref");
-                                                ListPreference l = (ListPreference) findPreference("player"
-                                                        + i + "DiffPref");
-
-                                                if (((Boolean) newValue).booleanValue() == true) {
-                                                        e.setEnabled(true);
-                                                        l.setEnabled(false);
-                                                } else {
-                                                        e.setEnabled(false);
-                                                        l.setEnabled(true);
-                                                }
-
-                                                return true;
-                                        }
-
-                                });
+                        if ((i == 2) && (isNotAI)) {
+                            //screenH.removePreference(h);
+                            getPreferenceScreen().findPreference("player2NamePref").setEnabled(true);
+                        } else {
+                            //screenH.addPreference(h);
+                            getPreferenceScreen().findPreference("player2NamePref").setEnabled(false);//Disabling
                         }
 
+
+                        if (i >= 3) {
+                            getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
+                            screen.addPreference(p3);
+                            aI.setChecked(true);
+                            screenH.removePreference(h);
+                        } else {
+                            screenH.addPreference(h);
+                            screen.removePreference(p3);
+                        }
+
+                        //if (i >= 3) {
+                        //    getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
+                        //    screen.addPreference(p3);
+                        //} else {
+                        //    screen.removePreference(p3);
+                        //}
+
+                        if (i == 4) {
+                            screen.addPreference(p4);
+                        } else {
+                            screen.removePreference(p4);
+                        }
                 }
 
         }

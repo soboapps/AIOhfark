@@ -26,6 +26,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutScore"
+        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
         
@@ -37,12 +38,7 @@
             android:textColor="#FFFFFF"
             android:textSize="25sp" />
 
-    </LinearLayout>
-    
-    <LinearLayout
-        android:id="@+id/linearLayoutCurrentScore"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+
         
         <TextView
             android:id="@+id/die_score"
@@ -50,7 +46,7 @@
             android:layout_height="wrap_content"
             android:text="@string/stCurrentScore"
             android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="22sp" />
 
 	</LinearLayout>
 
@@ -119,7 +115,8 @@
  
         <Button
             android:id="@+id/roll_button"
-            android:layout_width="fill_parent"
+            android:src="@drawable/dief"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="50"
             android:background="@drawable/roll_button"
@@ -162,7 +159,6 @@
                 android:gravity="center"
                 android:maxLines="1"
                 android:background="@drawable/win_button"
-                android:onClick="onRoll"
                 android:text="@string/stWinnerButton"
                 android:textSize="35sp"
                 android:textStyle="bold" />
@@ -189,7 +185,8 @@
         </LinearLayout>
         <Button
             android:id="@+id/score_button"
-            android:layout_width="fill_parent"
+            android:src="@drawable/dief"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="50"
             android:background="@drawable/score_button"

@@ -20,9 +20,13 @@
     <string name="stCredits">"Credits: Sulla base di un progetto open source per mikgonz!"</string>
     <string name="stPlayer1">"Giocatore 1"</string>
     <string name="stPlayer2">"Giocatore 2"</string>
+    <string name="stPlayer3">"Giocatore 3"</string>
+    <string name="stPlayer4">"Giocatore 4"</string>
     <string name="stMachine">Machine</string>
     <string name="stPlayer1Score">"0"</string>
     <string name="stPlayer2Score">"0"</string>
+    <string name="stPlayer3Score">"0"</string>
+    <string name="stPlayer4Score">"0"</string>
     <string name="stDieScore">" 0"</string>
     <string name="stNumFarkles">"Hai 0 Farkles di fila"</string>
     <string name="stCurrentScore">"Punteggio Dice:"</string>
@@ -88,16 +92,23 @@
     <string name="stNumberPlayers"> Numero di giocatori </string>
     <string name="stHowManyPlayers"> Quante persone stanno giocando?</string>
     <string name="stPlayerSetup"> Setup Giocatore </string>
-    <string name="stPlayer1Setup"> Giocatore 1 Setup </string>
+    <string name="stPlayer1Setup"> Giocatore 1 Impostare </string>
+    <string name="stPlayerNames">"Nomi dei giocatori"</string>
     <string name="stSetupFirstPlayer"> Imposta il primo giocatore </string>
     <string name="stEnterFirstPlayerName"> Immettere i primi giocatori Nome </string>
-    <string name="stSecondPlayerSetup"> Giocatore 2 Setup </string>
+    <string name="stSecondPlayerSetup"> Giocatore 2 Impostare </string>
     <string name="stSetupSecondPlayer"> Imposta il secondo giocatore </string>
-    <string name="stEnterSecondPlayerName"> Immettere il secondo Players Nome </string>
+    <string name="stEnterSecondPlayerName"> Immettere il secondo Giocatore Nome </string>
     <string name="stIsSecondPlayerHumanBeta"> è il secondo giocatore umano (Beta) </string>
     <string name="stIsSecondPlayerHuman"> è il secondo giocatore umano </string>
     <string name="stSeconPlayerNotHuman"> secondo giocatore non è umano </string>
     <string name="stSeconPlayerHuman"> Secondo Giocatore è umano </string>
+    <string name="stPlayer3etup">"Giocatore 3 Impostare"</string>
+    <string name="stSetupThirdPlayer">"Impostazione il terzo giocatore"</string>
+    <string name="stEnterThirdPlayerName">"Inserire il Giocatori terzo nome"</string>
+    <string name="stPlayer4Setup">"Giocatore 4 Impostare"</string>
+    <string name="stSetupFourPlayer">"Impostare quarto Giocatore"</string>
+    <string name="stEnterFourPlayerName">"Inserire il quarto Giocatori Nome"</string>
     <string name="stNotHumanCS"> Umano vs Android (Coming Soon) </string>
     <string name="stNotHumanBeta"> Umano vs Android (Beta) </string>
     <string name="stNotHuman"> Umano vs Android </string>
@@ -237,8 +248,9 @@
                 <item>500</item>
         </string-array>
         <string-array name="num_players_Array">
-                <item>1</item>
                 <item>2</item>
+                <item>3</item>
+                <item>4</item>
         </string-array>
         <string-array name="difficulty_Array">
                 <item>Easy</item>

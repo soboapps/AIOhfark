@@ -20,9 +20,13 @@
     <string name="stCredits">"Credits: na open source projektu mikgonz základě!"</string>
     <string name="stPlayer1">"Hráč 1"</string>
     <string name="stPlayer2">"Hráč 2"</string>
+    <string name="stPlayer3">"Hráč 3</string>
+    <string name="stPlayer4">"Hráč 4</string>
     <string name="stMachine">Machine</string>
     <string name="stPlayer1Score">"0"</string>
     <string name="stPlayer2Score">"0"</string>
+    <string name="stPlayer3Score">0</string>
+    <string name="stPlayer4Score">0</string>
     <string name="stDieScore">" 0"</string>
     <string name="stNumFarkles">"Máte 0 Farkles v řadě"</string>
     <string name="stCurrentScore">"Dice skóre:"</string>
@@ -86,8 +90,9 @@
 
     <!-- New Game Menu -->
     <string name="stNumberPlayers"> Počet hráčů </string>
-    <string name="stHowManyPlayers"> Kolik lidí se hraje?</string>
-    <string name="stPlayerSetup"> Nastavení Player </string>
+    <string name="stHowManyPlayers"> Kolik lidí hráčů?</string>
+    <string name="stPlayerSetup"> Nastavení hráčů </string>
+    <string name="stPlayerNames">Jména hráčů</string>
     <string name="stPlayer1Setup"> Hráč 1 Nastavení </string>
     <string name="stSetupFirstPlayer"> Nastavení první hráč </string>
     <string name="stEnterFirstPlayerName"> Zadejte první hráči Jméno </string>
@@ -98,6 +103,12 @@
     <string name="stIsSecondPlayerHuman"> Je druhý hráč člověk </string>
     <string name="stSeconPlayerNotHuman"> Druhý Hráč není člověk </string>
     <string name="stSeconPlayerHuman"> Druhý Hráč je člověk </string>
+    <string name="stPlayer3etup">"Hráč 3 Nastavení"</string>
+    <string name="stSetupThirdPlayer">"Nastavení třetí hráč"</string>
+    <string name="stEnterThirdPlayerName">"Vstoupit do třetí Hráči Jméno"</string>
+    <string name="stPlayer4Setup">"Přehrávač 4 Nastavení"</string>
+    <string name="stSetupFourPlayer">"Nastavení Čtvrtý Hráči"</string>
+    <string name="stEnterFourPlayerName">"Zadejte Čtvrtý Hráči Jméno"</string>
     <string name="stNotHumanCS"> člověk vs Android (Coming Soon) </string>
     <string name="stNotHumanBeta"> člověk vs Android (Beta) </string>
     <string name="stNotHuman"> člověk vs Android </string>
@@ -237,8 +248,9 @@
                 <item>500</item>
         </string-array>
         <string-array name="num_players_Array">
-                <item>1</item>
                 <item>2</item>
+                <item>3</item>
+                <item>4</item>
         </string-array>
         <string-array name="difficulty_Array">
                 <item>Easy</item>
@@ -271,6 +283,5 @@
                 <string name="save">Save</string>
                 <string name="sign_in">Sign In</string>
                 <string name="register">Register</string>
-
 
 </resources>

@@ -20,9 +20,13 @@
     <string name="stCredits">"Créditos: Basado en un proyecto de código abierto por mikgonz!"</string>
     <string name="stPlayer1">"Jugador 1"</string>
     <string name="stPlayer2">"Jugador 2"</string>
+    <string name="stPlayer3">"Jugador 3"</string>
+    <string name="stPlayer4">"Jugador 4"</string>
     <string name="stMachine">Machine</string>
     <string name="stPlayer1Score">"0"</string>
     <string name="stPlayer2Score">"0"</string>
+    <string name="stPlayer3Score">"0"</string>
+    <string name="stPlayer4Score">"0"</string>
     <string name="stDieScore">" 0"</string>
     <string name="stNumFarkles">"Usted tiene 0 Farkles en una fila"</string>
     <string name="stCurrentScore">"Puntuación Dados:"</string>
@@ -88,6 +92,7 @@
     <string name="stNumberPlayers"> Número de jugadores </string>
     <string name="stHowManyPlayers"> ¿Cuántas personas están jugando?</string>
     <string name="stPlayerSetup"> Configuración Jugador </string>
+    <string name="stPlayerNames">"Nombres del jugador"</string>
     <string name="stPlayer1Setup"> Jugador 1 Configuración </string>
     <string name="stSetupFirstPlayer"> Configuración de la Primera jugador </string>
     <string name="stEnterFirstPlayerName"> Introduzca los primeros jugadores Nombre </string>
@@ -98,6 +103,12 @@
     <string name="stIsSecondPlayerHuman"> es el segundo jugador humano </string>
     <string name="stSeconPlayerNotHuman"> Segundo jugador no es humano </string>
     <string name="stSeconPlayerHuman"> Segundo Player es humano </string>
+    <string name="stPlayer3etup">"Jugador 3 Configuración"</string>
+    <string name="stSetupThirdPlayer">"Configurar el tercer jugador"</string>
+    <string name="stEnterThirdPlayerName">"Introduzca el Players Tercer Nombre"</string>
+    <string name="stPlayer4Setup">"Jugador 4 Configuración"</string>
+    <string name="stSetupFourPlayer">"Configuración del Forth jugador"</string>
+    <string name="stEnterFourPlayerName">"Introduzca el Forth jugadores Nombre"</string>
     <string name="stNotHumanCS"> Humano vs Android (próximamente) </string>
     <string name="stNotHumanBeta"> Humano vs Android (Beta) </string>
     <string name="stNotHuman"> Humano vs Android </string>
@@ -237,8 +248,9 @@
                 <item>500</item>
         </string-array>
         <string-array name="num_players_Array">
-                <item>1</item>
                 <item>2</item>
+                <item>3</item>
+                <item>4</item>
         </string-array>
         <string-array name="difficulty_Array">
                 <item>Easy</item>

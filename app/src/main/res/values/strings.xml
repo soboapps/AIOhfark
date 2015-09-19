@@ -20,9 +20,13 @@
     <string name="stCredits">Credits: Based on an open source project by mikgonz!</string>
     <string name="stPlayer1">Player 1</string>
     <string name="stPlayer2">Player 2</string>
+    <string name="stPlayer3">Player 3</string>
+    <string name="stPlayer4">Player 4</string>
     <string name="stMachine">Machine</string>
     <string name="stPlayer1Score">0</string>
     <string name="stPlayer2Score">0</string>
+    <string name="stPlayer3Score">0</string>
+    <string name="stPlayer4Score">0</string>
     <string name="stDieScore"> 0</string>
     <string name="stNumFarkles">You have 0 Farkles in a row</string>
     <string name="stCurrentScore">Dice Score:</string>
@@ -86,8 +90,9 @@
 
     <!-- New Game Menu -->
     <string name="stNumberPlayers">Number of Players</string>
-    <string name="stHowManyPlayers">How many people are playing?</string>
+    <string name="stHowManyPlayers">How many players?</string>
     <string name="stPlayerSetup">Player Setup</string>
+    <string name="stPlayerNames">Player Names</string>
     <string name="stPlayer1Setup">Player 1 Setup</string>
     <string name="stSetupFirstPlayer">Setup the First Player</string>
     <string name="stEnterFirstPlayerName">Enter the First Players Name</string>
@@ -98,6 +103,12 @@
     <string name="stIsSecondPlayerHuman">Is the Second Player Human</string>
     <string name="stSeconPlayerNotHuman">Second Player is Not Human</string>
     <string name="stSeconPlayerHuman">Second Player is Human</string>
+    <string name="stPlayer3etup">Player 3 Setup</string>
+    <string name="stSetupThirdPlayer">Setup the Third Player</string>
+    <string name="stEnterThirdPlayerName">Enter the Third Players Name</string>
+    <string name="stPlayer4Setup">Player 4 Setup</string>
+    <string name="stSetupFourPlayer">Setup the Fourth Player</string>
+    <string name="stEnterFourPlayerName">Enter the Fourth Players Name</string>
     <string name="stNotHumanCS">Human vs Android (Coming Soon)</string>
     <string name="stNotHumanBeta">Human vs Android (Beta)</string>
     <string name="stNotHuman">Human vs Android</string>
@@ -237,8 +248,9 @@
                 <item>500</item>
         </string-array>
         <string-array name="num_players_Array">
-                <item>1</item>
                 <item>2</item>
+                <item>3</item>
+                <item>4</item>
         </string-array>
         <string-array name="difficulty_Array">
                 <item>Easy</item>

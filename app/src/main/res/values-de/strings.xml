@@ -20,9 +20,13 @@
     <string name="stCredits">"Credits: Gestützt auf einen Open-Source-Projekt von mikgonz!"</string>
     <string name="stPlayer1">"Spieler 1"</string>
     <string name="stPlayer2">"Spieler 2"</string>
+    <string name="stPlayer3">"Spieler 3"</string>
+    <string name="stPlayer4">"Spieler 4"</string>
     <string name="stMachine">Machine</string>
     <string name="stPlayer1Score">"0"</string>
     <string name="stPlayer2Score">"0"</string>
+    <string name="stPlayer3Score">"0"</string>
+    <string name="stPlayer4Score">"0"</string>
     <string name="stDieScore">" 0"</string>
     <string name="stNumFarkles">"Sie haben 0 Farkles in Folge"</string>
     <string name="stCurrentScore">"Dice Score:"</string>
@@ -84,24 +88,32 @@
 
     <string name="stOverLayMvsA"> \n\nWir haben sich zu einem "Single-Player-Modus" versetzt. :-) \n\n Menschen vs Android ist eine neue Funktion und kann Fehler enthalten. \n\nBitte senden Sie alle Fragen im Zusammenhang mit soboapps@gmail.com \n\n\nTAP um fortzufahren </string>
 
+    <!-- New Game Menu -->
     <string name="stNumberPlayers"> Anzahl der Spieler </string>
     <string name="stHowManyPlayers"> Wie viele Menschen zu spielen?</string>
-    <string name="stPlayerSetup"> Player Setup </string>
-    <string name="stPlayer1Setup"> Spieler 1-Setup </string>
+    <string name="stPlayerSetup"> Spieler Geräte </string>
+    <string name="stPlayerNames">"Spielernamen"</string>
+    <string name="stPlayer1Setup"> Spieler 1 Geräte </string>
     <string name="stSetupFirstPlayer"> Setup der erste Spieler </string>
     <string name="stEnterFirstPlayerName"> Geben Sie den ersten Spieler Name </string>
-    <string name="stSecondPlayerSetup"> Spieler 2 Setup </string>
+    <string name="stSecondPlayerSetup"> Spieler 2 Geräte </string>
     <string name="stSetupSecondPlayer"> Setup der zweite Spieler </string>
     <string name="stEnterSecondPlayerName"> Geben Sie den zweiten Spieler Name </string>
     <string name="stIsSecondPlayerHumanBeta"> Ist der zweite Spieler Menschen (Beta) </string>
     <string name="stIsSecondPlayerHuman"> Ist der zweite Spieler Menschen </string>
-    <string name="stSeconPlayerNotHuman"> Second-Player ist nicht menschlich </string>
-    <string name="stSeconPlayerHuman"> Second Player ist Menschen </string>
-    <string name="stNotHumanCS"> Menschen vs Android (in Kürze) </string>
+    <string name="stSeconPlayerNotHuman"> Zweite Spieler ist nicht menschlich </string>
+    <string name="stSeconPlayerHuman"> Zweite Spieler ist Menschen </string>
+    <string name="stPlayer3etup">"Spieler 3 Geräte"</string>
+    <string name="stSetupThirdPlayer">"Geräte der dritte Spieler"</string>
+    <string name="stEnterThirdPlayerName">"Geben Sie den dritten Spieler Name"</string>
+    <string name="stPlayer4Setup">"Spieler 4 Geräte"</string>
+    <string name="stSetupFourPlayer">"Richten Sie die Vierte Spieler"</string>
+    <string name="stEnterFourPlayerName">"Geben Sie die Vierte Spieler Name"</string>
+    <string name="stNotHumanCS">"Mensch gegen Android (in Kürze)"</string>
     <string name="stNotHumanBeta"> Menschen vs Android (Beta) </string>
     <string name="stNotHuman"> Menschen vs Android </string>
-    <string name="stDifficultyOfAndroidBeta"> Schwierigkeitsgrad der Android-Player (Beta) </string>
-    <string name="stDifficultyOfAndroid"> Schwierigkeitsgrad der Android-Player </string>
+    <string name="stDifficultyOfAndroidBeta"> Schwierigkeitsgrad der Android-Spieler (Beta) </string>
+    <string name="stDifficultyOfAndroid"> Schwierigkeitsgrad der Android-Spieler </string>
     <string name="stDefaultEasy"> Einfach </string>
     
     <!-- Options Menu -->
@@ -235,9 +247,10 @@
                 <item>300</item>
                 <item>500</item>
         </string-array>
-        <string-array name="num_players_Array">
-                <item>1</item>
+            <string-array name="num_players_Array">
                 <item>2</item>
+                <item>3</item>
+                <item>4</item>
         </string-array>
         <string-array name="difficulty_Array">
                 <item>Easy</item>

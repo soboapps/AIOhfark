@@ -20,9 +20,13 @@
     <string name="stCredits">"Кредиты: на основе проекта с открытым кодом на mikgonz!"</string>
     <string name="stPlayer1">"Игрок 1"</string>
     <string name="stPlayer2">"Игрок 2"</string>
+    <string name="stPlayer3">"Игрок 3"</string>
+    <string name="stPlayer4">"Игрок 4"</string>
     <string name="stMachine">Machine</string>
     <string name="stPlayer1Score">"0"</string>
     <string name="stPlayer2Score">"0"</string>
+    <string name="stPlayer3Score">"0"</string>
+    <string name="stPlayer4Score">"0"</string>
     <string name="stDieScore">" 0"</string>
     <string name="stNumFarkles">"У вас 0 Farkles подряд"</string>
     <string name="stCurrentScore">"Dice Оценка:"</string>
@@ -84,10 +88,12 @@
 
     <string name= "stOverLayMvsA"> \n\n We добавили "режим одиночной игры". :-) \n\nчеловека против Android это новая функция, и может содержать ошибки. \n\nПожалуйста, представить все вопросы, soboapps@gmail.com \n\n\nTAP продолжать </string>
 
+    <!-- New Game Menu -->
     <string name= "stNumberPlayers"> Количество игроков </string>
     <string name= "stHowManyPlayers"> Сколько людей играет?</string>
     <string name= "stPlayerSetup"> Установка Player </string>
     <string name= "stPlayer1Setup"> Игрок 1 Настройка </string>
+    <string name= "stPlayerNames">"Имена игрока"</string>
     <string name= "stSetupFirstPlayer"> Настройка первого игрока </string>
     <string name= "stEnterFirstPlayerName"> Введите первые игроки Имя </string>
     <string name= "stSecondPlayerSetup"> Игрок 2 установка </string>
@@ -98,6 +104,12 @@
     <string name= "stSeconPlayerNotHuman"> Второй игрок не человека </string>
     <string name= "stSeconPlayerHuman"> Второй Игрок человека </string>
     <string name= "stNotHumanCS"> Человек против Android (Скоро) </string>
+    <string name="stPlayer3etup">"Игрок 3 Настройка"</string>
+    <string name="stSetupThirdPlayer">"Настройка третьего игрока"</string>
+    <string name="stEnterThirdPlayerName">"Введите Третий Игроки Имя"</string>
+    <string name="stPlayer4Setup">"Игрок 4 Настройка"</string>
+    <string name="stSetupFourPlayer">"Настройка Форт-плеер"</string>
+    <string name="stEnterFourPlayerName">"Введите четвертый Игроки Имя"</string>
     <string name= "stNotHumanBeta"> Человек против Android (Beta) </string>
     <string name= "stNotHuman"> Человек против Android </string>
     <string name= "stDifficultyOfAndroidBeta"> Сложность Android Player (Beta) </string>
@@ -236,8 +248,9 @@
                 <item>500</item>
         </string-array>
         <string-array name="num_players_Array">
-                <item>1</item>
                 <item>2</item>
+                <item>3</item>
+                <item>4</item>
         </string-array>
         <string-array name="difficulty_Array">
                 <item>Easy</item>

@@ -37,6 +37,11 @@ final class Scorer {
                         int doubleTripletStatus = isDoubleTriplet(newArray, c);
                         if (doubleTripletStatus > 0)
                                 return doubleTripletStatus;
+
+                        int noScoreStatus = isNoScore(newArray, c, false);
+                        if (noScoreStatus > 0)
+                                return noScoreStatus;
+
                 }
 
                 int fiveOfAKindStatus = 0;
@@ -293,8 +298,6 @@ final class Scorer {
                 int[] fourArray = isFourOfAKind(array, c, length);
                 int[] threeArray = isThreeOfAKind(array, c, length);
                 //int[] threePairArray = isThreePair(array, c, length);
-
-
                 //int[] twoArray = isOnePair(array, c, length, dM);
 
                 int[] temp = null;
@@ -493,5 +496,34 @@ final class Scorer {
 
                 return score;
         }
+
+        public final static int isNoScore(int[] array, Context c, boolean calledPublicly) {
+                if (array.length < 6)
+                        return 0;
+
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(c);
+
+                boolean toNoScore = prefs.getBoolean("toNoScorePref", true);
+
+                if (!toNoScore)
+                        return 0;
+
+                int noScore = 0;
+                if (toNoScore)
+                        noScore = Integer.valueOf(prefs.getString("noScorePref", "500"));
+
+                if (calledPublicly)
+                        array = count(array);
+
+                boolean isNoScore = (array[0] == 0 && array[1] != 0 && array[2] != 0
+                        && array[3] != 0 && array[4] == 0 && array[5] != 0);
+
+                if (isNoScore)
+                        return noScore;
+                else
+                        return 0;
+
+        }
+
 
 }

@@ -127,22 +127,39 @@
                 android:entryValues="@array/straight_Array"
                 android:dependency="toScoreStraightPref"
                 android:shouldDisableView="true" />
-                
-        <CheckBoxPreference
-                android:title="@string/stTwoThreeOfKindScore"
-                android:defaultValue="true"
-                android:summaryOff="@string/stTwoThreeOfKindSetPointsOff"
-                android:summaryOn="@string/stTwoThreeOfKindSetPointsOn"
-                android:key="toScoreTwoTripsPref" />
-                
-        <ListPreference
-                android:title="@string/stTwoThreeOfKindValue"
-                android:summary="@string/ststTwoThreeOfKindWorth"
-                android:key="twoTripletScorePref"
-                android:defaultValue="2500"
-                android:entries="@array/two_pair_Array"
-                android:entryValues="@array/two_pair_Array"
-                android:dependency="toScoreTwoTripsPref"
-                android:shouldDisableView="true" />
 
-</PreferenceScreen>
+                <CheckBoxPreference
+                        android:title="@string/stNoScore"
+                        android:defaultValue="false"
+                        android:summaryOff="@string/stNoScoreOff"
+                        android:summaryOn="@string/stNoScoreOn"
+                        android:key="toNoScorePref" />
+
+                <ListPreference
+                        android:title="@string/stNoScoreTitle"
+                        android:summary="@string/stNoScorablePoints"
+                        android:key="noScorePref"
+                        android:defaultValue="500"
+                        android:entries="@array/noscorable_Array"
+                        android:entryValues="@array/noscorable_Array"
+                        android:dependency="toNoScorePref"
+                        android:shouldDisableView="true" />
+
+        <CheckBoxPreference
+                        android:title="@string/stTwoThreeOfKindScore"
+                        android:defaultValue="true"
+                        android:summaryOff="@string/stTwoThreeOfKindSetPointsOff"
+                        android:summaryOn="@string/stTwoThreeOfKindSetPointsOn"
+                        android:key="toScoreTwoTripsPref" />
+
+                <ListPreference
+                        android:title="@string/stTwoThreeOfKindValue"
+                        android:summary="@string/ststTwoThreeOfKindWorth"
+                        android:key="twoTripletScorePref"
+                        android:defaultValue="2500"
+                        android:entries="@array/two_pair_Array"
+                        android:entryValues="@array/two_pair_Array"
+                        android:dependency="toScoreTwoTripsPref"
+                        android:shouldDisableView="true" />
+
+        </PreferenceScreen>

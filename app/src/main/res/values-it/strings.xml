@@ -12,7 +12,7 @@
     <string name="disclaimer">"Tutti gli altri marchi e marchi registrati sono di proprietà dei rispettivi proprietari. \U00ae e \u2122 denotano marchi registrati negli Stati Uniti e in altri paesi"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
-    <string name="stAbout_lr">"OhFark 2.0.3 \u00a9 2015"</string>
+    <string name="stAbout_lr">"OhFark 2.0.4 \u00a9 2015"</string>
     <string name="stSlogan">"OhFark, Divertimento per tutta la famiglia!"</string>
     <string name="stDonate">"Donare"</string>
     <string name="donate1">"Donare 1 dollaro"</string>
@@ -184,6 +184,13 @@
     
     <string name="stAStraight">"Retta"</string>
     <string name="stAStraightPoints">"Quanti punti è una retta è la pena?"</string>
+
+    <string name="stNoScore">"6 Non-Punteggio dadi vengono lanciati"</string>
+    <string name="stNoScoreOff">"Nessun punto per rotolare tutti e 6 non-Punteggio dadi"</string>
+    <string name="stNoScoreOn">"Punti per rotolare tutti dadi 6 Non-Punteggio specificato"</string>
+
+    <string name="stNoScoreTitle">"6 Non-Punteggio Dadi Punti Valore"</string>
+    <string name="stNoScorablePoints">"Quanti punti per la laminazione tutti i 6 dadi non-punteggio assegnabile?"</string>
     
     <string name="stTwoThreeOfKindScore">"2, 3 of a Kind Scoring"</string>
     <string name="stTwoThreeOfKindSetPointsOff">"Rotolando 2, 3 di un genere farà guadagnare la somma del 2, 3 of a Kind"</string>

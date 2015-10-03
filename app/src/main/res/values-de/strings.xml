@@ -12,7 +12,7 @@
     <string name="disclaimer">"Alle anderen Logos und Warenzeichen sind Eigentum der jeweiligen Markeninhaber. \U00ae und \u2122 bezeichnen eingetragene Marken in den Vereinigten Staaten und in anderen Ländern"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
-    <string name="stAbout_lr">"OhFark 2.0.3 \u00A9 2015"</string>
+    <string name="stAbout_lr">"OhFark 2.0.4 \u00A9 2015"</string>
     <string name="stSlogan">"OhFark, Spaß für die ganze Familie!"</string>
     <string name="stDonate">"Spenden"</string>
     <string name="donate1">"Donate $ 1"</string>
@@ -184,6 +184,13 @@
     
     <string name="stAStraight">"Ein Hetero"</string>
     <string name="stAStraightPoints">"Wie viele Punkte eine gerade wert ist?"</string>
+
+    <string name="stNoScore">"6 Nicht Bewertbare Würfel gerollt"</string>
+    <string name="stNoScoreOff">"Keine Punkte für das Walzen Alle 6 Nicht Bewertbare Würfel"</string>
+    <string name="stNoScoreOn">"Punkte für roll alle angegebenen 6 Nicht Bewertbare Würfel"</string>
+
+    <string name="stNoScoreTitle">"6 Nicht Bewertbare Würfel Punkt-Wert"</string>
+    <string name="stNoScorablePoints">"Wie viele Punkte für das Walzen Alle 6 Nicht Bewertbare Würfel?"</string>
     
     <string name="stTwoThreeOfKindScore">"2, 3 of a Kind Scoring"</string>
     <string name="stTwoThreeOfKindSetPointsOff">"Rollende 2, 3 von einer Art wird die Summe der 2, 3 of a Kind zu verdienen"</string>

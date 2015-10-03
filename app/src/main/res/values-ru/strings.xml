@@ -12,7 +12,7 @@
     <string name="disclaimer">"Все другие логотипы и товарные знаки являются собственностью соответствующих владельцев. \U00ae и \u2122 обозначают зарегистрированными товарными знаками в Соединенных Штатах и ​​других странах"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
-    <string name="stAbout_lr">"OhFark 2.0.3 \u00A9 2015"</string>
+    <string name="stAbout_lr">"OhFark 2.0.4 \u00A9 2015"</string>
     <string name="stSlogan">"OhFark, Развлечения для всей семьи!"</string>
     <string name="stDonate">"Жертвовать"</string>
     <string name="donate1">"Пожертвуйте $ 1"</string>
@@ -184,6 +184,14 @@
     
     <string name="stAStraight">"Прямо"</string>
     <string name="stAStraightPoints">"Сколько очков будет прямой стоит?"</string>
+
+    <string name="stNoScore">"6 Незасчитываемые Кости проката"</string>
+    <string name="stNoScoreOff">"Нет пунктов для прокатки все кости 6 Незасчитываемые"</string>
+    <string name="stNoScoreOn">"Очки для прокатных все кости 6 Незасчитываемые указанный"</string>
+
+    <string name="stNoScoreTitle">"6 Незасчитываемые Kости очки Значение"</string>
+    <string name="stNoScorablePoints">"Сколько очков для прокатки все 6 Номера подлежащих оценке кости?"</string>
+
     
     <string name="stTwoThreeOfKindScore">"2, 3 вида скоринга"</string>
     <string name="stTwoThreeOfKindSetPointsOff">"Подвижной 2, 3 вида заработает сумму 2, 3 вида"</string>

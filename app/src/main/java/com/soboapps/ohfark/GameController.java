@@ -90,12 +90,6 @@ public class GameController extends PreferenceActivity {
         int numOfPlayers = Integer.valueOf(prefs.getString("playerNumPref", "2"));
         Boolean isNotAI = Boolean.valueOf(prefs.getBoolean("player2IsHumanPref", true));
 
-        //if (numOfPlayers >= 3)
-        //for (int i = 1; i <= numOfPlayers; i++) {
-        //    String temp = prefs.getString("Player " + i + "NamePref", "Player " + i);
-        //    players.add(new Player(temp));
-        //} else {
-
         String mName = "Android";
         String temp1 = (prefs.getString("player1NamePref", "Player 1"));
         String temp2 = (prefs.getString("player2NamePref", "Player 2"));
@@ -125,8 +119,7 @@ public class GameController extends PreferenceActivity {
             players.add(new Player(mName));
         }
 
-        }
-   // }
+    }
 
     // Check to to see if the current player is the Machine
     public boolean isMachinePlayer() {
@@ -287,7 +280,7 @@ public class GameController extends PreferenceActivity {
         final int turnScore = currPlayer.getInRoundScore() + highlightedScore + currPlayer.getScore();
 
         if (((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 2))
-         || ((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
+                || ((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
 
                 || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 350) && (dM.numDiceRemain() <= 3))
                 || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
@@ -401,25 +394,25 @@ public class GameController extends PreferenceActivity {
         UI.finalRoundLayout.setVisibility(View.GONE);
 
         // Play Sound
-        SharedPreferences myPrefs=PreferenceManager.getDefaultSharedPreferences(UI);
+        SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(UI);
         if (myPrefs.getBoolean("soundPrefCheck", true)) {
 
-            if (dM.numDiceRemain() == 5){
+            if (dM.numDiceRemain() == 5) {
                 SoundManager.playSound(5, 1);  //5 DiceRoll
             }
-            if (dM.numDiceRemain() == 4){
+            if (dM.numDiceRemain() == 4) {
                 SoundManager.playSound(4, 1);  //5 DiceRoll
             }
             if (dM.numDiceRemain() == 3) {
                 SoundManager.playSound(3, 1);  //5 DiceRoll
             }
-            if (dM.numDiceRemain() == 2){
+            if (dM.numDiceRemain() == 2) {
                 SoundManager.playSound(2, 1);  //5 DiceRoll
             }
-            if (dM.numDiceRemain() == 1){
+            if (dM.numDiceRemain() == 1) {
                 SoundManager.playSound(1, 1);  //5 DiceRoll
             }
-            if (dM.numDiceRemain() == 0){
+            if (dM.numDiceRemain() == 0) {
                 SoundManager.playSound(6, 1);  //6 DiceRoll
             }
         }
@@ -454,16 +447,17 @@ public class GameController extends PreferenceActivity {
         dM.rollDice();
         UI.updateImages(true, false);
 
-        // If the highest score possible on the table is 0 then its a farkle
-        if (Scorer.calculate(dM.diceOnTable(DieManager.ABS_VALUE_FLAG), true,
-                UI) == 0) {
-            currPlayer.setInRoundScore(0);
-            currPlayer.incrementNumOfFarkles();
-            // True because its a Farkle
-            endRound(true);
-            // Else just show what the player rolled
-        } else
-            UI.updateImages(true, false);
+            // If the highest score possible on the table is 0 then its a farkle
+            if (Scorer.calculate(dM.diceOnTable(DieManager.ABS_VALUE_FLAG), true, UI) == 0) {
+                currPlayer.setInRoundScore(0);
+                currPlayer.incrementNumOfFarkles();
+                // True because its a Farkle
+                endRound(true);
+                // Else just show what the player rolled
+            } else
+
+                UI.updateImages(true, false);
+
     }
 
     // When a dice is clicked the GameController determines which dice to
@@ -605,7 +599,16 @@ public class GameController extends PreferenceActivity {
         // True if there is a straight on the table
         boolean isStraight = Scorer.isStraight(diceOnTable, UI, true) != 0;
 
-        return (!isZero || isThreePair || isStraight);
+        boolean isNoScore = Scorer.isNoScore(diceOnTable, UI, true) != 0;
+
+        // If there are no scorring dice on the First Roll
+        // Allow Highlight all Dice
+        if (isNoScore){
+            return (isNoScore);
+        } else {
+            // Normal Scoring options without No Score Alternative
+            return (!isZero || isThreePair || isStraight);
+        }
     }
 
     // Called when the score button is clicked. Can be called from the AI

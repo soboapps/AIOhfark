@@ -12,7 +12,7 @@
     <string name="disclaimer">"Tous les autres logos et marques sont la propriété des propriétaires respectifs. \U00ae et \u2122 représentent des marques déposées aux Etats-Unis et d'autres pays"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
-    <string name="stAbout_lr">"OhFark 2.0.3 \u00A9 2015"</string>
+    <string name="stAbout_lr">"OhFark 2.0.4 \u00A9 2015"</string>
     <string name="stSlogan">"OhFark, Divertissement pour toute la famille!"</string>
     <string name="stDonate">"Donner"</string>
     <string name="donate1">"Don de 1 $"</string>
@@ -184,6 +184,13 @@
     
     <string name="stAStraight">"A droite"</string>
     <string name="stAStraightPoints">"Combien de points est une quinte vaut?"</string>
+
+    <string name="stNoScore">"6 non-notation dé sont lancés"</string>
+    <string name="stNoScoreOff">"Pas de points pour rouler tous les dé 6 non-notation"</string>
+    <string name="stNoScoreOn">"Points pour rouler tous les dé 6 non-notation spécifiée"</string>
+
+    <string name="stNoScoreTitle">"6 non-notation dé Valeur"</string>
+    <string name="stNoScorablePoints">"Combien de points pour rouler tous les 6 dé non-notation?"</string>
     
     <string name="stTwoThreeOfKindScore">"2, 3 of a Kind de notation"</string>
     <string name="stTwoThreeOfKindSetPointsOff">"Roulant 2, 3 d'un genre gagnera la somme des 2, 3 of a Kind"</string>

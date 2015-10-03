@@ -12,7 +12,7 @@
     <string name="disclaimer">All other logos and trademarks are the property of the respective trademark owners. \u00ae and \u2122 denote registered trademarks in the United States and other countries</string>
     <string name="stCompany">South Bound Apps</string>
     <string name="stWWW">http://www.soboapps.com</string>
-    <string name="stAbout_lr">OhFark 2.0.3 \u00A9 2015</string>
+    <string name="stAbout_lr">OhFark 2.0.4 \u00A9 2015</string>
     <string name="stSlogan">OhFark, Fun for the Entire Family!</string>
     <string name="stDonate">Donate</string>
     <string name="donate1">Donate $1</string>
@@ -173,7 +173,7 @@
     <string name="stSixOfKindPoints">How many points is Six of a Kind worth?</string>
     <string name="stSixOfKind4XValue">4x the 3 Of A Kind Value</string>
     <string name="stSixOfKind8XValue">8x the 3 Of A Kind Value</string>
-    
+
     <string name="stSixOnes">Six One\'s</string>
     <string name="stSixOnesPoints">How many points are Six One\'s worth?</string>
     <string name="stSixOnesInstantWin">Instant Win</string>
@@ -183,7 +183,14 @@
     <string name="stScoreStraightOn">A Straight will earn points specified</string>
     
     <string name="stAStraight">A Straight</string>
-    <string name="stAStraightPoints">How many points is a Straight is worth?</string>
+    <string name="stAStraightPoints">How many points for a Straight?</string>
+
+    <string name="stNoScore">6 Non-Scoring Dice are Rolled</string>
+    <string name="stNoScoreOff">No points for rolling all 6 Non-Scoring dice</string>
+    <string name="stNoScoreOn">Points for rolling all 6 Non-Scoring dice specified</string>
+
+    <string name="stNoScoreTitle">6 Non-Scoring Dice Points Value</string>
+    <string name="stNoScorablePoints">How many points for rolling all 6 Non-Scorable dice?</string>
     
     <string name="stTwoThreeOfKindScore">2, 3 of a Kind Scoring</string>
     <string name="stTwoThreeOfKindSetPointsOff">Rolling 2, 3 of a kind will earn the sum of the 2, 3 of a Kind</string>
@@ -234,6 +241,12 @@
                 <item>1200</item>
                 <item>1500</item>
                 <item>2500</item>
+        </string-array>
+        <string-array
+                name="noscorable_Array">
+                <item>100</item>
+                <item>300</item>
+                <item>500</item>
         </string-array>
         <string-array name="two_pair_Array">
                 <item>1500</item>

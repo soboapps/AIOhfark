@@ -20,7 +20,7 @@ At the end of the player's turn, the dice are passed to the next player and they
 Once a player has achieved a winning point total, the other player has one last turn to score enough points to surpass that high-score.
 
 * Human vs Android Mode (Single Player) & Two to Four Players - Local Game Play Only, No Online Play.
-* Screen Flips for Easy 2 Player Games
+* Screen Flips for Easy 2 - 4 Player Games
 * Choose from Easy, Medium or Hard Difficulty Levels for Human vs Android play
 * Wide Range of Scoring Customizations.
 * Easy "Reset All Options" in case you get carried away.

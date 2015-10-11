@@ -26,6 +26,7 @@
              <EditTextPreference
                 android:title="@string/stEnterFirstPlayerName"
                 android:defaultValue="@string/stPlayer1"
+                android:selectAllOnFocus="true"
                 android:maxLength="10"
                 android:key="player1NamePref" />
 
@@ -33,6 +34,7 @@
                 android:id="@+id/second_player"
                 android:title="@string/stEnterSecondPlayerName"
                 android:defaultValue="@string/stPlayer2"
+                android:selectAllOnFocus="true"
                 android:maxLength="10"
                 android:enabled="true"
                 android:key="player2NamePref" />
@@ -40,6 +42,7 @@
             <EditTextPreference
                 android:title="@string/stEnterThirdPlayerName"
                 android:defaultValue="@string/stPlayer3"
+                android:selectAllOnFocus="true"
                 android:maxLength="10"
                 android:enabled="true"
                 android:key="player3NamePref" />
@@ -47,6 +50,7 @@
             <EditTextPreference
                 android:title="@string/stEnterFourPlayerName"
                 android:defaultValue="@string/stPlayer4"
+                android:selectAllOnFocus="true"
                 android:maxLength="10"
                 android:enabled="true"
                 android:key="player4NamePref" />

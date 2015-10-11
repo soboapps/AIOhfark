@@ -515,8 +515,8 @@ final class Scorer {
                 if (calledPublicly)
                         array = count(array);
 
-                boolean isNoScore = (array[0] == 0 && array[1] != 0 && array[2] != 0
-                        && array[3] != 0 && array[4] == 0 && array[5] != 0);
+                boolean isNoScore = ((array.length == 6) && (array[0] == 0) && (array[1] != 0) && (array[2] != 0)
+                        && (array[3] != 0) && (array[4] == 0) && (array[5] != 0));
 
                 if (isNoScore)
                         return noScore;

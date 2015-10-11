@@ -2,6 +2,7 @@ package com.soboapps.ohfark;
 
 import java.util.ArrayList;
 
+import android.app.ActionBar;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -13,10 +14,12 @@ import android.graphics.Color;
 import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.AudioManager;
+import android.os.Build;
 import android.os.Handler;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
@@ -73,6 +76,23 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        /**
+        //hide statut bar
+        if (Build.VERSION.SDK_INT < 16) { //ye olde method
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        } else { // Jellybean and up, new hotness
+            View decorView = getWindow().getDecorView();
+            // Hide the status bar.
+            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+            decorView.setSystemUiVisibility(uiOptions);
+            // Remember that you should never show the action bar if the
+            // status bar is hidden, so hide that too if necessary.
+            //ActionBar actionBar = getActionBar();
+            //actionBar.hide();
+        }
+        */
 
         BroadcastReceiver broadcast_reciever = new BroadcastReceiver() {
 
@@ -304,6 +324,11 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         //String strI = Integer.toString(possibleScore);
 
         //Flip the Canvas
+        // Three Player game needs a special flip order if using Flip Screen
+        // We need to figure out if it's a 3 player game and if it's the 3rd
+        // Players turn so we can stop the flip after the 2nd player scores
+        //  Order: ^ - <> - v
+        if (controller.isThirdPlayer() == false)
         flipCanvas();
     }
 

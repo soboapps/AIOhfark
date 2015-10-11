@@ -68,6 +68,7 @@
     <string name="stQuit">"Smettere!"</string>
     <string name="stPlayAgain">"Giocare di nuovo!"</string>
     <string name="stPlay">Giocare</string>
+    <string name="stClose">Chiudere</string>
     
     <string name="stLword0">"Congrats  "</string>
     <string name="stLword1">"Ma stai scherzando  "</string>
@@ -123,6 +124,8 @@
     <string name="stFlipScreen">"Capovolgere lo schermo"</string>
     <string name="stDoNotFlip">"Non capovolgere lo schermo"</string>
     <string name="stFlipTheScreen">"Capovolgere lo schermo"</string>
+    <string name="stThreePlayerFlip">3 Giocatore Capovolgere Pattern</string>
+    <string name="stNeverShowAgain">Non mostrare più</string>
     
     <string name="stSoundFX">"FX suono"</string>
     <string name="stSoundOff">"Il suono è Off"</string>
@@ -241,6 +244,12 @@
                 <item>1200</item>
                 <item>1500</item>
                 <item>2500</item>
+        </string-array>
+        <string-array
+            name="noscorable_Array">
+            <item>100</item>
+            <item>300</item>
+            <item>500</item>
         </string-array>
         <string-array name="two_pair_Array">
                 <item>1500</item>

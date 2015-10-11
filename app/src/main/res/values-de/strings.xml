@@ -68,6 +68,7 @@
     <string name="stQuit">"Gehen!"</string>
     <string name="stPlayAgain">"Spielen Wieder!"</string>
     <string name="stPlay">Spielen</string>
+    <string name="stClose">Schließen</string>
     
     <string name="stLword0">"Herzlichen Glückwunsch  "</string>
     <string name="stLword1">"Willst du mich verarschen  "</string>
@@ -123,6 +124,8 @@
     <string name="stFlipScreen">"Klappen Sie den Bildschirm"</string>
     <string name="stDoNotFlip">"Nicht Klappen Sie den Bildschirm"</string>
     <string name="stFlipTheScreen">"Klappen Sie den Bildschirm"</string>
+    <string name="stThreePlayerFlip">3 Spieler-Schlag-Muster</string>
+    <string name="stNeverShowAgain">Nie mehr anzeigen</string>
     
     <string name="stSoundFX">"Sound FX"</string>
     <string name="stSoundOff">"Ton ist Aus"</string>
@@ -241,6 +244,12 @@
                 <item>1200</item>
                 <item>1500</item>
                 <item>2500</item>
+        </string-array>
+        <string-array
+            name="noscorable_Array">
+            <item>100</item>
+            <item>300</item>
+            <item>500</item>
         </string-array>
         <string-array name="two_pair_Array">
                 <item>1500</item>

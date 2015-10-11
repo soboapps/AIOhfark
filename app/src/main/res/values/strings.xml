@@ -68,6 +68,7 @@
     <string name="stQuit">Quit!</string>
     <string name="stPlayAgain">Play Again!</string>
     <string name="stPlay">Play</string>
+    <string name="stClose">Close</string>
     
     <string name="stLword0">Congrats  </string>
     <string name="stLword1">Are you kidding me  </string>
@@ -123,6 +124,8 @@
     <string name="stFlipScreen">Flip the Screen</string>
     <string name="stDoNotFlip">Do Not Flip the Screen</string>
     <string name="stFlipTheScreen">Flip the Screen</string>
+    <string name="stThreePlayerFlip">3 Player Flip Pattern</string>
+    <string name="stNeverShowAgain">Never Show Again</string>
     
     <string name="stSoundFX">Sound FX</string>
     <string name="stSoundOff">Sound is Off</string>

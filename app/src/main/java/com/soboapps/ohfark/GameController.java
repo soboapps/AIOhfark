@@ -31,6 +31,7 @@ public class GameController extends PreferenceActivity {
     private boolean negateFarklePenalty = false;
     private boolean toFarkle = false;
     private boolean aiPlayer = false;
+    private boolean thirdPlayer = false;
     public boolean isPlayerPastWinScore = false;
     public boolean didPlayerGetGOB = false;
     public boolean IsHumanPref = true;
@@ -124,13 +125,26 @@ public class GameController extends PreferenceActivity {
     // Check to to see if the current player is the Machine
     public boolean isMachinePlayer() {
         currPlayer = players.get(round % players.size());
-        // TODO Alert AI
         // Check for Machine Player, if found Roll the dice
         if (currPlayer.getName() == "Android"){
             aiPlayer = true;
             return true;
         }
         aiPlayer = false;
+        return false;
+    }
+
+    // Three Player game needs a special flip order if using Flip Screen
+    // We need to figure out if it's a 3 player game and if it's the 3rd
+    // Players turn so we can stop the flip after the 2nd player scores
+    //  Order: ^ - <> - v
+    public boolean isThirdPlayer() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(UI);
+        if (players.size()==3 && currPlayer.getName() == (prefs.getString("player3NamePref", "Player 3"))){
+            thirdPlayer = true;
+            return true;
+        }
+        thirdPlayer = false;
         return false;
     }
 
@@ -280,7 +294,7 @@ public class GameController extends PreferenceActivity {
         final int turnScore = currPlayer.getInRoundScore() + highlightedScore + currPlayer.getScore();
 
         if (((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 2))
-                || ((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
+                || ((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && ((possibleScore >= 400) && (dM.numDiceRemain() <= 3)))
 
                 || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 350) && (dM.numDiceRemain() <= 3))
                 || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 400))
@@ -302,7 +316,7 @@ public class GameController extends PreferenceActivity {
 
                     }
                 }
-            }, 1000);
+            }, 1500);
         } else {
             // Roll the dice becasue you didn't
             // meet the criteria to score

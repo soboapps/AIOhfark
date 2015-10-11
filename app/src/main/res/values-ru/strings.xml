@@ -68,6 +68,7 @@
     <string name="stQuit">"Выход!"</string>
     <string name="stPlayAgain">"Играть снова!"</string>
     <string name="stPlay">Играть</string>
+    <string name="stClose">Закрыть</string>
     
     <string name="stLword0">"Поздравляю  "</string>
     <string name="stLword1">"Ты издеваешься надо мной  "</string>
@@ -123,6 +124,8 @@
     <string name="stFlipScreen">"Перевернуть экран"</string>
     <string name="stDoNotFlip">"Не перевернуть экран"</string>
     <string name="stFlipTheScreen">"Перевернуть экран"</string>
+    <string name="stThreePlayerFlip">3 плеер Магнитно-шаблон</string>
+    <string name="stNeverShowAgain">Никогда Снова Показать</string>
     
     <string name="stSoundFX">"Звук FX"</string>
     <string name="stSoundOff">"Звук Off"</string>
@@ -242,6 +245,12 @@
                 <item>1200</item>
                 <item>1500</item>
                 <item>2500</item>
+        </string-array>
+        <string-array
+            name="noscorable_Array">
+            <item>100</item>
+            <item>300</item>
+            <item>500</item>
         </string-array>
         <string-array name="two_pair_Array">
                 <item>1500</item>

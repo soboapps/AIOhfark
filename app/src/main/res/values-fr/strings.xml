@@ -68,6 +68,7 @@
     <string name="stQuit">"Cesser de fumer!"</string>
     <string name="stPlayAgain">"Jouer de nouveau!"</string>
     <string name="stPlay">Jouer</string>
+    <string name="stClose">Fermer</string>
     
     <string name="stLword0">"Félicitations  "</string>
     <string name="stLword1">"Vous plaisantez j'espère  "</string>
@@ -123,6 +124,8 @@
     <string name="stFlipScreen">"Retournez l'écran"</string>
     <string name="stDoNotFlip">"Ne retournez pas l'écran"</string>
     <string name="stFlipTheScreen">"Retournez l'écran"</string>
+    <string name="stThreePlayerFlip">Joueur 3 Motif de conférence</string>
+    <string name="stNeverShowAgain">Ne jamais afficher de nouveau</string>
     
     <string name="stSoundFX">"Le son FX"</string>
     <string name="stSoundOff">"Le son est Off"</string>
@@ -241,6 +244,12 @@
                 <item>1200</item>
                 <item>1500</item>
                 <item>2500</item>
+        </string-array>
+        <string-array
+            name="noscorable_Array">
+            <item>100</item>
+            <item>300</item>
+            <item>500</item>
         </string-array>
         <string-array name="two_pair_Array">
                 <item>1500</item>

@@ -6,10 +6,11 @@
     android:versionName="2.0.4" >
 
     <uses-sdk
-        android:minSdkVersion="7"
+        android:minSdkVersion="8"
         android:targetSdkVersion="23" />
 
     <application
+
         android:icon="@drawable/icon"
         android:allowBackup="true"
         android:launchMode="singleTask"

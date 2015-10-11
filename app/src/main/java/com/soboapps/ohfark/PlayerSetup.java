@@ -1,7 +1,11 @@
 package com.soboapps.ohfark;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -13,10 +17,16 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class PlayerSetup extends PreferenceActivity {
 
@@ -38,6 +48,8 @@ public class PlayerSetup extends PreferenceActivity {
         Preference p4;
         CheckBoxPreference aI;
 
+        SharedPreferences setThreePlayerNoti;
+        boolean showThreePlayerFlip;
 
 
 
@@ -47,37 +59,25 @@ public class PlayerSetup extends PreferenceActivity {
 
                 prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-                //CheckBoxPreference aI = new CheckBoxPreference(this);
+                setThreePlayerNoti = PreferenceManager.getDefaultSharedPreferences(this );
+                showThreePlayerFlip = setThreePlayerNoti.getBoolean("threePlayerFlipNoti", true);
+
                 addPreferencesFromResource(R.xml.local_players_prefs);
                 Preference o = findPreference("scorePrefs");
 
                 aI = (CheckBoxPreference)findPreference("player2IsHumanPref");
 
-            //CheckBox Ai = (CheckBox)PlayerSetup.this.findViewById(R.id.human_player);;
-
                 p2 = findPreference("player2NamePref");
                 p3 = findPreference("player3NamePref");
                 p4 = findPreference("player4NamePref");
 
-
-
                 isNotAI = Boolean.valueOf(prefs.getBoolean("player2IsHumanPref", true));
 
                 if (aI.isChecked()){
-                    //n.addPreference(p2);
                     getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
                 } else {
-
-                    //n.removePreference(p2);
                     getPreferenceScreen().findPreference("player2NamePref").setEnabled(false);//Disabling
                 }
-
-
-                //prefs.setOnPreferenceClickListener(pref1_click);
-
-
-
-
 
                 prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -96,30 +96,21 @@ public class PlayerSetup extends PreferenceActivity {
                 n.removePreference(p3);
                 n.removePreference(p4);
 
-                //Ai = (CheckBox)PlayerSetup.this.findViewById(R.id.human_player);
-                //if (aI.isChecked()){
-                //    n.addPreference(p2);
-                //} else {
-                //    n.removePreference(p2);
-                //}
-
-
                 numOfPlayers = Integer.valueOf(prefs.getString("playerNumPref", "2"));
 
                 for (int i = 1; i <= numOfPlayers; i++) {
 
-
+                    /**
                     if (i == 1) {
                         //aI.setChecked(false);
                     } else {
                         //aI.setChecked(true);
                     }
+                    */
 
                     if ((i == 2) && (aI.isChecked())) {
-                        //screenH.removePreference(h);
                         getPreferenceScreen().findPreference("player2NamePref").setEnabled(true);
                     } else {
-                        //screenH.addPreference(h);
                         getPreferenceScreen().findPreference("player2NamePref").setEnabled(false);//Disabling
                     }
 
@@ -132,13 +123,6 @@ public class PlayerSetup extends PreferenceActivity {
                         screenH.addPreference(h);
                         screen.removePreference(p3);
                     }
-
-                    //if (i >= 3) {
-                    //    screen.addPreference(p3);
-                    //    getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
-                    //} else {
-                    //    screen.removePreference(p3);
-                    //}
 
                     if (i == 4) {
                         screen.addPreference(p4);
@@ -177,7 +161,6 @@ public class PlayerSetup extends PreferenceActivity {
 
                 // Open Scoring Prefs
                 o.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-
                         @Override
                         public boolean onPreferenceClick(Preference preference) {
                                 startActivity(new Intent(PlayerSetup.this, ScoringOptions.class));
@@ -188,19 +171,16 @@ public class PlayerSetup extends PreferenceActivity {
                 Preference p = findPreference("playPref");
 
                 p.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         startActivity(new Intent(PlayerSetup.this, OhFarkActivity.class));
                         PlayerSetup.this.finish();
                         return true;
                     }
-
                 });
 
             final CheckBoxPreference finalAI = aI;
             aI.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         if (finalAI.isChecked()){
@@ -214,14 +194,10 @@ public class PlayerSetup extends PreferenceActivity {
                     }
 
                 });
-
-
-
         }
 
-
+/**
         protected void enablePrefs() {
-
                 Preference p = null;
                 for (int i = 1; i <= 2; i++) {
 
@@ -235,38 +211,24 @@ public class PlayerSetup extends PreferenceActivity {
                                 p.setEnabled(false);
                         }
                 }
-
                 p = findPreference("playPref");
                 p.setEnabled(true);
         }
+*/
 
         protected void setUpListeners(boolean setListeners) {
-
             CheckBoxPreference c = null;
-
-            //aI.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-            //    @Override
-            //    public boolean onPreferenceClick(Preference preference) {
-            //        return false;
-            //    }
-            //});
-
-
             for (int i = 2; i <= numOfPlayers; i++) {
                 c = (CheckBoxPreference) findPreference("player" + i + "onePlayPref");
 
-                //for (int i = 2; i <= numOfPlayers; i++) {
-
-                        //if (aI.isChecked()){
-                        //    n.addPreference(p2);
-                        //} else {
-                        //    n.removePreference(p2);
-                        //}
+                        /**
                         if (i == 1) {
                            // aI.setChecked(false);
                         } else {
                            // aI.setChecked(true);
                         }
+                        */
+
 
                         if ((i == 2) && (isNotAI)) {
                             //screenH.removePreference(h);
@@ -287,12 +249,6 @@ public class PlayerSetup extends PreferenceActivity {
                             screen.removePreference(p3);
                         }
 
-                        //if (i >= 3) {
-                        //    getPreferenceScreen().findPreference("player2NamePref").setEnabled(true); //Enabling
-                        //    screen.addPreference(p3);
-                        //} else {
-                        //    screen.removePreference(p3);
-                        //}
 
                         if (i == 4) {
                             screen.addPreference(p4);
@@ -301,6 +257,36 @@ public class PlayerSetup extends PreferenceActivity {
                         }
                 }
 
+                    if (showThreePlayerFlip == true) {
+                        if ((numOfPlayers == 3)) {
+                            boolean dialog_status = prefs.getBoolean("dialog_status", false);//get the status of the dialog from preferences, if false you ,ust show the dialog
+                            if (!dialog_status) {
+                                View content = getLayoutInflater().inflate(
+                                        R.layout.threeplayer, null); // inflate the content of the dialog
+                                final CheckBox userCheck = (CheckBox) content.findViewById(R.id.check_box1);  //the checkbox from that view
+                                //build the dialog
+                                new AlertDialog.Builder(PlayerSetup.this)
+                                        .setTitle(getString(R.string.stThreePlayerFlip))
+                                        .setView(content)
+                                        .setPositiveButton((R.string.stClose),
+                                                new DialogInterface.OnClickListener() {
+
+                                                    public void onClick(
+                                                            DialogInterface dialog,
+                                                            int which) {
+                                                        //find our if the user checked the checkbox and put true in the preferences so we don't show the dialog again
+                                                        SharedPreferences.Editor editor = prefs.edit();
+                                                        editor.putBoolean("dialog_status",userCheck.isChecked());
+                                                        editor.commit();
+                                                        dialog.dismiss(); //end the dialog.
+                                                    }
+                                                })
+                                        .show();
+                            } else {
+                                //Do Nothing! Do not show the dialog since the user checked the box
+                            }
+                        }
+                    }
         }
 
 

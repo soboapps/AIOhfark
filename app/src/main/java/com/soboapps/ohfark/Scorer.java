@@ -498,17 +498,19 @@ final class Scorer {
         }
 
         public final static int isNoScore(int[] array, Context c, boolean calledPublicly) {
-                if (array.length < 6)
-                        return 0;
 
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(c);
-
                 boolean toNoScore = prefs.getBoolean("toNoScorePref", true);
+
+                int noScore = 0;
+
+                if (array.length != 6)
+                        return 0;
 
                 if (!toNoScore)
                         return 0;
 
-                int noScore = 0;
+                //int noScore = 0;
                 if (toNoScore)
                         noScore = Integer.valueOf(prefs.getString("noScorePref", "500"));
 
@@ -518,8 +520,8 @@ final class Scorer {
                 //boolean isNoScore = ((array.length == 6) && (array[0] == 0) && (array[1] != 0) && (array[2] != 0)
                 //        && (array[3] != 0) && (array[4] == 0) && (array[5] != 0));
 
-                boolean isNoScore = ((array[0] == 0) && (array[1] != 0) && (array[2] != 0)
-                        && (array[3] != 0) && (array[4] == 0) && (array[5] != 0));
+                boolean isNoScore = (array[0] != 1 && array[1] != 0 && array[2] != 0
+                        && array[3] != 0 && array[4] != 1 && array[5] != 0);
 
                 if (isNoScore)
                         return noScore;

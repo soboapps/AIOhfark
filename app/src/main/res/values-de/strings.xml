@@ -12,7 +12,7 @@
     <string name="disclaimer">"Alle anderen Logos und Warenzeichen sind Eigentum der jeweiligen Markeninhaber. \U00ae und \u2122 bezeichnen eingetragene Marken in den Vereinigten Staaten und in anderen Ländern"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
-    <string name="stAbout_lr">"OhFark 2.0.4 \u00A9 2015"</string>
+    <string name="stAbout_lr">"OhFark 2.0.5 \u00A9 2015"</string>
     <string name="stSlogan">"OhFark, Spaß für die ganze Familie!"</string>
     <string name="stDonate">"Spenden"</string>
     <string name="donate1">"Donate $ 1"</string>
@@ -119,6 +119,7 @@
     
     <!-- Options Menu -->
     <string name="stResetOptions">"Zurücksetzen Alle Optionen"</string>
+    <string name="stOptionsReset">Optionen Zurücksetzen</string>
     <string name="stConfigOptions">"Konfigurieren Scoring-Optionen"</string>
     
     <string name="stFlipScreen">"Klappen Sie den Bildschirm"</string>

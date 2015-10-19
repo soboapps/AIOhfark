@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.soboapps.ohfark"
     android:installLocation="auto"
-    android:versionCode="204"
-    android:versionName="2.0.4" >
+    android:versionCode="205"
+    android:versionName="2.0.5" >
 
     <uses-sdk
         android:minSdkVersion="8"

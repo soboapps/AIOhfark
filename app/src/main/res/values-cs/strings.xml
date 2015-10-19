@@ -12,7 +12,7 @@
     <string name="disclaimer">"Všechny ostatní loga a ochranné známky jsou majetkem příslušných vlastníků. \U00ae a \u2122 znamenají registrované ochranné známky ve Spojených státech a dalších zemích"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
-    <string name="stAbout_lr">"OhFark 2.0.4 \u00A9 2015"</string>
+    <string name="stAbout_lr">"OhFark 2.0.5 \u00A9 2015"</string>
     <string name="stSlogan">"OhFark, Zábava pro celou rodinu!"</string>
     <string name="stDonate">"Darovat"</string>
     <string name="donate1">"Donate 1 dolar"</string>
@@ -119,6 +119,7 @@
     
     <!-- Options Menu -->
     <string name="stResetOptions">"Obnovit všechny možnosti"</string>
+    <string name="stOptionsReset">Možnosti přesázet</string>
     <string name="stConfigOptions">"Konfigurovat možnosti Bodování"</string>
     
     <string name="stFlipScreen">"Odstředit obrazovky"</string>

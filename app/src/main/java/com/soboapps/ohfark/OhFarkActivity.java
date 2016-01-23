@@ -2,28 +2,19 @@ package com.soboapps.ohfark;
 
 import java.util.ArrayList;
 
-import android.app.ActionBar;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.Shader;
-import android.graphics.drawable.BitmapDrawable;
 import android.media.AudioManager;
-import android.os.Build;
 import android.os.Handler;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.app.Activity;
@@ -66,6 +57,8 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     private Player currPlayer;
     private Player lastPlayer;
 
+    private BroadcastReceiver broadcast_reciever;
+
 
     //  Shaker was annoying, but I left code here in case someone wants it.
     //private Shaker shaker=null;
@@ -76,6 +69,13 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Check to see if this is an upgrade and clerar the Prefs if it is.
+        try {
+            updatePreferences();
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
         /**
         //hide statut bar
@@ -94,6 +94,8 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         }
         */
 
+
+
         BroadcastReceiver broadcast_reciever = new BroadcastReceiver() {
 
             @Override
@@ -105,6 +107,9 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             }
         };
         registerReceiver(broadcast_reciever, new IntentFilter("finish_activity"));
+        unregisterReceiver(broadcast_reciever);
+
+
 
         //Initialize the RateMyApp component
         //set the title, days till the user is prompted and the no. of launches till the user is prompted
@@ -428,6 +433,9 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Used in onAnimatonEnds()
         if (isFarkle)
             toFarkle = true;
+            //Intent f = new Intent(getBaseContext(), OhFarkActivity.class);
+            //f.putExtra("toFarkle", true);
+            //startActivity(f);
 
 
     }
@@ -548,12 +556,39 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         }
     }
 
+    //Reset Preferences on upgrade
+    void updatePreferences() throws PackageManager.NameNotFoundException {
+        SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        int versionCode = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_CONFIGURATIONS).versionCode;
+
+        if (myPrefs.getInt("lastUpdate", 0) != versionCode) {
+            try {
+                //runUpddates();
+
+                // Commiting in the preferences, that the update was successful.
+                SharedPreferences.Editor editor = myPrefs.edit();
+                editor.clear();
+                editor.putInt("lastUpdate", versionCode);
+                editor.commit();
+
+                String strI = this.getString(R.string.stOptionsReset);
+                Toast t = Toast.makeText(this.getApplicationContext(), strI, Toast.LENGTH_LONG);
+                t.setGravity(Gravity.CENTER, 0, 0);
+                t.show();
+            } catch(Throwable t) {
+                // update failed, or cancelled
+            }
+        }
+    }
+
     // Action Bar Menu
     public boolean onCreateOptionsMenu(Menu menu){
         super.onCreateOptionsMenu(menu);
         MenuInflater prefs = getMenuInflater();
         prefs.inflate(R.menu.prefs_menu, menu);
-        return true;
+
+        return super.onCreateOptionsMenu(menu);
+        //return true;
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
@@ -574,7 +609,15 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             case R.id.menuExit:
                 finish();
         }
-        return false;
+            return super.onOptionsItemSelected(item);
+            //return false;
+    }
+    /**
+     * Launching new activity
+     * */
+    private void LocationFound() {
+        Intent i = new Intent(OhFarkActivity.this, LocationFound.class);
+        startActivity(i);
     }
 
     //@Override
@@ -614,5 +657,6 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         //if(shaker != null)
         //  shaker.close();
     }
+
 
 }

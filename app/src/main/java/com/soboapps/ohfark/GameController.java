@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.preference.PreferenceActivity;
@@ -81,6 +82,7 @@ public class GameController extends PreferenceActivity {
         UI.finalRoundButtonState(false);
         UI.finalRoundLayout(false);
         UI.winnerLayout(false);
+
     }
 
     // Load the players from Preferences / Human or AI
@@ -166,7 +168,7 @@ public class GameController extends PreferenceActivity {
 
         if (!isFarkle)
 
-            UI.rollButtonState(true);
+        UI.rollButtonState(true);
         UI.scoreButtonState(false);
 
         String pscore = UI.getString(R.string.stScore);
@@ -241,7 +243,7 @@ public class GameController extends PreferenceActivity {
         if (currPlayer.hasHighestScore()) {
             gameOverMan = true;
         }
-        if ((aiPlayer = true && gameOverMan == false) || (isRoundEnded == false && currPlayer.getName() == "Android")) {
+        if (((aiPlayer = true) && (gameOverMan== false)) || ((isRoundEnded==false) && (currPlayer.getName() == "Android"))) {
             if (currPlayer.getName() == "Android") {
 
                 UI.handler.postDelayed(new Runnable() {
@@ -270,7 +272,7 @@ public class GameController extends PreferenceActivity {
                                             }
                                         }
                                         // Go decide what to do with the selected dice
-                                        aiDecide();
+                                        aiDecide(false);
                                     }
                                 }, 750);
                             }
@@ -281,7 +283,11 @@ public class GameController extends PreferenceActivity {
         }
     }
 
-    public void aiDecide(){
+    public void aiDecide(final boolean isFarkle){
+
+        //Bundle bundle = getIntent().getExtras();
+        //boolean toFarkle = bundle.getBoolean("toFarkle");
+
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(UI);
         String ListDifPreference;
@@ -289,11 +295,12 @@ public class GameController extends PreferenceActivity {
         GOB_SCORE = Integer.valueOf(prefs.getString("gobScorePref", "0"));
 
 
+
         final int highlightedScore = Scorer.calculate(dM.getHighlighted(DieManager.ABS_VALUE_FLAG), false, UI);
         final int possibleScore = currPlayer.getInRoundScore() + highlightedScore;
         final int turnScore = currPlayer.getInRoundScore() + highlightedScore + currPlayer.getScore();
 
-        if (((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 300) && (dM.numDiceRemain() <= 2))
+        if (((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 350) && (dM.numDiceRemain() <= 2))
                 || ((ListDifPreference.equals("Easy")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && ((possibleScore >= 400) && (dM.numDiceRemain() <= 3)))
 
                 || ((ListDifPreference.equals("Medium")) && (highlightedScore > 0) &&  (turnScore >= GOB_SCORE) && (dM.numDiceRemain() != 0) && (possibleScore >= 350) && (dM.numDiceRemain() <= 3))
@@ -305,7 +312,7 @@ public class GameController extends PreferenceActivity {
                 @Override
                 public void run() {
                     // Score the Dice
-                    if ((isRoundEnded == false && dM.numDiceRemain() == 0) || (isLastRound == true && turnScore < WINNING_SCORE)){
+                    if (!isFarkle && (isRoundEnded==false) && (dM.numDiceRemain() == 0) || (isLastRound == true) && (turnScore < WINNING_SCORE)){
                         aiRoll();
                     } else {
                         if (highlightedScore > 0) {
@@ -320,13 +327,13 @@ public class GameController extends PreferenceActivity {
         } else {
             // Roll the dice becasue you didn't
             // meet the criteria to score
-            if ((isRoundEnded == false) && (gameOverMan == false)) {
+            if ((isRoundEnded==false) && (gameOverMan==false)) {
                 aiRoll();
             }
         }
     }
 
-    // Makes an Button shows who won an loads GameOver Layout
+    // Make a Button that shows who won and loads GameOver Layout
     private void alertOfWinner() {
 
         String wintext = UI.getString(R.string.stWinnerButton);
@@ -408,8 +415,8 @@ public class GameController extends PreferenceActivity {
         UI.finalRoundLayout.setVisibility(View.GONE);
 
         // Play Sound
-        SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(UI);
-        if (myPrefs.getBoolean("soundPrefCheck", true)) {
+        SharedPreferences mySoundPref = PreferenceManager.getDefaultSharedPreferences(UI);
+        if (mySoundPref.getBoolean("soundPrefCheck", true)) {
 
             if (dM.numDiceRemain() == 5) {
                 SoundManager.playSound(5, 1);  //5 DiceRoll
@@ -491,8 +498,6 @@ public class GameController extends PreferenceActivity {
             return;
 
         int value = dM.getValue(index, DieManager.ABS_VALUE_FLAG);
-
-
 
         // A letter was clicked
         if (value == 0)
@@ -588,7 +593,8 @@ public class GameController extends PreferenceActivity {
     }
 
     // Determines whether to highlight the dice clicked
-    public boolean shouldHighlight(int index) {
+    // Determines whether to highlight the dice clicked
+    private boolean shouldHighlight(int index) {
 
         // Gets the pairs (if any)
         int[] pairs = dM.findPairs(index, DieManager.INDEX_FLAG);
@@ -613,24 +619,26 @@ public class GameController extends PreferenceActivity {
         // True if there is a straight on the table
         boolean isStraight = Scorer.isStraight(diceOnTable, UI, true) != 0;
 
-        boolean isNoScore = Scorer.isNoScore(diceOnTable, UI, true) != 0;
+        return (!isZero || isThreePair || isStraight);
+
+        //boolean isNoScore = Scorer.isNoScore(diceOnTable, UI, true) != 0;
 
         // If there are no scorring dice on the First Roll
         // Allow Highlight all Dice
-        if (isNoScore){
-            return (isNoScore);
-        } else {
-            // Normal Scoring options without No Score Alternative
-            return (!isZero || isThreePair || isStraight);
-        }
+        //if (isNoScore){
+        //    return (isNoScore);
+        //} else {
+        // Normal Scoring options without No Score Alternative
+        //    return (!isZero || isThreePair || isStraight);
+        //}
     }
 
     // Called when the score button is clicked. Can be called from the AI
     public void onScore() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(UI);
+        SharedPreferences mySoundPref = PreferenceManager.getDefaultSharedPreferences(UI);
 
         //Play Sound
-        if (prefs.getBoolean("soundPrefCheck", true)) {
+        if (mySoundPref.getBoolean("soundPrefCheck", true)) {
             SoundManager.playSound(11, 1);  // Flip Sound
         }
 
@@ -664,18 +672,19 @@ public class GameController extends PreferenceActivity {
                 currPlayer.setOriginalWinner(true);
                 currPlayer.setHasHighestScore(true);
 
-                // Play Sound
-                SharedPreferences mySoundPref=PreferenceManager.getDefaultSharedPreferences(UI);
-                if (mySoundPref.getBoolean("soundPrefCheck", true)) {
-                    SoundManager.playSound(12, 1);  //Final Round
-                    //Display the Final Round Button
-                    UI.finalRoundLayout.setVisibility(View.VISIBLE);
-                    UI.finalRoundButtonState(true);
-                    isLastRound = true;
-                }
+                //Display the Final Round Button
+                UI.finalRoundLayout.setVisibility(View.VISIBLE);
+                UI.finalRoundButtonState(true);
+                isLastRound = true;
 
             } else {
                 currPlayer.setHasHighestScore(true);
+            }
+
+            // Play Sound
+            //SharedPreferences mySoundPref=PreferenceManager.getDefaultSharedPreferences(UI);
+            if (mySoundPref.getBoolean("soundPrefCheck", true)) {
+                SoundManager.playSound(12, 1);  //Final Round
             }
         }
 

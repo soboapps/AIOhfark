@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/threePlayerOrderImage"
         android:src="@drawable/player3fliporder"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center|right" />
 
     <CheckBox
         android:id="@+id/check_box1"

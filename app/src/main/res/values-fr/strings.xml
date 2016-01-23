@@ -12,7 +12,7 @@
     <string name="disclaimer">"Tous les autres logos et marques sont la propriété des propriétaires respectifs. \U00ae et \u2122 représentent des marques déposées aux Etats-Unis et d'autres pays"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
-    <string name="stAbout_lr">"OhFark 2.0.7 \u00A9 2015"</string>
+    <string name="stAbout_lr">"OhFark 2.0.15 \u00A9 2016"</string>
     <string name="stSlogan">"OhFark, Divertissement pour toute la famille!"</string>
     <string name="stDonate">"Donner"</string>
     <string name="donate1">"Don de 1 $"</string>
@@ -69,6 +69,7 @@
     <string name="stPlayAgain">"Jouer de nouveau!"</string>
     <string name="stPlay">Jouer</string>
     <string name="stClose">Fermer</string>
+    <string name="activity_new_message">Back</string>
     
     <string name="stLword0">"Félicitations  "</string>
     <string name="stLword1">"Vous plaisantez j'espère  "</string>

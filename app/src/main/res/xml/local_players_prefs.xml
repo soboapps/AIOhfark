@@ -4,7 +4,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:key="playerPrefs"
-    android:title="@string/stPlayerSetup">
+    android:title="@string/stPlayerSetup"
+    android:orientation="vertical">
 
     <PreferenceCategory
         android:title="@string/stNumberPlayers"
@@ -59,7 +60,7 @@
 
     <PreferenceCategory
         android:key="IsHumanPref"
-        android:title="@string/stNotHumanBeta">
+        android:title="@string/stNotHuman">
 
         <CheckBoxPreference
             android:id="@+id/human_player"

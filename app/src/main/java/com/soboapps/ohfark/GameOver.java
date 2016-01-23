@@ -19,7 +19,7 @@ public class GameOver extends Activity{
 		super.onCreate(savedInstanceState);
 
 		// Pause to show winner
-		SystemClock.sleep(4500);
+		SystemClock.sleep(1500);
 
 		setContentView(R.layout.game_over);
 

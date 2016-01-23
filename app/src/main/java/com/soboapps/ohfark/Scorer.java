@@ -38,9 +38,11 @@ final class Scorer {
                         if (doubleTripletStatus > 0)
                                 return doubleTripletStatus;
 
+                        /*
                         int noScoreStatus = isNoScore(newArray, c, false);
                         if (noScoreStatus > 0)
                                 return noScoreStatus;
+                        */
 
                 }
 
@@ -497,6 +499,8 @@ final class Scorer {
                 return score;
         }
 
+
+        /**
         public final static int isNoScore(int[] array, Context c, boolean calledPublicly) {
 
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(c);
@@ -529,6 +533,7 @@ final class Scorer {
                         return 0;
 
         }
+         */
 
 
 }

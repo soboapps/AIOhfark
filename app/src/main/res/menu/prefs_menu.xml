@@ -5,13 +5,15 @@
     	android:id="@+id/menuNewGame"
     	android:alphabeticShortcut="n"
     	android:title="@string/stNewGame"
-    	android:icon="@drawable/ic_menu_newgame" />	
+    	android:icon="@drawable/ic_menu_newgame"
+		android:showAsAction="ifRoom" />
 	
 	<item    
     	android:id="@+id/menuOptions"
     	android:alphabeticShortcut="o"
     	android:title="@string/stOptions"
-    	android:icon="@drawable/ic_menu_settings" />	  
+    	android:icon="@drawable/ic_menu_settings"
+		android:showAsAction="ifRoom" />
 	
 	<item    
     	android:id="@+id/menuHelp"

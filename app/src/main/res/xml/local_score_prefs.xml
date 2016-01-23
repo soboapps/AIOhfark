@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/stScoringOptions">
+        android:title="@string/stScoringOptions" >
 
         <ListPreference
                 android:title="@string/stWinningScore"
@@ -53,24 +53,6 @@
 
         </PreferenceScreen>
 
-<!--        
-        <CheckBoxPreference
-                android:title="@string/stScoreOnePair"
-                android:defaultValue="false"
-                android:summaryOff="@string/stNoScoreSinglePair"
-                android:summaryOn="@string/stScoreSinglePair"
-                android:key="scoreOnePairPref" />
-                
-        <ListPreference
-                android:title="@string/stSinglePair"
-                android:summary="@string/stSinglePairPoints"
-                android:key="onePairPref"
-                android:defaultValue="100"
-                android:entries="@array/onepair_Array"
-                android:entryValues="@array/onepair_Array"
-                android:dependency="scoreOnePairPref"
-                android:shouldDisableView="true" />
--->                
         <ListPreference
                 android:title="@string/stThreePair"
                 android:summary="@string/stThreePairPoints"
@@ -129,37 +111,20 @@
                 android:shouldDisableView="true" />
 
                 <CheckBoxPreference
-                        android:title="@string/stNoScore"
-                        android:defaultValue="false"
-                        android:summaryOff="@string/stNoScoreOff"
-                        android:summaryOn="@string/stNoScoreOn"
-                        android:key="toNoScorePref" />
+                                android:title="@string/stTwoThreeOfKindScore"
+                                android:defaultValue="true"
+                                android:summaryOff="@string/stTwoThreeOfKindSetPointsOff"
+                                android:summaryOn="@string/stTwoThreeOfKindSetPointsOn"
+                                android:key="toScoreTwoTripsPref" />
 
-                <ListPreference
-                        android:title="@string/stNoScoreTitle"
-                        android:summary="@string/stNoScorablePoints"
-                        android:key="noScorePref"
-                        android:defaultValue="500"
-                        android:entries="@array/noscorable_Array"
-                        android:entryValues="@array/noscorable_Array"
-                        android:dependency="toNoScorePref"
-                        android:shouldDisableView="true" />
+                        <ListPreference
+                                android:title="@string/stTwoThreeOfKindValue"
+                                android:summary="@string/ststTwoThreeOfKindWorth"
+                                android:key="twoTripletScorePref"
+                                android:defaultValue="2500"
+                                android:entries="@array/two_pair_Array"
+                                android:entryValues="@array/two_pair_Array"
+                                android:dependency="toScoreTwoTripsPref"
+                                android:shouldDisableView="true" />
 
-        <CheckBoxPreference
-                        android:title="@string/stTwoThreeOfKindScore"
-                        android:defaultValue="true"
-                        android:summaryOff="@string/stTwoThreeOfKindSetPointsOff"
-                        android:summaryOn="@string/stTwoThreeOfKindSetPointsOn"
-                        android:key="toScoreTwoTripsPref" />
-
-                <ListPreference
-                        android:title="@string/stTwoThreeOfKindValue"
-                        android:summary="@string/ststTwoThreeOfKindWorth"
-                        android:key="twoTripletScorePref"
-                        android:defaultValue="2500"
-                        android:entries="@array/two_pair_Array"
-                        android:entryValues="@array/two_pair_Array"
-                        android:dependency="toScoreTwoTripsPref"
-                        android:shouldDisableView="true" />
-
-        </PreferenceScreen>
+                </PreferenceScreen>

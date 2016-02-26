@@ -15,6 +15,7 @@ public class Options extends PreferenceActivity {
                 addPreferencesFromResource(R.xml.options_prefs);
 
                 Preference p = findPreference("scorePrefs");
+                Preference ps = findPreference("playerPrefs");
                 Preference f = findPreference("screenPrefCheck");
                 Preference s = findPreference("soundPrefCheck");
                 //Preference v = findPreference("shakerPrefCheck");
@@ -31,6 +32,16 @@ public class Options extends PreferenceActivity {
                                 return true;
                         }
                 });
+
+                ps.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+                        @Override
+                        public boolean onPreferenceClick(Preference preference) {
+                                startActivity(new Intent(Options.this, PlayerSetup.class));
+                                return true;
+                        }
+                });
+
                 
                 // Set Screen Flip Pref
                 f.setOnPreferenceClickListener(new OnPreferenceClickListener() {
@@ -67,11 +78,18 @@ public class Options extends PreferenceActivity {
 
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
+                            //Intent i = getBaseContext().getPackageManager()
+                            //        .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+                            //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            //finish();
+                            //startActivity(i);
+
 	                    	Intent intent = new Intent(getApplicationContext(), OhFarkActivity.class);
 	                    	intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 	                    	intent.putExtra("EXIT", true);
-	                    	startActivity(intent);
                             finish();
+                            startActivity(intent);
+
                             return true;
                     }
                 });

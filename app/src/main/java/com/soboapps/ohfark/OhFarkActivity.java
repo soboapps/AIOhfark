@@ -2,8 +2,10 @@ package com.soboapps.ohfark;
 
 import java.util.ArrayList;
 
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
@@ -11,6 +13,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.animation.Animation;
@@ -70,7 +73,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Check to see if this is an upgrade and clerar the Prefs if it is.
+        // Check to see if this is an upgrade and clear the Prefs if it is.
         try {
             updatePreferences();
         } catch (PackageManager.NameNotFoundException e) {
@@ -436,8 +439,6 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             //Intent f = new Intent(getBaseContext(), OhFarkActivity.class);
             //f.putExtra("toFarkle", true);
             //startActivity(f);
-
-
     }
 
     @Override
@@ -470,7 +471,9 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Show Farkle Animation
         farkleAnimation();
 
+        // Check to make sure it's not player 3's turn before flipping
         // Flip the Canvas
+        if (controller.isThirdPlayer() == false)
         flipCanvas();
 
     }
@@ -533,8 +536,6 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
 
             }, 250 * controller.numOnTable());
 
-
-
         } else {
             //No more animations so alert the controller.
             controller.animationsEnded(false);
@@ -559,25 +560,36 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //Reset Preferences on upgrade
     void updatePreferences() throws PackageManager.NameNotFoundException {
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        // Get the Current Version Number of the application
         int versionCode = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_CONFIGURATIONS).versionCode;
 
-        if (myPrefs.getInt("lastUpdate", 0) != versionCode) {
-            try {
-                //runUpddates();
+        //if (myPrefs.getInt("lastUpdate", 0) != versionCode) {
+        if (myPrefs.getInt("lastUpdate", 0) <= 209) {
 
-                // Commiting in the preferences, that the update was successful.
-                SharedPreferences.Editor editor = myPrefs.edit();
-                editor.clear();
-                editor.putInt("lastUpdate", versionCode);
-                editor.commit();
+            // Show Version
+            //String sVer = Integer.toString(versionCode);
+            //Toast v = Toast.makeText(this.getApplicationContext(), sVer, Toast.LENGTH_LONG);
+            //v.setGravity(Gravity.CENTER, 0, 0);
+            //v.show();
 
-                String strI = this.getString(R.string.stOptionsReset);
-                Toast t = Toast.makeText(this.getApplicationContext(), strI, Toast.LENGTH_LONG);
-                t.setGravity(Gravity.CENTER, 0, 0);
-                t.show();
-            } catch(Throwable t) {
-                // update failed, or cancelled
-            }
+                try {
+                    //runUpddates();
+
+                    // Commiting in the preferences, that the update was successful.
+                    SharedPreferences.Editor editor = myPrefs.edit();
+                    editor.clear();
+                    // Creates a Shared Preference with the Application Version to compare
+                    // against for upgrades
+                    editor.putInt("lastUpdate", versionCode);
+                    editor.commit();
+
+                    String strI = this.getString(R.string.stOptionsReset);
+                    Toast t = Toast.makeText(this.getApplicationContext(), strI, Toast.LENGTH_LONG);
+                    t.setGravity(Gravity.CENTER, 0, 0);
+                    t.show();
+                } catch (Throwable t) {
+                    // update failed, or cancelled
+                }
         }
     }
 
@@ -595,7 +607,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         switch(item.getItemId()){
             case R.id.menuNewGame:
                 startActivity(new Intent(OhFarkActivity.this, PlayerSetup.class));
-                finish();
+                //finish();
                 return true;
             case R.id.menuOptions:
                 startActivity(new Intent(OhFarkActivity.this, Options.class));
@@ -643,13 +655,71 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //	}
     //}
 
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // Kills & force closes the app
-            android.os.Process.killProcess(android.os.Process.myPid());
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+
+            AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
+            alertbox.setTitle(R.string.stExit);
+            String fmessage = getString(R.string.stExit) + " " +  getString(R.string.app_name) + "?";
+            alertbox.setMessage(fmessage);
+
+            alertbox.setPositiveButton(R.string.stExit,
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            exit();
+                        }
+                    });
+
+            alertbox.setNeutralButton(R.string.Cancel,
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface arg0, int arg1) {
+                        }
+                    });
+
+            alertbox.show();
+
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
         }
-        return super.onKeyDown(keyCode, event);
+
     }
+
+    private  void exit(){
+        this.finish();
+        android.os.Process.killProcess(android.os.Process.myPid());
+    }
+
+/*
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_HOME) {
+            Log.i("Home Button", "Clicked");
+            // Toast.makeText(this,"Home Button Clicked",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Toast.makeText(this, "Press Home Button to pause Evaluation",
+                    Toast.LENGTH_LONG).show();
+            Log.i("Back Button", "Clicked");
+            //android.os.Process.killProcess(android.os.Process.myPid());
+            return false;
+            // finish();
+        }
+        return false;
+
+
+
+        //if (keyCode == KeyEvent.KEYCODE_BACK) {
+            // Kills & force closes the app
+        //    android.os.Process.killProcess(android.os.Process.myPid());
+        //}
+        //return super.onKeyDown(keyCode, event);
+    }
+
+*/
+
 
     @Override
     public void onDestroy() {

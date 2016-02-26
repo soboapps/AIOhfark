@@ -10,6 +10,10 @@
         <Preference
                 android:key="scorePrefs"
                 android:title="@string/stConfigOptions"/>
+
+        <Preference
+            android:key="playerPrefs"
+            android:title="@string/stPlayerSetup"/>
         
         <CheckBoxPreference
                 android:title="@string/stFlipScreen"
@@ -32,7 +36,9 @@
                 android:summaryOn="Shake to Roll is On"
                 android:key="shakerPrefCheck" />  
         -->
-        
+
+
+
        <Preference
                 android:title="@string/stPlayNow"
                 android:key="twoPlayPref"

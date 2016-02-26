@@ -31,7 +31,7 @@
     	android:id="@+id/menuAbout"
     	android:alphabeticShortcut="a"
     	android:icon="@drawable/ic_menu_about"
-    	android:title="@string/stAbout"	/>
+    	android:title="@string/stAbout" />
 	  	
 <!-- Would like to have select-able icons on Action Bar 
 	 to turn Sound and Flip Screen Options On an Off

@@ -173,9 +173,19 @@ public class PlayerSetup extends PreferenceActivity {
                 p.setOnPreferenceClickListener(new OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
-                        startActivity(new Intent(PlayerSetup.this, OhFarkActivity.class));
-                        PlayerSetup.this.finish();
+
+                        //startActivity(new Intent(PlayerSetup.this, OhFarkActivity.class));
+                        //PlayerSetup.this.finish();
+                        //return true;
+
+                        Intent intent = new Intent(getApplicationContext(), OhFarkActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.putExtra("EXIT", true);
+                        //finish();
+                        startActivity(intent);
                         return true;
+
+
                     }
                 });
 
@@ -259,7 +269,7 @@ public class PlayerSetup extends PreferenceActivity {
 
                     if (showThreePlayerFlip == true) {
                         if ((numOfPlayers == 3)) {
-                            boolean dialog_status = prefs.getBoolean("dialog_status", false);//get the status of the dialog from preferences, if false you ,ust show the dialog
+                            boolean dialog_status = prefs.getBoolean("dialog_status", false);//get the status of the dialog from preferences, if false you ,just show the dialog
                             if (!dialog_status) {
                                 View content = getLayoutInflater().inflate(
                                         R.layout.threeplayer, null); // inflate the content of the dialog

@@ -168,7 +168,7 @@ public class GameController extends PreferenceActivity {
 
         if (!isFarkle)
 
-        UI.rollButtonState(true);
+            UI.rollButtonState(true);
         UI.scoreButtonState(false);
 
         String pscore = UI.getString(R.string.stScore);
@@ -468,16 +468,16 @@ public class GameController extends PreferenceActivity {
         dM.rollDice();
         UI.updateImages(true, false);
 
-            // If the highest score possible on the table is 0 then its a farkle
-            if (Scorer.calculate(dM.diceOnTable(DieManager.ABS_VALUE_FLAG), true, UI) == 0) {
-                currPlayer.setInRoundScore(0);
-                currPlayer.incrementNumOfFarkles();
-                // True because its a Farkle
-                endRound(true);
-                // Else just show what the player rolled
-            } else
+        // If the highest score possible on the table is 0 then its a farkle
+        if (Scorer.calculate(dM.diceOnTable(DieManager.ABS_VALUE_FLAG), true, UI) == 0) {
+            currPlayer.setInRoundScore(0);
+            currPlayer.incrementNumOfFarkles();
+            // True because its a Farkle
+            endRound(true);
+            // Else just show what the player rolled
+        } else
 
-                UI.updateImages(true, false);
+            UI.updateImages(true, false);
 
     }
 
@@ -487,7 +487,7 @@ public class GameController extends PreferenceActivity {
 
         // Play Select Sound
         SharedPreferences mySoundPref=PreferenceManager.getDefaultSharedPreferences(UI);
-        if (mySoundPref.getBoolean("soundPrefCheck", true)) {
+        if (mySoundPref.getBoolean("soundPrefCheck", true) && (shouldHighlight(index))) {
             SoundManager.playSound(10, 1);  // Select Sound
         }
 

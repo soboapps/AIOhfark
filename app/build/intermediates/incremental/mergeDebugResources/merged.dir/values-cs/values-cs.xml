@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_Array">
+                <item>Easy</item>
+                <item>Medium</item>
+                <item>Hard</item>
+        </string-array>
+    <string-array name="farkle_Array">
+                <item>-100</item>
+                <item>-500</item>
+                <item>-1000</item>
+        </string-array>
+    <string-array name="five_of_a_kind_Array">
+                <item>3x the 3 Of A Kind Value</item>
+                <item>6x the 3 Of A Kind Value</item>
+                <item>2000</item>
+                <item>4000</item>
+        </string-array>
+    <string-array name="four_of_a_kind_Array">
+                <item>2x the 3 Of A Kind Value</item>
+                <item>4x the 3 Of A Kind Value</item>
+                <item>1000</item>
+                <item>2000</item>
+        </string-array>
+    <string-array name="gob_score_Array">
+                <item>0</item>
+                <item>300</item>
+                <item>500</item>
+                <item>750</item>
+                <item>1000</item>
+        </string-array>
+    <string-array name="noscorable_Array">
+            <item>100</item>
+            <item>300</item>
+            <item>500</item>
+        </string-array>
+    <string-array name="num_players_Array">
+                <item>2</item>
+                <item>3</item>
+                <item>4</item>
+        </string-array>
+    <string-array name="onepair_Array">
+                <item>100</item>
+                <item>200</item>
+                <item>300</item>
+                <item>500</item>
+        </string-array>
+    <string-array name="six_of_a_kind_Array">
+                <item>4x the 3 Of A Kind Value</item>
+                <item>8x the 3 Of A Kind Value</item>
+                <item>3000</item>
+                <item>6000</item>
+                <item>10000</item>
+        </string-array>
+    <string-array name="six_ones_Array">
+                <item>5000</item>
+                <item>10000</item>
+        </string-array>
+    <string-array name="straight_Array">
+                <item>1000</item>
+                <item>1200</item>
+                <item>1500</item>
+                <item>2500</item>
+        </string-array>
+    <string-array name="three_pair_Array">
+                <item>500</item>
+                <item>600</item>
+                <item>750</item>
+                <item>1000</item>
+                <item>1500</item>
+        </string-array>
+    <string-array name="two_pair_Array">
+                <item>1500</item>
+                <item>2000</item>
+                <item>2500</item>
+                <item>3000</item>
+        </string-array>
+    <string-array name="win_score_Array">
+                <item>1000</item>
+                <item>2500</item>
+                <item>5000</item>
+                <item>7500</item>
+                <item>10000</item>
+        </string-array>
+    <string name="Cancel">"Zrušit"</string>
+    <string name="ChooseGame">"Vyberte si nový typ hry"</string>
+    <string name="HowToPlay">"OhFark hraje jednoho nebo dva hráče, každý hráč v řadě, které mají obrátit se na házení kostkou. Každý hráč\0027s otočit výsledky v skóre a skóre pro každého hráče se hromadí na vítězné celkem 1000 - 10,000."</string>
+    <string name="LandPlayerScore">"Hráč 1 Skóre\003A 0 Hráč 2 Skóre\oo3A: 0"</string>
+    <string name="OnePlayer">"1 Hráč"</string>
+    <string name="PlayerScore">"Hráč 1 Skóre\003A 0 \nHráč 2 Skóre\oo3A: 0"</string>
+    <string name="Rules">"Na začátku každého kola, hráč hází. Po každém hodu, musí být vybrán jeden nebo více bodování kostky. Hráč pak může ukončit svůj tah a bank skóre nahromaděné dosud, nebo pokračovat vrhl kostky. V případě, že hráč skóroval všech šest kostky, oni \022Hot Dice\022 a mohou pokračovat v zatáčce nové role všech šesti kostek, čímž se skóre, které již nashromážděných. Neexistuje žádný limit na počet \022Hot Dice\022 hráč se může posunovat v jednom kole. Pokud žádný z kostky skóre v daném hodu, hráč má \022FARKLED\022 a všechny body pro tento tah jsou ztraceny. Na konci přehrávače\0027s obrátit, další hráč má svůj tah. Poté, co hráč dosáhl vítězný bod celkem, každý jiný hráč má jeden poslední zatáčku na skóre dostatečný počet bodů k překonání, že vysoká skóre."</string>
+    <string name="TwoPlayer">"2 Hráč"</string>
+    <string name="activity_new_message">Back</string>
+    <string name="app_label">"OhFarkle"</string>
+    <string name="app_misconfigured">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
+    <string name="app_name">"OhFark"</string>
+    <string name="btnRollClick">"HandleRoll"</string>
+    <string name="buttonHandler">"buttonClickEvent"</string>
+    <string name="cancel">Cancel</string>
+    <string name="check_avail">Check If Available</string>
+    <string name="dialog_message">Líbí se vám OhFark? Věnujte prosím čas, aby ho ohodnotit.\n</string>
+    <string name="dialog_message_never">Nikdy</string>
+    <string name="dialog_message_no_gp">Nemáte nainstalován Google Play</string>
+    <string name="dialog_message_not_now">Teď Ne</string>
+    <string name="dialog_message_rate">Rychlost </string>
+    <string name="dialog_message_yes">Ano</string>
+    <string name="disclaimer">"Všechny ostatní loga a ochranné známky jsou majetkem příslušných vlastníků. \U00ae a \u2122 znamenají registrované ochranné známky ve Spojených státech a dalších zemích"</string>
+    <string name="donate1">"Donate 1 dolar"</string>
+    <string name="hello">"Hello World, OhFarkActivity!"</string>
+    <string name="license_failed">License check failed.</string>
+    <string name="password">Password:</string>
+    <string name="register">Register</string>
+    <string name="save">Save</string>
+    <string name="scoring_handler">"scoringClick"</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_failed">Failed to sign in. Please check your network connection and try again.</string>
+    <string name="stAStraight">"Rovný"</string>
+    <string name="stAStraightPoints">"Kolik bodů je Rovný stojí za to?"</string>
+    <string name="stAbout">"Kdo"</string>
+    <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
+    <string name="stClose">Blízko</string>
+    <string name="stCompany">"South Bound Apps"</string>
+    <string name="stConfigOptions">"Konfigurovat možnosti Bodování"</string>
+    <string name="stCredits">"Credits: na open source projektu mikgonz základě!"</string>
+    <string name="stCurrentScore">"Dice skóre:"</string>
+    <string name="stDefaultEasy"> Easy </string>
+    <string name="stDiceScore">"Kostky Skóre \: "</string>
+    <string name="stDie1">"Die1"</string>
+    <string name="stDie2">"Die2"</string>
+    <string name="stDie3">"Die3"</string>
+    <string name="stDie4">"Die4"</string>
+    <string name="stDie5">"Die5"</string>
+    <string name="stDie6">"Die6"</string>
+    <string name="stDieScore">" 0"</string>
+    <string name="stDifficultyOfAndroid"> Obtížnost Android přehrávače </string>
+    <string name="stDifficultyOfAndroidBeta"> Obtížnost Android Player (Beta) </string>
+    <string name="stDoNotFlip">"Nevyklápějte obrazovky"</string>
+    <string name="stDonate">"Darovat"</string>
+    <string name="stEnterFirstPlayerName"> Zadejte první hráči Jméno </string>
+    <string name="stEnterFourPlayerName">"Zadejte Čtvrtý Hráči Jméno"</string>
+    <string name="stEnterSecondPlayerName"> Zadejte druhé Hráči Jméno </string>
+    <string name="stEnterThirdPlayerName">"Vstoupit do třetí Hráči Jméno"</string>
+    <string name="stExit">"Východ"</string>
+    <string name="stFarkles">" Farkles v řadě"</string>
+    <string name="stFinalRound">"Final Round"</string>
+    <string name="stFiveOfKind">"Pět z A Druh"</string>
+    <string name="stFiveOfKind3XValue">3x the 3 Of A Kind Value</string>
+    <string name="stFiveOfKind6XValue">6x the 3 Of A Kind Value</string>
+    <string name="stFiveOfKindPoints">"Kolik bodů je pět z druhu stojí za to?"</string>
+    <string name="stFlipScreen">"Odstředit obrazovky"</string>
+    <string name="stFlipTheScreen">"Odstředit obrazovky"</string>
+    <string name="stFourOfKind">"Čtveřice"</string>
+    <string name="stFourOfKind2XValue">2x the 3 Of A Kind Value</string>
+    <string name="stFourOfKind4XValue">4x the 3 Of A Kind Value</string>
+    <string name="stFourOfKindPoints">"Kolik bodů je Čtveřice stojí za to?"</string>
+    <string name="stGOB">"Dostat-Na-Deska Skóre"</string>
+    <string name="stGameOver">"Hra Přes!"</string>
+    <string name="stHelp">"Pomoc"</string>
+    <string name="stHowManyPlayers"> Kolik lidí hráčů?</string>
+    <string name="stHowManyPoints">"Kolik bodů bude trvat, než vyhrát?"</string>
+    <string name="stHowManyToGOB">"Kolik bodů potřebný k nám, na palubě?"</string>
+    <string name="stIsSecondPlayerHuman"> Je druhý hráč člověk </string>
+    <string name="stIsSecondPlayerHumanBeta"> Je druhý hráč člověk (Beta) </string>
+    <string name="stLword0">"Gratulujeme  "</string>
+    <string name="stLword1">"Děláš si srandu  "</string>
+    <string name="stLword2">"A vítězem se stává \.  "</string>
+    <string name="stLword3">"WOW,  "</string>
+    <string name="stLword4">"Nemůžu tomu uvěřit  "</string>
+    <string name="stMachine">Machine</string>
+    <string name="stNeverShowAgain">Nikdy šou znovu</string>
+    <string name="stNewGame">"Nová hra"</string>
+    <string name="stNoScorablePoints">"Kolik bodů pro válcování všech 6 Non-hodnotitelných kostky?"</string>
+    <string name="stNoScore">"6 Non-Bodování kostky jsou válcované"</string>
+    <string name="stNoScoreOff">"Žádné body pro válcovací všechny 6 Non-Bodování kostky"</string>
+    <string name="stNoScoreOn">"Body pro válcovací všechny 6 Non-zaznamenávat kostky zadaný"</string>
+    <string name="stNoScoreSinglePair">"No skóre pro zbývající jeden pár"</string>
+    <string name="stNoScoreTitle">"6 Non-Bodování Kostky Hodnota"</string>
+    <string name="stNotHuman"> člověk vs Android </string>
+    <string name="stNotHumanBeta"> člověk vs Android (Beta) </string>
+    <string name="stNotHumanCS"> člověk vs Android (Coming Soon) </string>
+    <string name="stNumFarkles">"Máte 0 Farkles v řadě"</string>
+    <string name="stNumberPlayers"> Počet hráčů </string>
+    <string name="stOptions">"Možnosti"</string>
+    <string name="stOptionsReset">Možnosti přesázet</string>
+    <string name="stOverLayMvsA"> \n\nImplicitne přidali "režimu pro jednoho hráče." :-) \n\nčlověk vs Android je nová funkce, a může obsahovat chyby. \n\nProsím předložit všechny problémy, které soboapps@gmail.com \n\n\nTAP, aby i nadále </string>
+    <string name="stPass">"projít"</string>
+    <string name="stPlay">Hrát</string>
+    <string name="stPlayAgain">"Hrát znovu!"</string>
+    <string name="stPlayAgainTitle">"Hrát znovu?"</string>
+    <string name="stPlayNow">"Hrát teď"</string>
+    <string name="stPlayer1">"Hráč 1"</string>
+    <string name="stPlayer1Score">"0"</string>
+    <string name="stPlayer1Setup"> Hráč 1 Nastavení </string>
+    <string name="stPlayer2">"Hráč 2"</string>
+    <string name="stPlayer2Score">"0"</string>
+    <string name="stPlayer3">"Hráč 3</string>
+    <string name="stPlayer3Score">0</string>
+    <string name="stPlayer3etup">"Hráč 3 Nastavení"</string>
+    <string name="stPlayer4">"Hráč 4</string>
+    <string name="stPlayer4Score">0</string>
+    <string name="stPlayer4Setup">"Přehrávač 4 Nastavení"</string>
+    <string name="stPlayerNames">Jména hráčů</string>
+    <string name="stPlayerSetup"> Nastavení hráčů </string>
+    <string name="stPoints">"skóre"</string>
+    <string name="stQuit">"Konec!"</string>
+    <string name="stResetOptions">"Obnovit všechny možnosti"</string>
+    <string name="stRoll">"role"</string>
+    <string name="stRword0">"  vyhráli jste!"</string>
+    <string name="stRword1">"  pamatujte, že každý pes má svůj den!"</string>
+    <string name="stRword2">"  bys měl jít pro!"</string>
+    <string name="stRword3">"  jste měli lepší zkontrolovat sami!"</string>
+    <string name="stRword4">"  vy jste tak šťastný! \""</string>
+    <string name="stScore">"skóre"</string>
+    <string name="stScoreAStraight">"Skóre Rovný"</string>
+    <string name="stScoreOnePair">"Skóre na jednom páru"</string>
+    <string name="stScoreSinglePair">"Zbývající Single Pár vstřelí"</string>
+    <string name="stScoreStraightOff">"Rovný nezískáte žádné body"</string>
+    <string name="stScoreStraightOn">"Rovný bude vydělávat body stanovené"</string>
+    <string name="stScoring">"Jak Skóre"</string>
+    <string name="stScoringOptions">"Možnosti Vyhodnocování"</string>
+    <string name="stSeconPlayerHuman"> Druhý Hráč je člověk </string>
+    <string name="stSeconPlayerNotHuman"> Druhý Hráč není člověk </string>
+    <string name="stSecondPlayerSetup"> Hráč 2 Nastavení </string>
+    <string name="stSetupFirstPlayer"> Nastavení první hráč </string>
+    <string name="stSetupFourPlayer">"Nastavení Čtvrtý Hráči"</string>
+    <string name="stSetupSecondPlayer"> Nastavení druhý hráč </string>
+    <string name="stSetupThirdPlayer">"Nastavení třetí hráč"</string>
+    <string name="stSinglePair">"1 Pár"</string>
+    <string name="stSinglePairPoints">"Kolik bodů 1 Pár stojí za to"</string>
+    <string name="stSixOfKind">"Šest z A Druh"</string>
+    <string name="stSixOfKind4XValue">4x the 3 Of A Kind Value</string>
+    <string name="stSixOfKind8XValue">8x the 3 Of A Kind Value</string>
+    <string name="stSixOfKindPoints">"Kolik bodů je Six of a Kind stojí za to?"</string>
+    <string name="stSixOnes">"Šest One"</string>
+    <string name="stSixOnesInstantWin">"Instant Win"</string>
+    <string name="stSixOnesPoints">"Kolik bodů je Six One stojí za to?"</string>
+    <string name="stSlogan">"OhFark, Zábava pro celou rodinu!"</string>
+    <string name="stSoundFX">"Zvuk FX"</string>
+    <string name="stSoundOff">"Zvuk je Off"</string>
+    <string name="stSoundOn">"Zvuk je Zapnuto"</string>
+    <string name="stThreeFarkInRow">"3 Farkles in-a-řady pokutového"</string>
+    <string name="stThreeFarkInRowCheckBox">"3 Farkles in-a-řady pokutového"</string>
+    <string name="stThreeFarkNegativeOff">"Negativní skóre povoleno"</string>
+    <string name="stThreeFarkNegativeOn">"Skóre nepůjde pod 0"</string>
+    <string name="stThreeFarkNegativeScoreCheckBox">"Negativní výsledek?"</string>
+    <string name="stThreeFarkPenaltyHowManyPoints">"Kolik bodů pro Farkle trestu?"</string>
+    <string name="stThreeFarkPenaltyOff">"Žádný trest pro 3 Farkles in-a-řady"</string>
+    <string name="stThreeFarkPenaltyOn">"Trest za 3 Farkles in-a-řady"</string>
+    <string name="stThreeFarkPenaltyOptions">"3 Farkle možnosti trestné"</string>
+    <string name="stThreeFarkPenaltyPoints">"Farkle trestné body"</string>
+    <string name="stThreePair">"3 Pár"</string>
+    <string name="stThreePairPoints">"Kolik bodů je 3 Pár stojí za to?"</string>
+    <string name="stThreePlayerFlip">3 třetí Odstředit obrazovky</string>
+    <string name="stTwoThreeOfKindScore">"2, 3 a Druh Bodování"</string>
+    <string name="stTwoThreeOfKindSetPointsOff">"Rolling 2, 3 a druhu bude vydělávat součet 2, 3 stejné"</string>
+    <string name="stTwoThreeOfKindSetPointsOn">"Rolling 2, 3 a druhu bude vydělávat stanovený počet bodů"</string>
+    <string name="stTwoThreeOfKindValue">"2, 3 a Druh bodovou hodnotou"</string>
+    <string name="stWWW">"http://www.soboapps.com"</string>
+    <string name="stWaitButton">Počkejte</string>
+    <string name="stWinner">"Vítěz \: 0"</string>
+    <string name="stWinnerButton">vyhrává</string>
+    <string name="stWinningScore">"Vítězná Skóre"</string>
+    <string name="stYes">"Ano"</string>
+    <string name="stYouHave">"Máte "</string>
+    <string name="startButtonHandler">"buttonStartClick"</string>
+    <string name="ststTwoThreeOfKindWorth">"Kolik bodů jsou 2, 3 druhu stojí za to?"</string>
+    <string name="unknown_error">Unknown error.</string>
+    <string name="username">Username:</string>
+</resources>

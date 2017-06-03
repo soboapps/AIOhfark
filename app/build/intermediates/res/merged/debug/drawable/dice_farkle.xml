@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <level-list xmlns:android="http://schemas.android.com/apk/res/android">
+	    <item android:maxLevel="0" android:drawable="@drawable/dief" />
+	    <item android:maxLevel="1" android:drawable="@drawable/diea" />
+	    <item android:maxLevel="2" android:drawable="@drawable/dier" />
+	    <item android:maxLevel="3" android:drawable="@drawable/diek" />
+	    <item android:maxLevel="4" android:drawable="@drawable/diel" />
+	    <item android:maxLevel="5" android:drawable="@drawable/diee" />
+</level-list>

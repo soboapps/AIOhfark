@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.soboapps.ohfark"
+    android:installLocation="auto"
+    android:versionCode="2025"
+    android:versionName="2.0.25" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="25" />
+
+    <application
+        android:allowBackup="true"
+        android:clearTaskOnLaunch="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:roundIcon="@mipmap/ic_launcher_round" >
+        <activity
+            android:name="com.soboapps.ohfark.OhFarkActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        <activity
+            android:label="@string/app_name"
+            android:exported="false"
+            android:name=".Flip180" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.FLIP180" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        -->
+
+        <activity
+            android:name="com.soboapps.ohfark.Options"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.soboapps.ohfark.ScoringOptions"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.soboapps.ohfark.PlayerSetup"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.soboapps.ohfark.Help"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/stHelp" />
+        <activity
+            android:name="com.soboapps.ohfark.About"
+            android:exported="false"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/stAbout_lr"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.soboapps.ohfark.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.soboapps.ohfark.GameOver"
+            android:background="#c0000000"
+            android:exported="false"
+            android:finishOnTaskLaunch="true"
+            android:label="Game Over"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <!-- Location found activity -->
+        <!--
+       <activity
+           android:name=".LocationFound"
+           android:label="@string/activity_new_message"
+           android:parentActivityName="com.soboapps.ohfark.OhFarkActivity" >
+       </activity>
+        -->
+        <provider
+            android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:authorities="com.soboapps.ohfark.com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

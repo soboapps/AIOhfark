@@ -49,12 +49,12 @@ public class DieManager {
                 diceImages.put(6, R.drawable.die6_roll);
 
                 // I want it to show these grey dice once the dice are dead (Still working on it)
-                deadImages.put(0, R.drawable.die1_dead);
-                deadImages.put(1, R.drawable.die2_dead);
-                deadImages.put(2, R.drawable.die3_dead);
-                deadImages.put(3, R.drawable.die4_dead);
-                deadImages.put(4, R.drawable.die5_dead);
-                deadImages.put(5, R.drawable.die6_dead);
+                //deadImages.put(0, R.drawable.die1_dead);
+                //deadImages.put(1, R.drawable.die2_dead);
+                //deadImages.put(2, R.drawable.die3_dead);
+                //deadImages.put(3, R.drawable.die4_dead);
+                //deadImages.put(4, R.drawable.die5_dead);
+                //deadImages.put(5, R.drawable.die6_dead);
 
                 // Shows a blank dice for all images
                 letterImages.put(0, R.drawable.die_no);
@@ -74,12 +74,14 @@ public class DieManager {
                         // If its a new round then the dice value can be changed from 0.
                         // Else it can't
                         if (isNewRound || diceValues[j] != 0)
+                                //Remark th eline out below for testing 6-of-a-kind
                                 diceValues[j] = (int) ((Math.random() * 6) + 1);
-                        // Comment out the above line of code
+
                         // to Roll all the same dice (6, 3's) for testing
                         // Change (3) to what ever die you want to test with
                         // Example (1) will test with all 1's
-                        //diceValues[j] = (int) ((3));
+                                // Un-Remark the line below to test 6-of-a-kind
+                                //diceValues[j] = (int) ((3));
 
 
 

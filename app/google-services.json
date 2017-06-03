@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "908600660380",
+    "firebase_url": "https://aiohfark.firebaseio.com",
+    "project_id": "aiohfark",
+    "storage_bucket": "aiohfark.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908600660380:android:6c4633d551f3840e",
+        "android_client_info": {
+          "package_name": "com.soboapps.ohfark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908600660380-bq1d1d3bporkp46mj3uq0cnrarec43pm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.soboapps.ohfark",
+            "certificate_hash": "F7205754B3A1DB057BC966561A0E74575FD982B6"
+          }
+        },
+        {
+          "client_id": "908600660380-oanl8aau1tk378ka64dj8uqbphmuptcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.soboapps.ohfark",
+            "certificate_hash": "E7AAD22CCD182F6F3C82FF7963547EC8F43D9C71"
+          }
+        },
+        {
+          "client_id": "908600660380-ijk1qpqpr3qdudrfadq6leji6g8p5rtv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbjguPBHIDFtcnBAhFfD_14o8DoVRIxTs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908600660380-ijk1qpqpr3qdudrfadq6leji6g8p5rtv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

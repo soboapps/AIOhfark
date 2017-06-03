@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\xml\\local_score_prefs.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\xml\\local_score_prefs.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\xml\\local_players_prefs.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\xml\\local_players_prefs.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\xml\\options_prefs.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\xml\\options_prefs.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\xml\\overlay_prefs.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\xml\\overlay_prefs.xml"
+    }
+]

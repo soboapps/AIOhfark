@@ -1,0 +1,7 @@
+#Wed May 31 17:56:17 GMT-04:00 2017
+base.0=C\:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b1b599a4c141468b0f28a5209397bb7b6cce7755
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_15f4f758409186645b063a6d22cbbdd2e40f845a\\classes.dex
+base.1=C\:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_15f4f758409186645b063a6d22cbbdd2e40f845a
+file.0=C\:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b1b599a4c141468b0f28a5209397bb7b6cce7755\\classes.dex

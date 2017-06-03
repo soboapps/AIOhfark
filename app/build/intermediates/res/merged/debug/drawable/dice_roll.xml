@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <level-list xmlns:android="http://schemas.android.com/apk/res/android">
+	    <item android:maxLevel="0" android:drawable="@drawable/die1_roll" />
+	    <item android:maxLevel="1" android:drawable="@drawable/die2_roll" />
+	    <item android:maxLevel="2" android:drawable="@drawable/die3_roll" />
+	    <item android:maxLevel="3" android:drawable="@drawable/die4_roll" />
+	    <item android:maxLevel="4" android:drawable="@drawable/die5_roll" />
+	    <item android:maxLevel="5" android:drawable="@drawable/die6_roll" />
+</level-list>

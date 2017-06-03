@@ -3,6 +3,10 @@
 
     <string name="hello">"Hello World, OhFarkActivity!"</string>
     <string name="app_name">"OhFark"</string>
+    <string name="sign_in_failed">Failed to sign in. Please check your network connection and try again.</string>
+    <string name="app_misconfigured">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
+    <string name="license_failed">License check failed.</string>
+    <string name="unknown_error">Unknown error.</string>
     <string name="dialog_message_rate">Rychlost </string>
     <string name="dialog_message">Líbí se vám OhFark? Věnujte prosím čas, aby ho ohodnotit.\n</string>
     <string name="dialog_message_yes">Ano</string>
@@ -12,7 +16,7 @@
     <string name="disclaimer">"Všechny ostatní loga a ochranné známky jsou majetkem příslušných vlastníků. \U00ae a \u2122 znamenají registrované ochranné známky ve Spojených státech a dalších zemích"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
-    <string name="stAbout_lr">"OhFark 2.0.15 \u00A9 2016"</string>
+    <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
     <string name="stSlogan">"OhFark, Zábava pro celou rodinu!"</string>
     <string name="stDonate">"Darovat"</string>
     <string name="donate1">"Donate 1 dolar"</string>

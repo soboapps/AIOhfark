@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\sdmei\OneDrive\Documents\GitHub\AIOhfark\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4e15895db3dcc8e1d1f5ffa9da532c34f4ff0bcc">
+        <dex dex="C:\Users\sdmei\OneDrive\Documents\GitHub\AIOhfark\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b1b599a4c141468b0f28a5209397bb7b6cce7755\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\sdmei\OneDrive\Documents\GitHub\AIOhfark\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="C:\Users\sdmei\OneDrive\Documents\GitHub\AIOhfark\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_15f4f758409186645b063a6d22cbbdd2e40f845a\classes.dex" />
+    </item>
+
+</items>

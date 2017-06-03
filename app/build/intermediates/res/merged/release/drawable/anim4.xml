@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  	<item android:duration="200" android:drawable="@drawable/die4_roll" />
+    <item android:duration="200" android:drawable="@drawable/die5_roll" />
+    <item android:duration="200" android:drawable="@drawable/die6_roll" />
+    <item android:duration="200" android:drawable="@drawable/die3_roll" />
+    <item android:duration="200" android:drawable="@drawable/die1_roll" />
+    <item android:duration="200" android:drawable="@drawable/die2_roll" />
+</animation-list>

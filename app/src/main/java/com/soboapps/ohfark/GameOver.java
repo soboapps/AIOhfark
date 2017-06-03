@@ -40,6 +40,7 @@ public class GameOver extends Activity{
 
 			public void onClick(View v) {
 				reload();
+				//restart();
 				finish();
 			}
 		});
@@ -48,13 +49,18 @@ public class GameOver extends Activity{
 	}
 
 	public GameOver() {
-
 	}
 
 	public void reload() {
-		Intent intent = new Intent("finish_activity");
-		sendBroadcast(intent);
-		startActivity(new Intent(this.getApplicationContext(), OhFarkActivity.class));
+		//Intent intent = new Intent("finish_activity");
+		//sendBroadcast(intent);
+		//startActivity(new Intent(this.getApplicationContext(), OhFarkActivity.class));
+
+		Intent i = getBaseContext().getPackageManager()
+				.getLaunchIntentForPackage( getBaseContext().getPackageName() );
+		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		finish();
+		startActivity(i);
 	}
 
 	public void quitGame() {

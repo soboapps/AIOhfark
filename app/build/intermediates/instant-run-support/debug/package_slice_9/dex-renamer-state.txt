@@ -1,0 +1,4 @@
+#Wed May 31 17:56:17 GMT-04:00 2017
+base.0=C\:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9
+renamed.0=classes.dex
+file.0=C\:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9\\classes.dex

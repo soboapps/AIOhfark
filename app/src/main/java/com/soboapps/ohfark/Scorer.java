@@ -148,7 +148,7 @@ final class Scorer {
 
                 int threePairScore = Integer.valueOf(prefs.getString("threePairPref", "750"));
 
-                if (prefs.getString("Four of A Kind", "2x the 3 Of A Kind Value") != null) {
+                if (prefs.getString("Four of A Kind", "4x the 3 Of A Kind Value") != null) {
                         //if (prefs.getString(UI.getString(R.string.stFourOfKind), UI.getString(R.string.stFourOfKind2XValue)) != null) {
 
                         if (calledPublicly)
@@ -156,7 +156,8 @@ final class Scorer {
 
                         int count = 0;
 
-                        if ((array[0] >= 2) && (array[3] != 4 ) && (array[5] != 4 ))
+                        //if ((array[0] >= 2) && (array[3] != 4 ) && (array[5] != 4 )) // Bug that 4 of a kind does not allow for extra 1 and 5
+                        if ((array[0] >= 2) && (array[5] != 4 ))
                                 count += array[0] / 2;
                         if (array[1] >= 2 )
                                 count += array[1] / 2;
@@ -164,7 +165,8 @@ final class Scorer {
                                 count += array[2] / 2;
                         if (array[3] >= 2)
                                 count += array[3] / 2;
-                        if ((array[4] >= 2) && (array[3] != 4 ) && (array[5] != 4 ))
+                        //if ((array[4] >= 2) && (array[3] != 4 ) && (array[5] != 4 ))
+                        if ((array[4] >= 2) && (array[5] != 4 ))
                                 count += array[4] / 2;
                         if (array[5] >= 2)
                                 count += array[5] / 2;
@@ -243,15 +245,16 @@ final class Scorer {
                         array[5] = 0;
                 }
 
-                if (sixOfAKindMult > 100)
-                        return sixOfAKindMult;
-
-                if (sixKindPref.contains("3000") && score != sixOnesMult)
-                        score = 3000;
-                if (sixKindPref.contains("6000") && score != sixOnesMult)
-                        score = 6000;
-                if (sixKindPref.contains("10000") && score != sixOnesMult)
-                        score = 10000;
+                //if (sixOfAKindMult > 100)
+                //        return sixOfAKindMult;
+        //***********************
+                // Scoring is not correct for 3000/6000/10000
+                //if (sixKindPref.contains("3000") && score != sixOnesMult)
+                //        score = 3000;
+                //if (sixKindPref.contains("6000") && score != sixOnesMult)
+                //        score = 6000;
+                //if (sixKindPref.contains("10000") && score != sixOnesMult)
+                //        score = 10000;
 
                 if (score != 0)
                         return score;

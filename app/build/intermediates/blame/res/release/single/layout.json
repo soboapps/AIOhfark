@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\final_round.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\final_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\toast_layout.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\toast_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\game_over.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\game_over.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\help.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\help.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\dialog.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\threeplayer.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\threeplayer.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\main.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\play_type.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\play_type.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\lastround.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\lastround.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\info_overview.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\info_overview.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\about.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\about.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\activity_location_found.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\activity_location_found.xml"
+    },
+    {
+        "merged": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\build\\intermediates\\res\\merged\\release\\layout\\custom_toast.xml",
+        "source": "C:\\Users\\sdmei\\OneDrive\\Documents\\GitHub\\AIOhfark\\app\\src\\main\\res\\layout\\custom_toast.xml"
+    }
+]

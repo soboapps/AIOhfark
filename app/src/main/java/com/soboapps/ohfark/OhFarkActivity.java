@@ -2,8 +2,10 @@ package com.soboapps.ohfark;
 
 import java.util.ArrayList;
 
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
@@ -59,6 +61,11 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
 
     private BroadcastReceiver broadcast_reciever;
 
+    //private FirebaseAuth mAuth;
+
+    //private FirebaseAuth.AuthStateListener mAuthListener;
+
+    private static final String TAG = "OhFarkActivity";
 
     //  Shaker was annoying, but I left code here in case someone wants it.
     //private Shaker shaker=null;
@@ -66,11 +73,12 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     // Makes new images appear after every button click
     //@SuppressWarnings("deprecation")
     //@SuppressLint("NewApi")
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Check to see if this is an upgrade and clerar the Prefs if it is.
+        // Check to see if this is an upgrade and clear the Prefs if it is.
         try {
             updatePreferences();
         } catch (PackageManager.NameNotFoundException e) {
@@ -78,22 +86,21 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         }
 
         /**
-        //hide statut bar
-        if (Build.VERSION.SDK_INT < 16) { //ye olde method
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        } else { // Jellybean and up, new hotness
-            View decorView = getWindow().getDecorView();
-            // Hide the status bar.
-            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-            decorView.setSystemUiVisibility(uiOptions);
-            // Remember that you should never show the action bar if the
-            // status bar is hidden, so hide that too if necessary.
-            //ActionBar actionBar = getActionBar();
-            //actionBar.hide();
-        }
-        */
-
+         //hide statut bar
+         if (Build.VERSION.SDK_INT < 16) { //ye olde method
+         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+         WindowManager.LayoutParams.FLAG_FULLSCREEN);
+         } else { // Jellybean and up, new hotness
+         View decorView = getWindow().getDecorView();
+         // Hide the status bar.
+         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+         decorView.setSystemUiVisibility(uiOptions);
+         // Remember that you should never show the action bar if the
+         // status bar is hidden, so hide that too if necessary.
+         //ActionBar actionBar = getActionBar();
+         //actionBar.hide();
+         }
+         */
 
 
         BroadcastReceiver broadcast_reciever = new BroadcastReceiver() {
@@ -110,7 +117,6 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         unregisterReceiver(broadcast_reciever);
 
 
-
         //Initialize the RateMyApp component
         //set the title, days till the user is prompted and the no. of launches till the user is prompted
         rate = new RateMyApp(this, getString(R.string.app_name), 7, 2);
@@ -121,7 +127,6 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         //set text size
         rate.setTextSize(16);
         rate.start();
-
 
 
         //Hide the App Icon and Title for a cleaner look
@@ -153,7 +158,6 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         winnerButton = (Button) findViewById(R.id.winnerButton);
         winnerLayout = (LinearLayout) findViewById(R.id.winnerLayout);
         winnerTextView = (TextView) findViewById(R.id.winnerButton);
-
 
 
         handler = new Handler();
@@ -193,10 +197,28 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             winnerButton.setText(savedInstanceState.getCharSequence("winnerText"));
             winnerLayout.setEnabled(savedInstanceState.getBoolean("visibleLState"));
         }
+
+        //mAuth = FirebaseAuth.getInstance();
+
+        //mAuthListener = new FirebaseAuth.AuthStateListener() {
+        //    @Override
+        //    public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+        //        FirebaseUser user = firebaseAuth.getCurrentUser();
+        //        if (user != null) {
+        //            // User is signed in
+        //            Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+        //        } else {
+        //            // User is signed out
+        //           Log.d(TAG, "onAuthStateChanged:signed_out");
+        //        }
+        //        // ...
+        //    }
+        //};
+
     }
 
-    public void aiBgrd(){
-        LinearLayout lL = (LinearLayout)findViewById(R.id.llParent);
+    public void aiBgrd() {
+        LinearLayout lL = (LinearLayout) findViewById(R.id.llParent);
         lL.setBackgroundColor(Color.parseColor("#455A64"));
         //Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.bg);
         //BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
@@ -205,8 +227,8 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         //layout.setBackgroundDrawable(bitmapDrawable);
     }
 
-    public void defaultBgrd(){
-        LinearLayout lL = (LinearLayout)findViewById(R.id.llParent);
+    public void defaultBgrd() {
+        LinearLayout lL = (LinearLayout) findViewById(R.id.llParent);
         lL.setBackgroundColor(Color.parseColor("#263238"));
     }
 
@@ -215,9 +237,9 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
 	//Hide the ActionBar and System Notifications
 	@SuppressLint("NewApi")
 	private void hideSystemUI() {
-		
+
 		if(Build.VERSION.SDK_INT >= 14){
-		
+
 		View decorView = getWindow().getDecorView();
 	    // Set the IMMERSIVE flag.
 	    // Set the content to appear under the system bars so that the content
@@ -265,7 +287,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //Disable the Roll and Score Buttons
     //so the Human cannot cheat, sad huh?
     // TODO AI
-    public void disableButtons(){
+    public void disableButtons() {
         rollButton.setClickable(false);
         scoreButton.setClickable(false);
     }
@@ -274,7 +296,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //Enable the Roll and Score buttons after
     //the Machine has taken it's turn
     // TODO AI
-    public void enableButtons(){
+    public void enableButtons() {
         rollButton.setClickable(true);
         scoreButton.setClickable(true);
     }
@@ -283,14 +305,14 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //Disable the layout for all of the dice
     //so the Human cannot cheat, sad huh.
     // TODO AI
-    public void disableDice(){
+    public void disableDice() {
         LinearLayout dice1_3 = (LinearLayout) findViewById(R.id.die_1_3);
-        for ( int i = 0; i < dice1_3.getChildCount();  i++ ){
+        for (int i = 0; i < dice1_3.getChildCount(); i++) {
             View view = dice1_3.getChildAt(i);
             view.setEnabled(false);
         }
         LinearLayout dice4_6 = (LinearLayout) findViewById(R.id.die_4_6);
-        for ( int i = 0; i < dice4_6.getChildCount();  i++ ){
+        for (int i = 0; i < dice4_6.getChildCount(); i++) {
             View view = dice4_6.getChildAt(i);
             view.setEnabled(false);
         }
@@ -299,14 +321,14 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //Enable the Layout for all of the dice
     //for the Human to play
     // TODO AI
-    public void enableDice(){
+    public void enableDice() {
         LinearLayout dice1_3 = (LinearLayout) findViewById(R.id.die_1_3);
-        for ( int i = 0; i < dice1_3.getChildCount();  i++ ){
+        for (int i = 0; i < dice1_3.getChildCount(); i++) {
             View view = dice1_3.getChildAt(i);
             view.setEnabled(true);
         }
         LinearLayout dice4_6 = (LinearLayout) findViewById(R.id.die_4_6);
-        for ( int i = 0; i < dice4_6.getChildCount();  i++ ){
+        for (int i = 0; i < dice4_6.getChildCount(); i++) {
             View view = dice4_6.getChildAt(i);
             view.setEnabled(true);
         }
@@ -314,14 +336,14 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
 
 
     public void onScore(View v) {
-        SharedPreferences myPrefs=PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         // Calculate Score
         controller.onScore();
 
         // Check to see if the AI is playing and Roll if it is.
         // Make sure the Game is not over.
-        if (controller.isMachinePlayer()== true || controller.gameOverMan == false){
+        if (controller.isMachinePlayer() == true || controller.gameOverMan == false) {
             controller.aiRoll();
             //AiD.aiRoll(this);
         }
@@ -334,7 +356,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Players turn so we can stop the flip after the 2nd player scores
         //  Order: ^ - <> - v
         if (controller.isThirdPlayer() == false)
-        flipCanvas();
+            flipCanvas();
     }
 
 
@@ -433,11 +455,9 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Used in onAnimatonEnds()
         if (isFarkle)
             toFarkle = true;
-            //Intent f = new Intent(getBaseContext(), OhFarkActivity.class);
-            //f.putExtra("toFarkle", true);
-            //startActivity(f);
-
-
+        //Intent f = new Intent(getBaseContext(), OhFarkActivity.class);
+        //f.putExtra("toFarkle", true);
+        //startActivity(f);
     }
 
     @Override
@@ -448,7 +468,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         outState.putCharSequence("scoreText", scoreBox.getText());
         outState.putCharSequence("numFarklesText", numFarkles.getText());
         outState.putCharSequence("dieScoreText", dieScore.getText());
-        outState.putCharSequence("winnerText", winnerTextView.getText() );
+        outState.putCharSequence("winnerText", winnerTextView.getText());
 
         super.onSaveInstanceState(outState);
     }
@@ -461,7 +481,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     public void showFarkle() {
 
         // Play Awww Sound
-        SharedPreferences myPrefs=PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         if (myPrefs.getBoolean("soundPrefCheck", true)) {
             SoundManager.playSound(9, 1);  // Awww Sound
 
@@ -470,8 +490,10 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Show Farkle Animation
         farkleAnimation();
 
+        // Check to make sure it's not player 3's turn before flipping
         // Flip the Canvas
-        flipCanvas();
+        if (controller.isThirdPlayer() == false)
+            flipCanvas();
 
     }
 
@@ -508,7 +530,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
 
         // Check to see if the AI is playing and Roll if it is.
         // Make sure the Game is not over.
-        if (controller.isMachinePlayer()== true || controller.gameOverMan == false){
+        if (controller.isMachinePlayer() == true || controller.gameOverMan == false) {
             controller.aiRoll();
             //AiD.aiRoll(this);
         }
@@ -533,8 +555,6 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
 
             }, 250 * controller.numOnTable());
 
-
-
         } else {
             //No more animations so alert the controller.
             controller.animationsEnded(false);
@@ -545,7 +565,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
 
     private void flipCanvas() {
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (myPrefs.getBoolean("player2IsHumanPref", true))  {
+        if (myPrefs.getBoolean("player2IsHumanPref", true)) {
 
             if (myPrefs.getBoolean("screenPrefCheck", true)) {
                 Flip180 llParent = (Flip180) this.findViewById(R.id.llParent);
@@ -559,15 +579,26 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //Reset Preferences on upgrade
     void updatePreferences() throws PackageManager.NameNotFoundException {
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        // Get the Current Version Number of the application
         int versionCode = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_CONFIGURATIONS).versionCode;
 
-        if (myPrefs.getInt("lastUpdate", 0) != versionCode) {
+        //if (myPrefs.getInt("lastUpdate", 0) != versionCode) {
+        if (myPrefs.getInt("lastUpdate", 0) <= 209) {
+
+            // Show Version
+            //String sVer = Integer.toString(versionCode);
+            //Toast v = Toast.makeText(this.getApplicationContext(), sVer, Toast.LENGTH_LONG);
+            //v.setGravity(Gravity.CENTER, 0, 0);
+            //v.show();
+
             try {
                 //runUpddates();
 
                 // Commiting in the preferences, that the update was successful.
                 SharedPreferences.Editor editor = myPrefs.edit();
                 editor.clear();
+                // Creates a Shared Preference with the Application Version to compare
+                // against for upgrades
                 editor.putInt("lastUpdate", versionCode);
                 editor.commit();
 
@@ -575,14 +606,14 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
                 Toast t = Toast.makeText(this.getApplicationContext(), strI, Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
-            } catch(Throwable t) {
+            } catch (Throwable t) {
                 // update failed, or cancelled
             }
         }
     }
 
     // Action Bar Menu
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater prefs = getMenuInflater();
         prefs.inflate(R.menu.prefs_menu, menu);
@@ -591,11 +622,11 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         //return true;
     }
 
-    public boolean onOptionsItemSelected(MenuItem item){
-        switch(item.getItemId()){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
             case R.id.menuNewGame:
                 startActivity(new Intent(OhFarkActivity.this, PlayerSetup.class));
-                finish();
+                //finish();
                 return true;
             case R.id.menuOptions:
                 startActivity(new Intent(OhFarkActivity.this, Options.class));
@@ -609,16 +640,17 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             case R.id.menuExit:
                 finish();
         }
-            return super.onOptionsItemSelected(item);
-            //return false;
+        return super.onOptionsItemSelected(item);
+        //return false;
     }
+
     /**
      * Launching new activity
-     * */
-    private void LocationFound() {
-        Intent i = new Intent(OhFarkActivity.this, LocationFound.class);
-        startActivity(i);
-    }
+     */
+    //private void LocationFound() {
+    //    Intent i = new Intent(OhFarkActivity.this, LocationFound.class);
+    //    startActivity(i);
+    //}
 
     //@Override
     //public void shakingStarted() {
@@ -643,13 +675,111 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //	}
     //}
 
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // Kills & force closes the app
-            android.os.Process.killProcess(android.os.Process.myPid());
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+
+            AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
+            alertbox.setTitle(R.string.stExit);
+            String fmessage = getString(R.string.stExit) + " " + getString(R.string.app_name) + "?";
+            alertbox.setMessage(fmessage);
+
+            alertbox.setPositiveButton(R.string.stExit,
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            exit();
+                        }
+                    });
+
+            alertbox.setNeutralButton(R.string.Cancel,
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface arg0, int arg1) {
+                        }
+                    });
+
+            alertbox.show();
+
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
         }
-        return super.onKeyDown(keyCode, event);
+
     }
+
+    private void exit() {
+        this.finish();
+        android.os.Process.killProcess(android.os.Process.myPid());
+    }
+
+/*
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_HOME) {
+            Log.i("Home Button", "Clicked");
+            // Toast.makeText(this,"Home Button Clicked",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Toast.makeText(this, "Press Home Button to pause Evaluation",
+                    Toast.LENGTH_LONG).show();
+            Log.i("Back Button", "Clicked");
+            //android.os.Process.killProcess(android.os.Process.myPid());
+            return false;
+            // finish();
+        }
+        return false;
+
+
+
+        //if (keyCode == KeyEvent.KEYCODE_BACK) {
+            // Kills & force closes the app
+        //    android.os.Process.killProcess(android.os.Process.myPid());
+        //}
+        //return super.onKeyDown(keyCode, event);
+    }
+
+*/
+
+    //@Override
+    //public void onStart() {
+    //    super.onStart();
+    //    mAuth.addAuthStateListener(mAuthListener);
+    //}
+
+    //@Override
+    //public void onStop() {
+    //    super.onStop();
+    //    if (mAuthListener != null) {
+    //        mAuth.removeAuthStateListener(mAuthListener);
+    //    }
+    //}
+
+    /*
+    public void addAuthStateListener(FirebaseAuth.AuthStateListener listener){
+
+        mAuth.createUserWithEmailAndPassword(email,password)
+                .
+
+        addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete (@NonNull Task < AuthResult > task) {
+                Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+
+                // If sign in fails, display a message to the user. If sign in succeeds
+                // the auth state listener will be notified and logic to handle the
+                // signed in user can be handled in the listener.
+                if (!task.isSuccessful()) {
+                    Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                // ...
+            }
+        }
+
+        );
+    }
+    */
 
     @Override
     public void onDestroy() {

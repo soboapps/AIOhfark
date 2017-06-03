@@ -117,7 +117,11 @@
     <string name="stAStraight">"Ein Hetero"</string>
     <string name="stAStraightPoints">"Wie viele Punkte eine gerade wert ist?"</string>
     <string name="stAbout">"Über"</string>
+<<<<<<< HEAD:app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-de/values-de.xml
     <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
+=======
+    <string name="stAbout_lr">"OhFark 2.0.16 \u00A9 2016"</string>
+>>>>>>> origin/master:app/build/intermediates/res/debug/values-de/values-de.xml
     <string name="stClose">Schließen</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stConfigOptions">"Konfigurieren Scoring-Optionen"</string>

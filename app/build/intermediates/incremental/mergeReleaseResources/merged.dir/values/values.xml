@@ -124,7 +124,11 @@
     <string name="stAStraight">A Straight</string>
     <string name="stAStraightPoints">How many points for a Straight?</string>
     <string name="stAbout">About</string>
+<<<<<<< HEAD:app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml
     <string name="stAbout_lr">OhFark 2.0.25 \u00A9 2017</string>
+=======
+    <string name="stAbout_lr">OhFark 2.0.16 \u00A9 2016</string>
+>>>>>>> origin/master:app/build/intermediates/res/debug/values/values.xml
     <string name="stClose">Close</string>
     <string name="stCompany">South Bound Apps</string>
     <string name="stConfigOptions">Configure Scoring Options</string>

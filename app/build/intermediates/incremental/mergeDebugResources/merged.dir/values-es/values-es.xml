@@ -117,7 +117,11 @@
     <string name="stAStraight">"Una recta"</string>
     <string name="stAStraightPoints">"¿Cuántos puntos es una recta vale la pena?"</string>
     <string name="stAbout">"Acerca de"</string>
+<<<<<<< HEAD:app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml
     <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
+=======
+    <string name="stAbout_lr">"OhFark 2.0.16 \u00A9 2016"</string>
+>>>>>>> origin/master:app/build/intermediates/res/debug/values-es/values-es.xml
     <string name="stClose">Cerca</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stConfigOptions">"Configurar las opciones de puntuación"</string>

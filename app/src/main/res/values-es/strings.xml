@@ -16,7 +16,11 @@
     <string name="disclaimer">"El resto de logotipos y marcas registradas son propiedad de sus titulares respectivos. \ U00ae y \ u2122 denotan marcas comerciales registradas en Estados Unidos y otros países"</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stWWW">"http://www.soboapps.com"</string>
+<<<<<<< HEAD
     <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
+=======
+    <string name="stAbout_lr">"OhFark 2.0.16 \u00A9 2016"</string>
+>>>>>>> origin/master
     <string name="stSlogan">"OhFark, Diversión para toda la familia!"</string>
     <string name="stDonate">"Donar"</string>
     <string name="donate1">"Donar $ 1"</string>

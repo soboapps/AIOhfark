@@ -117,7 +117,11 @@
     <string name="stAStraight">"A linha reta"</string>
     <string name="stAStraightPoints">"Quantos pontos é uma linha reta vale a pena?"</string>
     <string name="stAbout">"Sobre"</string>
+<<<<<<< HEAD:app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-pt/values-pt.xml
     <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
+=======
+    <string name="stAbout_lr">"OhFark 2.0.16 \u00A9 2016"</string>
+>>>>>>> origin/master:app/build/intermediates/res/debug/values-pt/values-pt.xml
     <string name="stClose">Fechar</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stConfigOptions">"Configurar opções de Pontuação"</string>

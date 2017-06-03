@@ -16,7 +16,11 @@
     <string name="disclaimer">All other logos and trademarks are the property of the respective trademark owners. \u00ae and \u2122 denote registered trademarks in the United States and other countries</string>
     <string name="stCompany">South Bound Apps</string>
     <string name="stWWW">http://www.soboapps.com</string>
+<<<<<<< HEAD
     <string name="stAbout_lr">OhFark 2.0.25 \u00A9 2017</string>
+=======
+    <string name="stAbout_lr">OhFark 2.0.16 \u00A9 2016</string>
+>>>>>>> origin/master
     <string name="stSlogan">OhFark, Fun for the Entire Family!</string>
     <string name="stDonate">Donate</string>
     <string name="donate1">Donate $1</string>

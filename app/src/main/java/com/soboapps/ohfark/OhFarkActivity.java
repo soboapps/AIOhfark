@@ -13,6 +13,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.animation.Animation;
@@ -455,9 +456,15 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Used in onAnimatonEnds()
         if (isFarkle)
             toFarkle = true;
+<<<<<<< HEAD
         //Intent f = new Intent(getBaseContext(), OhFarkActivity.class);
         //f.putExtra("toFarkle", true);
         //startActivity(f);
+=======
+            //Intent f = new Intent(getBaseContext(), OhFarkActivity.class);
+            //f.putExtra("toFarkle", true);
+            //startActivity(f);
+>>>>>>> origin/master
     }
 
     @Override
@@ -493,7 +500,11 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         // Check to make sure it's not player 3's turn before flipping
         // Flip the Canvas
         if (controller.isThirdPlayer() == false)
+<<<<<<< HEAD
             flipCanvas();
+=======
+        flipCanvas();
+>>>>>>> origin/master
 
     }
 
@@ -591,6 +602,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             //v.setGravity(Gravity.CENTER, 0, 0);
             //v.show();
 
+<<<<<<< HEAD
             try {
                 //runUpddates();
 
@@ -609,6 +621,26 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             } catch (Throwable t) {
                 // update failed, or cancelled
             }
+=======
+                try {
+                    //runUpddates();
+
+                    // Commiting in the preferences, that the update was successful.
+                    SharedPreferences.Editor editor = myPrefs.edit();
+                    editor.clear();
+                    // Creates a Shared Preference with the Application Version to compare
+                    // against for upgrades
+                    editor.putInt("lastUpdate", versionCode);
+                    editor.commit();
+
+                    String strI = this.getString(R.string.stOptionsReset);
+                    Toast t = Toast.makeText(this.getApplicationContext(), strI, Toast.LENGTH_LONG);
+                    t.setGravity(Gravity.CENTER, 0, 0);
+                    t.show();
+                } catch (Throwable t) {
+                    // update failed, or cancelled
+                }
+>>>>>>> origin/master
         }
     }
 
@@ -676,6 +708,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
     //}
 
     @Override
+<<<<<<< HEAD
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
 
@@ -713,6 +746,45 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
 
 /*
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+=======
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+
+            AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
+            alertbox.setTitle(R.string.stExit);
+            String fmessage = getString(R.string.stExit) + " " +  getString(R.string.app_name) + "?";
+            alertbox.setMessage(fmessage);
+
+            alertbox.setPositiveButton(R.string.stExit,
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            exit();
+                        }
+                    });
+
+            alertbox.setNeutralButton(R.string.Cancel,
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface arg0, int arg1) {
+                        }
+                    });
+
+            alertbox.show();
+
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
+        }
+
+    }
+
+    private  void exit(){
+        this.finish();
+        android.os.Process.killProcess(android.os.Process.myPid());
+    }
+
+/*
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+>>>>>>> origin/master
 
         if (keyCode == KeyEvent.KEYCODE_HOME) {
             Log.i("Home Button", "Clicked");
@@ -726,6 +798,7 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
             //android.os.Process.killProcess(android.os.Process.myPid());
             return false;
             // finish();
+<<<<<<< HEAD
         }
         return false;
 
@@ -778,8 +851,23 @@ public class OhFarkActivity extends Activity implements AnimationEndListener {
         }
 
         );
+=======
+        }
+        return false;
+
+
+
+        //if (keyCode == KeyEvent.KEYCODE_BACK) {
+            // Kills & force closes the app
+        //    android.os.Process.killProcess(android.os.Process.myPid());
+        //}
+        //return super.onKeyDown(keyCode, event);
+>>>>>>> origin/master
     }
     */
+
+*/
+
 
     @Override
     public void onDestroy() {

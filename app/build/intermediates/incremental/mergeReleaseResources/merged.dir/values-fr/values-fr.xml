@@ -117,7 +117,11 @@
     <string name="stAStraight">"A droite"</string>
     <string name="stAStraightPoints">"Combien de points est une quinte vaut?"</string>
     <string name="stAbout">"Sur"</string>
+<<<<<<< HEAD:app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-fr/values-fr.xml
     <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
+=======
+    <string name="stAbout_lr">"OhFark 2.0.16 \u00A9 2016"</string>
+>>>>>>> origin/master:app/build/intermediates/res/debug/values-fr/values-fr.xml
     <string name="stClose">Fermer</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stConfigOptions">"Configurer les options de notation"</string>

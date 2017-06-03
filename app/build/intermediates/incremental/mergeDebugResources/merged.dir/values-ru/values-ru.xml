@@ -117,7 +117,11 @@
     <string name="stAStraight">"Прямо"</string>
     <string name="stAStraightPoints">"Сколько очков будет прямой стоит?"</string>
     <string name="stAbout">"О"</string>
+<<<<<<< HEAD:app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml
     <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
+=======
+    <string name="stAbout_lr">"OhFark 2.0.16 \u00A9 2016"</string>
+>>>>>>> origin/master:app/build/intermediates/res/debug/values-ru/values-ru.xml
     <string name="stClose">Закрыть</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stConfigOptions">"Настройка Скоринг Параметры"</string>

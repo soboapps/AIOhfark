@@ -117,7 +117,11 @@
     <string name="stAStraight">"Rovný"</string>
     <string name="stAStraightPoints">"Kolik bodů je Rovný stojí za to?"</string>
     <string name="stAbout">"Kdo"</string>
+<<<<<<< HEAD:app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml
     <string name="stAbout_lr">"OhFark 2.0.25 \u00A9 2017"</string>
+=======
+    <string name="stAbout_lr">"OhFark 2.0.16 \u00A9 2016"</string>
+>>>>>>> origin/master:app/build/intermediates/res/debug/values-cs/values-cs.xml
     <string name="stClose">Blízko</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stConfigOptions">"Konfigurovat možnosti Bodování"</string>

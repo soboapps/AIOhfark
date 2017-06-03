@@ -117,7 +117,11 @@
     <string name="stAStraight">"Retta"</string>
     <string name="stAStraightPoints">"Quanti punti è una retta è la pena?"</string>
     <string name="stAbout">"Su"</string>
+<<<<<<< HEAD:app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-it/values-it.xml
     <string name="stAbout_lr">"OhFark 2.0.25 \u00a9 2017"</string>
+=======
+    <string name="stAbout_lr">"OhFark 2.0.16 \u00a9 2016"</string>
+>>>>>>> origin/master:app/build/intermediates/res/debug/values-it/values-it.xml
     <string name="stClose">Chiudere</string>
     <string name="stCompany">"South Bound Apps"</string>
     <string name="stConfigOptions">"Configurare opzioni di punteggio"</string>

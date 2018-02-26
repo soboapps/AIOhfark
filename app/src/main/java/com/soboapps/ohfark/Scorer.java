@@ -401,8 +401,17 @@ final class Scorer {
                         .getDefaultSharedPreferences(c);
 
                 String fourKindPref = prefs.getString("fourOfAKindPref", "2x the 3 Of A Kind Value");
-                int fourOfAKindMult = (fourKindPref.contains("1000")) ? 1000 : Integer
-                        .valueOf("" + fourKindPref.charAt(0));
+                
+                // Shorthand
+                int fourOfAKindMult = (fourKindPref.contains("1000")) ? 1000 : Integer.valueOf("" + fourKindPref.charAt(0));
+                
+                // Longhand
+                //int fourOfAKindMult;
+                //if (fourKindPref.contains("1000")) {
+                //        fourOfAKindMult = 1000;
+                //} else {
+                //        fourOfAKindMult = Integer.valueOf("" + fourKindPref.charAt(0));
+                //}        
 
                 int score = 0;
 
